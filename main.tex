@@ -76,6 +76,14 @@ ALMA Cycle II program to observe spectroscopic binaries. Observed on XX. Very br
   \end{center}
 \end{figure}
 
+We model the molecular line emission with the \texttt{DiskJockey} package \citep{czekala15a}\footnote{Open source under an MIT license at \url{URLHERE}.}. Owing to the excellent quality of the ALMA data, we extend the package to include a model with a vertical temperature gradient.
+
+This means that while most equations are similar as in \citep{rosenfeld12b}, we have modified the temperature parameterization to include a power law for the midplane temperature and one at larger heights in the disk, the ``atmospheric'' temperature, with a smooth transition in between.
+
+The radial density structure is set by the surface density prescription $\Sigma(r)$, where the vertical density structure is determined by solving the equation for hydrostatic equilibrium.
+
+We also include CO freezeout, where the CO abundance is decreased by a factor of XX when the disk temperature falls below $19\,$K. We include a photodissociation threshold, wherever the column density of gas above a height is below XX, we decrease the CO abundance to zero.
+
 \subsection{Spectroscopic Observations}
 
 TRES and Digital Spedometer Observations.
