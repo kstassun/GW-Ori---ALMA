@@ -57,39 +57,30 @@ Spectroscopic activity and inner disk clearing \citep{fang14}.
 
 ALMA Cycle II program to observe spectroscopic binaries. Observed on XX. Very bright disk, detected in \twelve, \thirteen, and \eighteen. Peak line fluxes are XX. Line widths are XX.
 
-\begin{figure}[htb]
+\begin{figure*}[htb]
 \begin{center}
   \includegraphics[draft,width=\textwidth,height=0.9\textheight]{chmaps_CO.pdf}
   \figcaption{\twelve\ channel maps. Due to the nearby cloud contamination, we do not model these. (Or, we model only the XX channels.)
   \label{fig:chmaps_CO}}
   \end{center}
-\end{figure}
+\end{figure*}
 
-\begin{figure}[htb]
+\begin{figure*}[htb]
 \begin{center}
   \includegraphics[draft,width=\textwidth,height=0.9\textheight]{chmaps_13CO.pdf}
   \figcaption{\thirteen\ channel maps, model, and residuals.
   \label{fig:chmaps_13CO}}
   \end{center}
-\end{figure}
+\end{figure*}
 
-\begin{figure}[htb]
+\begin{figure*}[htb]
 \begin{center}
   \includegraphics[draft,width=\textwidth,height=0.9\textheight]{chmaps_C18O.pdf}
   \figcaption{\eighteen\ channel maps, model, and residuals.
   \label{fig:chmaps_C18O}}
   \end{center}
-\end{figure}
+\end{figure*}
 
-We model the molecular line emission with the \texttt{DiskJockey} package \citep{czekala15a}\footnote{Open source under an MIT license at \url{URLHERE}.}. Owing to the excellent quality of the ALMA data, we extend the package to include a model with a vertical temperature gradient.
-
-This means that while most equations are similar as in \citep{rosenfeld12b}, we have modified the temperature parameterization to include a power law for the midplane temperature and one at larger heights in the disk, the ``atmospheric'' temperature, with a smooth transition in between.
-
-The radial density structure is set by the surface density prescription $\Sigma(r)$, where the vertical density structure is determined by solving the equation for hydrostatic equilibrium.
-
-We also include CO freezeout, where the CO abundance is decreased by a factor of XX when the disk temperature falls below $19\,$K. We include a photodissociation threshold, wherever the column density of gas above a height is below XX, we decrease the CO abundance to zero.
-
-We choose to fit with the distance to the source fixed at $d=414\,$pc, in order to save computational time. Distance uncertainty folds in linearly.
 
 \subsection{Spectroscopic Observations}
 
@@ -108,6 +99,32 @@ Photometry from Grankin, KELT.
 % Inferred central mass
 % Discussion of fit residuals
 % Agreement across transitions
+
+We analyze the \twelve, \thirteen, and \eighteen\ molecular line emission with the \texttt{DiskJockey} package \citep{czekala15a}\footnote{Open source under an MIT license at \url{https://github.com/iancze/DiskJockey}.}. Briefly, the package works to forward-model millimeter interferometric observations of molecular line emission with a parametric description of the disk structure, temperature, and velocity field. For a given set of parameters, the excellent radiative transfer package \texttt{RADMC-3D} \citep{dullemond12} is used to solve the radiative transfer equation and generate high-resolution channel maps. These images are then Fourier transformed and sampled at the same $u-v$ locations as the ALMA observations. The goodness of fit for each model is evaluated using a $\chi^2$ likelihood function which incorporates the visibility weights determined from the radiometer equation. After multiplying by the priors (discussed below), this posterior distribution is explored using the ensemble sampler MCMC \citep{goodman10,foreman-mackey13}.
+
+Further model details about the standard setup of our modeling approach can be found in \citep{czekala15a,czekala16}. Motivated by the excellent quality of the well-resolved observations of multiple CO isotopologues, we extend the package to include a disk model with a vertical temperature gradient \citep[e.g.,][]{dartois03}. Instead of previously assuming that the temperature at each radius is vertically isothermal, we now include a parameterization \citep[following][]{rosenfeld13a,williams14} that allows a smooth transition from a ``midplane'' temperature to an ``atmosphere'' temperature. These two boundary temperatures are described by power laws
+\begin{equation}
+	T_m(r) = T_{m,10} \left ( \frac{r}{10\,\textrm{AU}} \right )^{-q_m}
+\end{equation}
+
+\begin{equation}
+	T_a(r) = T_{a,10} \left ( \frac{r}{10\,\textrm{AU}} \right )^{-q_a}.
+\end{equation}
+The height of the atmosphere, $z_q$ is calculated as a multiple $h$ of the disk scale height $z_q(r) = h H(r)$, where for this analysis we fix $h = 4$. Between the midplane ($z = 0$) and atmosphere, the temperature is given by
+\begin{equation}
+	T(r, z) = T_m + (T_a - T_m)  \sin \left [ \frac{\pi z}{2 z_q} \right ]^{2 \delta}
+\end{equation}
+where we fix $\delta = 2$. At altitudes above $z_q$, the disk is again isothermal $T(r, z > z_q) = T_a(r)$. Because we are now considering large heights above the midplane, we properly calculate the velocity as the radial distance to the central stellar mass
+\begin{equation}
+	v^2(r, z) = \frac{G M_\ast}{(r^2 + z^2)^{1/2}}
+\end{equation}
+The radial surface density profile of the disk is still set by the density prescription of $\Sigma(r)$, however now the vertical density structure must be found by solving the equation for (vertical) hydrostatic equilibrium
+\begin{equation}
+	\frac{\partial \ln \rho}{\ln z} = - \left [\left (\frac{G M_\ast z}{(r^2 + z^2)^{3/2}} \right) \left ( \frac{\mu m_H}{k T} \right ) + \frac{\partial \ln T}{\partial z} \right].
+\end{equation}
+This ordinary differential equation (ODE) is solved numerically to yield an unnormalized vertical density profile. The normalization is given by the condition that $\Sigma(r) = \int_{-\infty}^{+\infty} \rho(r, z)\, \mathrm{d}z$, which is found by numerically integrating the solution to the ODE. We include a photodissociation threshold, wherever the column density of gas above a height is below \todo{XX}, we set the CO abundance to zero. This height $z_\mathrm{phot}$ is found by the solution to the equation $\sigma_\mathrm{phot}(r) = \int_{z_\mathrm{phot}}^\infty \rho(r, z)\, \mathrm{d}z.$
+
+Lastly, we account for CO freezeout on to dust grains by decreasing the CO abundance by a factor of $10^{-3}$ wherever the disk temperature is below $19\,$K. Because the distance to GW~Ori has been precisely determined by \citet{menten07} to be $414 \pm 7\,\textrm{pc}$, we order reduce the dimensionality of the problem and save computational time by exploring the model parameters with the distance to the source fixed at $d=414\,$pc. Because uncertainty in the source distance folds into uncertainty on $M_\ast$ in a linear manner, this is a small effect on the precision of $M_\ast$ compared to the statistical errors from the CO analysis.
 
 \subsection{Updated Spectroscopic Orbit}
 
@@ -145,7 +162,8 @@ Eclipses \citep{shevchenko92,shevchenko98}.
 % \tablewidth{dimen}
 % \tablenum{text}
 % \tablecolumns{6}
-\tablecaption{Photometric Eclipse Catalog\label{table:eclipses}}
+\tablecaption{Photometric Eclipse Catalog\label{table:eclipses} \todo{NOTE: this eclipse data is only for reference when doing the RV fit to exclude outliers. NOT for publication until appropriate authors (Shevchenko et al.) have been contacted and their permission granted.}
+}
 \tablehead{\colhead{Eclipse Number} & \colhead{Start} & \colhead{End} & \colhead{Duration} & \colhead{Decrement} & \colhead{Telescope}\\
 & [JD] & [JD] & [days] & [mmag] &
 }
