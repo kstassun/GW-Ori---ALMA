@@ -14,7 +14,7 @@
 \begin{document}
 
 \title{GW Ori: A Massive Stellar Systems with a Circum-triple Disk, Caught Young Ages}
-\author{I.~Czekala\altaffilmark{1}, et al. }%S.~M.~Andrews\altaffilmark{1}, E.~L.~N.~Jensen\altaffilmark{2}, K.~G.~Stassun\altaffilmark{3,4}, G.~Torres\altaffilmark{1}, \& D.~J.~Wilner\altaffilmark{1}}
+\author{I.~Czekala\altaffilmark{1}, S.~M.~Andrews\altaffilmark{1}, et al.} % E.~L.~N.~Jensen\altaffilmark{2}, K.~G.~Stassun\altaffilmark{3,4}, G.~Torres\altaffilmark{1}, \& D.~J.~Wilner\altaffilmark{1}}
 \altaffiltext{1}{Harvard-Smithsonian Center for Astrophysics,
 			 60 Garden Street, Cambridge, MA 02138; \email{iczekala@cfa.harvard.edu}}
 \altaffiltext{2}{Department of Physics and Astronomy, Swarthmore College, 500 College Avenue, Swarthmore, PA 19081}
@@ -124,7 +124,7 @@ The radial surface density profile of the disk is still set by the density presc
 \end{equation}
 This ordinary differential equation (ODE) is solved numerically to yield an unnormalized vertical density profile. The normalization is given by the condition that $\Sigma(r) = \int_{-\infty}^{+\infty} \rho(r, z)\, \mathrm{d}z$, which is found by numerically integrating the solution to the ODE. We include a photodissociation threshold, wherever the column density of gas above a height is below \todo{XX}, we set the CO abundance to zero. This height $z_\mathrm{phot}$ is found by the solution to the equation $\sigma_\mathrm{phot}(r) = \int_{z_\mathrm{phot}}^\infty \rho(r, z)\, \mathrm{d}z.$
 
-Lastly, we account for CO freezeout on to dust grains by decreasing the CO abundance by a factor of $10^{-3}$ wherever the disk temperature is below $19\,$K. Because the distance to GW~Ori has been precisely determined by \citet{menten07} to be $414 \pm 7\,\textrm{pc}$, we order reduce the dimensionality of the problem and save computational time by exploring the model parameters with the distance to the source fixed at $d=414\,$pc. Because uncertainty in the source distance folds into uncertainty on $M_\ast$ in a linear manner, this is a small effect on the precision of $M_\ast$ compared to the statistical errors from the CO analysis.
+Lastly, we account for CO freezeout on to dust grains by decreasing the CO abundance by a factor of $100$ wherever the disk temperature is below $19\,$K. Because the distance to GW~Ori has been precisely determined by \citet{menten07} to be $414 \pm 7\,\textrm{pc}$, we order reduce the dimensionality of the problem and save computational time by exploring the model parameters with the distance to the source fixed at $d=414\,$pc. Because uncertainty in the source distance folds into uncertainty on $M_\ast$ in a linear manner, this is a small effect on the precision of $M_\ast$ compared to the statistical errors from the CO analysis.
 
 \subsection{Updated Spectroscopic Orbit}
 
@@ -137,6 +137,24 @@ Lastly, we account for CO freezeout on to dust grains by decreasing the CO abund
 \end{figure}
 
 RV variation of ~8-10 km/s coincides with an eclipse of ~0.6 mags in R, roughly gray. Might be caused by a knife-edge that has asymmetry wrt rotation axis (R-M effect).
+
+Combining the RV constraints and disk constraints, we have the following constraints on component masses
+\begin{deluxetable}{lr@{\,$\pm$\,}ll}
+% \tabletypesize{font size command}
+% \rotate
+% \tablewidth{dimen}
+% \tablenum{text}
+% \tablecolumns{6}
+\tablecaption{Combined disk and RV constraints on component masses\label{table:components}}
+\tablehead{\colhead{Parameter} & \multicolumn{2}{c}{Value} & \colhead{Unit}}
+\startdata
+$M_\mathrm{tot}$ & 5.50 & 0.20 & $M_\odot$ \\
+$i_\mathrm{d}$ & 135 & 2 & degrees \\
+$M_A$ & 4.40 & 0.18 & $M_\odot$ \\
+$M_B$ & 0.42 & 0.02 & $M_\odot$ \\
+$M_C$ & 0.68 & 0.05 & $M_\odot$ \\
+\enddata
+\end{deluxetable}
 
 
 \subsection{Expanded Catalog of Photometric Eclipses}
@@ -189,6 +207,14 @@ Figure from KELT, ASAS, and AAVSO.
 Discussion of our inferred component masses with that of \citet{berger11}.
 
 Photospheric analysis of properties (based on either spectral type + SED of primary and/or limits on the secondary) coupled with 4 usual PMS models and \citet{choi16} models.
+
+\begin{figure}[htb]
+\begin{center}
+  \includegraphics{tracks.pdf}
+  \figcaption{MIST PMS tracks
+  \label{fig:PMS}}
+  \end{center}
+\end{figure}
 
 Figure showing evolution of photospheric properties as a function of time.
 
