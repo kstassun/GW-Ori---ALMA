@@ -59,7 +59,7 @@ ALMA Cycle II program to observe spectroscopic binaries. Observed on XX. Very br
 
 \begin{figure*}[htb]
 \begin{center}
-  \includegraphics[draft,width=\textwidth,height=0.9\textheight]{chmaps_CO.pdf}
+  \includegraphics{chmaps_CO.pdf}
   \figcaption{\twelve\ channel maps. Due to the nearby cloud contamination, we do not model these. (Or, we model only the XX channels.)
   \label{fig:chmaps_CO}}
   \end{center}
@@ -120,7 +120,7 @@ This ordinary differential equation (ODE) is solved numerically to yield an unno
 
 Lastly, we account for CO freezeout onto dust grains by decreasing the CO abundance by a factor of $100$ wherever the disk temperature is below $19\,$K. Because the distance to GW~Ori is precisely known \citep[$414 \pm 7\,\textrm{pc}$,][]{menten07}, we reduce the dimensionality of the posterior probability distribution and save computational time by keeping the distance to the source fixed. Since uncertainty in the source distance translates into $M_\ast$ uncertainty in a linear manner, this is a small effect on the precision of $M_\ast$ compared to the statistical uncertainty from the CO analysis.
 
-We model the \twelve, \thirteen, and \eighteen\ data independently, and each posterior exploration for take roughly 30,000 CPU hours of computation on the Harvard Odyssey cluster, including discarding samples for burn-in. For more details about other aspects of the modeling procedure, please see \citet{czekala15a,czekala16}. Although the isotopologues are modeled independently, the analyses yield similar constraints on the geometrical disk parameters and most importantly agree on the central stellar mass $M_\mathrm{tot}$ and the disk inclination $i_d$. The models differ slightly in their inference of the temperature structure of the disk. The best-fit parameters are summarized in \todo{Table XX}, and channel maps synthesized using the best-fit models are presented in Figure~\ref{fig:chmaps_CO}, Figure~\ref{fig:chmaps_13CO}, and Figure~\ref{fig:chmaps_C18O}. The joint posteriors for $M_\mathrm{tot}$ vs. $i_d$ for the isotopologues are shown in Figure~\ref{fig:posterior}.
+We model the \twelve, \thirteen, and \eighteen\ data independently, and each posterior exploration for take roughly 30,000 CPU hours of computation on the Harvard Odyssey cluster, including discarding samples for burn-in. For more details about other aspects of the modeling procedure, please see \citet{czekala15a,czekala16}. Although the isotopologues are modeled independently, the analyses yield similar constraints on the geometrical disk parameters and most importantly agree on the central stellar mass $M_\mathrm{tot}$ and the disk inclination $i_d$. The models differ slightly in their inference of the temperature structure of the disk. The best-fit parameters are summarized in Table~\ref{table:components}, and channel maps synthesized using the best-fit models are presented in Figure~\ref{fig:chmaps_CO}, Figure~\ref{fig:chmaps_13CO}, and Figure~\ref{fig:chmaps_C18O}. The joint posteriors for $M_\mathrm{tot}$ vs. $i_d$ for the isotopologues are shown in Figure~\ref{fig:posterior}.
 
 
 \begin{figure}[htb]
@@ -194,7 +194,7 @@ $M_C$ & 0.68 & 0.05 & $M_\odot$ \\
 
 % Presentation of photometry.
 % Catalog of eclipse dates
-% Discussion of possible occultor radius
+% Discussion of possible occulter radius
 
 \begin{figure}[htb]
 \begin{center}
@@ -254,7 +254,7 @@ Photospheric analysis of properties (based on either spectral type + SED of prim
 
 Warmer estimates show that.
 
-As \citet{fang14} point out, GW~Ori~A is in an earlier evolutionary stage than Herbig Be stars, although it will eventually become one.
+As mentioned by \citet{fang14}, GW~Ori~A is in an earlier evolutionary stage than Herbig Be stars, although it will eventually become one.
 
 \paragraph{Detection limits on secondary and tertiary components}
 In the context of \citet{berger11} and redone radial velocity analysis.
@@ -280,7 +280,7 @@ While the ratio between the outer orbital period and the inner orbital period is
 
 (Tokovinin has an updated catalog on his website with about twice as many systems as in the CDS version from this paper, but it would be non-trivial to figure out how to remake the above plot.  Not sure it's necessary.)
 
-Among late B star primaries (which GW Ori Aa will be on the main sequence), 13\% of systems have multiplicity of three or higher \citep{eggleton08}; this fraction is roughly constant across spectral types B--G.
+Among late B star primaries (which GW Ori A will be on the main sequence), 13\% of systems have multiplicity of three or higher \citep{eggleton08}; this fraction is roughly constant across spectral types B--G.
 
 \citet{tokovinin97} finds that the distribution of mutual inclinations of the orbits in triple systems is inconsistent both with complete alignment of the inner and outer orbits, but also with independent inclinations of the two orbits.  However, we should note that this is for a population of much older systems, in which significant dynamical evolution could have occurred, particularly for the shorter-period systems.  The fact that GW Ori appears to have roughly-aligned, circular inner and outer orbits (!! does it?  to be confirmed) is suggestive of formation of one or both companions from the massive disk surrounding the system.  (Wild speculation here.)
 
