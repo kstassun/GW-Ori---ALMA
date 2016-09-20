@@ -238,22 +238,21 @@ Figure from KELT, ASAS, and AAVSO.
 \section{Discussion}
 
 \subsection{Evolutionary status of GW Ori components}
-Discussion of our inferred component masses with that of \citet{berger11}.
+Pre-main sequence evolutionary models are commonly used to infer the mass and age of young stars using measurements of their photospheric properties. We now perform this exercise for the GW~Ori system and evaluate the consistency of the model predictions with our measured dynamical masses for each component.
 
-Photospheric analysis of properties (based on either spectral type + SED of primary and/or limits on the secondary) coupled with 4 usual PMS models and \citet{choi16} models.
+Given our inability to detect secondary or tertiary spectral lines in our optical spectra, we assume that all of the visible light can be attributed to the photosphere of GW~Ori~A. We adopt the photospheric properties of GW~Ori~A as determined by \citet{fang14}, $T_\mathrm{eff} = 5500 \pm 200\,\mathrm{K}$ and $L = 48 \pm 10\,L_\odot$. These photospheric properties clearly place GW~Ori~A in a high mass region of the Hertzsprung Russell Diagram (see Figure~\ref{fig:PMS}, left). For example, the MIST models suggest that GW~Ori~A is at least $3 M_\odot$.
+
+% List the models.
+We evaluate the following pre-main sequence models: \citet{choi16} models, \citet{dotter08}, \citet{tognelli11}, and \citet{siess00}. We do not include the \citet{baraffe15} models because they do not include models with sufficiently massive stars. We evaluate the predictions of the evolutionary models in a Bayesian manner, following \citet{jorgensen05}. These models deliver (among other quantities) the photospheric properties as a function of stellar mass and age, e.g., $T_\mathrm{eff}(M_\ast, \tau)$ and $L(M_\ast, \tau)$. The posterior probability distribution is then found by evaluating the consistency of the model predictions for a given \{$M_\ast$, $\tau$\} pair with the measured photospheric properties by \citet{fang14}, multiplied by any priors on  \{$M_\ast$, $\tau$\}, in which case we have none. The resulting posterior probability distributions are shown in Figure~\ref{fig:PMS} and are listed in Table~\ref{table:agreement}\footnote{Our code used to perform this analysis is available under an MIT open source license here: \url{https://github.com/iancze/ScottiePippen}}. In general, all four models make similar predictions about GW~Ori~A, $M_A \sim 3.9 \pm 3\,M_\odot$ and $\tau = 0.6 \pm 0.3\,$Myr. We assess the probability of consistency between the model-predicted mass and our dynamical mass by evaluating $p(M_\mathrm{model} = M_\mathrm{dyn}) = \int_0^\infty p_\mathrm{model}(M) \, p_\mathrm{dyn}(M) \, \mathrm{d}M$. For most models, the predicted stellar mass is significantly less than our measured dynamical mass, $M_A = 4.40 \pm 0.18\,M_\odot$, and is consistent only at the $2\sigma$ level. As mentioned by \citet{fang14}, GW~Ori~A is in an earlier evolutionary stage than Herbig Be stars, although it will eventually become one.
 
 \begin{figure}[htb]
 \begin{center}
   \includegraphics{tracks.pdf}
 	\includegraphics{agreement.pdf}
-  \figcaption{\emph{left}: PMS tracks for GW~Ori~A, shown for the MIST models. \emph{right}: Agreement with dynamical mass.
+  \figcaption{\emph{left}: GW~Ori~A placed on the early Hertzsprung Russell diagram with the MIST evolutionary models. The mass tracks are 1 - 5 $M_\odot$ in intervals of 1 $M_\odot$, and the dotted lines denote isochrones for $0.1$, $1$, and $10$~Myr. Given the measured dynamical mass, GW~Ori~A is clearly underluminous. \emph{right}: The joint $M_A$ vs. $\tau$ posteriors with 1 and 2$\sigma$ contours, evaluated using a suite of pre-main sequence evolutionary model predictions. The top and right panels show the marginal mass and age posteriors, respectively. The mass inferred from the photospheric properties is in slight tension with our measured dynamical mass at the $1-2\sigma$ level.
   \label{fig:PMS}}
   \end{center}
 \end{figure}
-
-Warmer estimates show that.
-
-As mentioned by \citet{fang14}, GW~Ori~A is in an earlier evolutionary stage than Herbig Be stars, although it will eventually become one.
 
 \begin{deluxetable}{lccc}
 \tablecaption{Pre-main sequence model evaluation\label{table:agreement}.}
@@ -268,13 +267,20 @@ MIST & $3.86^{+0.27}_{-0.34}$ & $0.38^{+0.33}_{-0.11}$ & 27\%\\
 \end{deluxetable}
 
 \paragraph{Detection limits on secondary and tertiary components}
-In the context of \citet{berger11} and redone radial velocity analysis.
-Figure showing evolution of photospheric properties as a function of time, for determined masses. We don't know the actual measured photospheric properties, but we can make guesses based on the PMS models themselves.
+Although we do not directly measure visible light from any stars in the GW~Ori system other than the A component, the existence of a B component was long known from radial velocity monitoring \citep{mathieu91} and the C component had long been suspected. In 2011, \citet{berger11} used the IOTA/IONIC3 interferometer to reconstruct an image that reveals all three components, as well as measure flux ratios in H-band. It is interesting to discuss the inferred dynamical masses of these components with the measured H-band fluxes of Berger and the non-detections of spectral lines in the visible.
+
+In Figure~\ref{fig:evolution}, we plot the ratio of effective temperatures and the computed flux ratios in Bessell I band and 2MASS H band. Bessell I roughly corresponds to the reddest echelle orders of the TRES spectrograph that we used to search for companion spectral lines.
+
+% Berger's ratios.
+The mean H-band flux ratio (computed as the weighted mean of all measurements) is $f_B/f_A = 0.57 \pm 0.05$ and $f_C/f_A = 0.23 \pm 0.01$. This means that the excess H-band flux is likely due to the presence of a circumstellar disk or accretion signatures above the photoshpheric emission of these stars, assuming that all stars are the same age.
+
+To our knowledge there has been no radial velocity monitoring of GW~Ori in the infrared.
+
 
 \begin{figure}[htb]
 \begin{center}
-  \includegraphics[draft,width=0.5\textwidth,height=0.3\textheight]{evolution.pdf}
-  \figcaption{MIST PMS tracks showing photospheric properties as function of time.
+  \includegraphics{evolution.pdf}
+  \figcaption{MIST PMS tracks showing photospheric properties as function of time. Under the assumption that all three stars are the same age, flux contrasts in Bessell I band and 2MASS H band are computed.
   \label{fig:evolution}}
   \end{center}
 \end{figure}
