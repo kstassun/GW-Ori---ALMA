@@ -24,12 +24,12 @@
 \altaffiltext{5}{Department of Physics, Fisk University, Nashville, TN 37208}
 
 \begin{abstract}
-We present spatially and spectrally resolved Atacama Large Millimeter/submillimeter Array (ALMA) observations of gas and dust in the disk orbiting the pre-main sequence triple GW Ori. Model transitions to put precise constraint on the total stellar mass of XX. We use 35 years of radial velocity monitoring of the single-lined spectroscopic binary to rederive accurate constraints, yeilding three components. Combining these two, yields a precise constraint on the primary stellar mass of XX. We show that this precise mass is inconsistent with the predictions of leading pre-main sequence evolutionary models based upon its observed photospheric properties. Regardless of the agreement, the GW~Ori system is undoubtedly young, less than 1~Myr. We put constraints on the orbital configuration of the triple system within the massive disk and discuss this in the context of star and planet formation.
+We present spatially and spectrally resolved Atacama Large Millimeter/submillimeter Array (ALMA) observations of gas and dust in the disk orbiting the pre-main sequence triple GW Ori. Model transitions to put precise constraint on the total stellar mass of XX. We use 35 years of radial velocity monitoring of the single-lined spectroscopic binary to rederive accurate constraints, yielding three components. Combining these two, yields a precise constraint on the primary stellar mass of XX. We show that this precise mass is inconsistent with the predictions of leading pre-main sequence evolutionary models based upon its observed photospheric properties. Regardless of the agreement, the GW~Ori system is undoubtedly young, less than 1~Myr. We put constraints on the orbital configuration of the triple system within the massive disk and discuss this in the context of star and planet formation.
 \end{abstract}
 \keywords{ protoplanetary disks -- stars: fundamental parameters -- stars: pre-main sequence -- stars: individual (GW Ori)}
 
 
-\section{Introduction} \label{sec:intro}}
+\section{Introduction} \label{sec:intro}
 
 % SEAN: To try and expedite things and reduce iterations here, I've tried to better organize Keivan's list of things to explore into topical paragraphs that mesh with the direction of this article.  All of the "note" contents are still here, but some are commented out with a suggestion that they would make much more sense in the Discussion section of the paper (i.e., once we've derived some of the necessary metrics).
 
@@ -38,7 +38,7 @@ We present spatially and spectrally resolved Atacama Large Millimeter/submillime
 \todo{{\it introduce GW Ori}}: among first known pre-main sequence SBs, associated with the $\lambda$ Ori complex (nominal age = 5 Myr; save discussion of membership for later!).  basic facts: composite spectral type = late G, SB1 with nominal period AB = 240 \citep{mathieu91}, long-term trend suggesting third body with C = 4000d.  IR interferometry finds tertiary \citep{berger11}.
 % Keivan also was interested to know if it was an x-ray source; this would go here if there was some way to make it relevant, but I'm not sure what that would be in our context.
 
-\todo{{\it mysterious stuff about GW Ori}}: has a disk and is doing weird stuff (can be brief here, since we don't really care about the details in this paper: Fang 2014 paper finds crazy activity and inner disk clearing, recent modeling by Sicilia-Aguilar).  dimmings like RW Aur, with associated RV deviations (see Shevchenko papers).  
+\todo{{\it mysterious stuff about GW Ori}}: has a disk and is doing weird stuff (can be brief here, since we don't really care about the details in this paper: Fang 2014 paper finds crazy activity and inner disk clearing, recent modeling by Sicilia-Aguilar).  dimmings like RW Aur, with associated RV deviations (see Shevchenko papers).
 % Keivan had a note about KELT dimmings, but I believe that was to check with Joey (not been published; we will likely fold that into this paper).
 
 \todo{{\it circle back to big picture/context}}: why GW Ori is interesting in the larger astrophysics landscape.  probably most interesting to mention here the nominal masses are large, and so its like a super-young version of Max Moe's multiple systems (possible SNe progenitors?).  also interesting from the perspective of forming high-order multiples (compact triple system).  finally note that its a particularly interesting test of pre-main sequence models at the high mass end of the IMF.  explain that its useful to get a mass measurement and why.
@@ -71,11 +71,11 @@ We present spatially and spectrally resolved Atacama Large Millimeter/submillime
 
 GW Ori was observed with the ALMA interferometer on 2015 May 14 (program ID 2012.1.00496.S), with 37 of the 12\,m main array antennas configured to span baselines of 23--558\,m.  The double sideband Band 6 receivers were employed in dual polarization mode, and the ALMA correlator was set up to process data in 4 spectral windows (SPWs).  Two of these SPWs, centered at 220.426 and 230.450\,GHz to observe the nearby $^{13}$CO and $^{12}$CO $J$=2--1 transitions (at rest frequencies of 220.399 and 230.538\,GHz, respectively), covered 234\,MHz of bandwidth in 3840 channels (a 61\,kHz channel spacing).  One other sampled 469\,MHz around 219.763\,GHz to observe the nearby C$^{18}$O $J$=2--1 transition (at rest frequency 219.560\,GHz) with 3840 channels (a 122\,kHz channel spacing).  The last SPW sampled the continuum in a 1.875\,GHz range around 231.956\,GHz using 128 coarse channels (a 15.625\,MHz channel spacing).
 
-The observations cycled between GW Ori and the quasar J0510+1800 with a 7 minute cadence.  The quasar J0423-0120 and Ganymede were observed as bandpass and flux calibration sources, respectively, at the start of the execution block.  The total on-source integration time for GW Ori was 16 minutes.  The observing conditions were typical for Band 6 projects, with a precipitable water vapor level around 1.1\,mm.  
+The observations cycled between GW Ori and the quasar J0510+1800 with a 7 minute cadence.  The quasar J0423-0120 and Ganymede were observed as bandpass and flux calibration sources, respectively, at the start of the execution block.  The total on-source integration time for GW Ori was 16 minutes.  The observing conditions were typical for Band 6 projects, with a precipitable water vapor level around 1.1\,mm.
 
-The visibility data were calibrated with standard procedures using the {\sc CASA} software package (v4.4).  The raw, observed visibility phases were adjusted based on the contemporaneous measurements of water vapor radiometers, flagged when applicable, and then the bandpass shape in (and between) each SPW was calibrated based on the observations of J0423-0120.  The absolute amplitude scale was determined based on the observations of Ganymede.  The complex gain behavior of the array and atmosphere was corrected based on the repeated observations of J0510+1800.  The calibrated visibilities showed a strong continuum signal, suggesting that self-calibration could significantly improve the data quality.  An initial model based on a preliminary continuum image was used for two rounds of phase-only self-calibration (on 30\,s, then 6\,s intervals) and one additional round that included the amplitudes (on a 7 minute scan interval).  This self-calibration reduced the RMS noise level in the continuum by a factor of $\sim$40.  After applying the self-calibration tables to the entire dataset (channel by channel),  we parsed out data products for each individual emission tracer of interest.  A set of continuum visibilities was constructed by spectrally averaging the line-free channels in each SPW into $\sim$125\,MHz increments.  The spectral visibilities for the $^{12}$CO, $^{13}$CO, and C$^{18}$O lines were continuum-subtracted and regridded into 170\,m s$^{-1}$-wide channels in the LSRK restframe over a $\sim$10\,km s$^{-1}$ range around the line centers. 
+The visibility data were calibrated with standard procedures using the {\sc CASA} software package (v4.4).  The raw, observed visibility phases were adjusted based on the contemporaneous measurements of water vapor radiometers, flagged when applicable, and then the bandpass shape in (and between) each SPW was calibrated based on the observations of J0423-0120.  The absolute amplitude scale was determined based on the observations of Ganymede.  The complex gain behavior of the array and atmosphere was corrected based on the repeated observations of J0510+1800.  The calibrated visibilities showed a strong continuum signal, suggesting that self-calibration could significantly improve the data quality.  An initial model based on a preliminary continuum image was used for two rounds of phase-only self-calibration (on 30\,s, then 6\,s intervals) and one additional round that included the amplitudes (on a 7 minute scan interval).  This self-calibration reduced the RMS noise level in the continuum by a factor of $\sim$40.  After applying the self-calibration tables to the entire dataset (channel by channel),  we parsed out data products for each individual emission tracer of interest.  A set of continuum visibilities was constructed by spectrally averaging the line-free channels in each SPW into $\sim$125\,MHz increments.  The spectral visibilities for the $^{12}$CO, $^{13}$CO, and C$^{18}$O lines were continuum-subtracted and regridded into 170\,m s$^{-1}$-wide channels in the LSRK restframe over a $\sim$10\,km s$^{-1}$ range around the line centers.
 
-These fully reduced visibility sets were then imaged by Fourier inversion assuming a Briggs (robust=0.5) weighting scheme and deconvolution with the standard {\tt CLEAN} algorithm.  Some basic image properties for the synthesized continuum image and spectral line image cubes are listed in Table~\ref{tab:ims}.  The continuum and spectral line moment maps are shown together in Figure~\ref{fig:moments}, along with a comparison of the integrated spectra.  The channel maps for individual lines are compiled in Figure~\ref{fig:chanmaps}.    
+These fully reduced visibility sets were then imaged by Fourier inversion assuming a Briggs (robust=0.5) weighting scheme and deconvolution with the standard {\tt CLEAN} algorithm.  Some basic image properties for the synthesized continuum image and spectral line image cubes are listed in Table~\ref{tab:ims}.  The continuum and spectral line moment maps are shown together in Figure~\ref{fig:moments}, along with a comparison of the integrated spectra.  The channel maps for individual lines are compiled in Figure~\ref{fig:chanmaps}.
 
 \begin{deluxetable}{lcc}[b!]
 \tablewidth{18pc}
@@ -107,12 +107,12 @@ C$^{18}$O $J$=2$-$1 & $0\farcs92\times0\farcs58$, 126\degr\ & 5     \\
   \end{center}
 \end{figure*}
 
-The 226\,GHz (1.3\,mm) continuum map shows a bright (flux density = 202\,mJy), compact but marginally resolved (deconvolved Gaussian FWHM $\approx 0\farcs9$) source centered on the GW Ori stellar system, with a peak intensity of 67\,mJy beam$^{-1}$ (S/N $\approx 1200$).  A crude estimate of the emission geometry (from a Gaussian fit to the visibilities) suggests an inclination of 35--40\degr\ from face-on, with the major axis oriented $\sim$170\degr\ E of N.    
+The 226\,GHz (1.3\,mm) continuum map shows a bright (flux density = 202\,mJy), compact but marginally resolved (deconvolved Gaussian FWHM $\approx 0\farcs9$) source centered on the GW Ori stellar system, with a peak intensity of 67\,mJy beam$^{-1}$ (S/N $\approx 1200$).  A crude estimate of the emission geometry (from a Gaussian fit to the visibilities) suggests an inclination of 35--40\degr\ from face-on, with the major axis oriented $\sim$170\degr\ E of N.
 
-The CO isotopologue channel maps reveal bright (integrated intensities of 41.8, 5.7, and 0.8\,Jy\,km\,s$^{-1}$ for $^{12}$CO, $^{13}$CO, and C$^{18}$O, respectively) and extended (FWHM $\sim 2\farcs5$) emission that is clearly in rotation around the continuum centroid, spanning a projected velocity range of $\pm$5\,km s$^{-1}$ from the line center.  The line emission is blueshifted to the south and redshifted to the north, consistent with the orientation estimated from the continuum emission.  The peak intensities for each line are $\sim$800, 290, and 55\,mJy beam$^{-1}$ in the brightest channels (peak S/N $\approx 130$, 35, and 14) for $^{12}$CO, $^{13}$CO, and C$^{18}$O, respectively.  The $^{12}$CO channel maps show some clear evidence for structured contamination from the surrounding molecular cloud, particularly as a streamer to the west at LSRK velocities $\sim$11--13\,km s$^{-1}$ and some diffuse clumps to the north around 13--14\,km s$^{-1}$.  Those features are much fainter, but still present, in $^{13}$CO emission; they are not apparent in the C$^{18}$O maps.   
+The CO isotopologue channel maps reveal bright (integrated intensities of 41.8, 5.7, and 0.8\,Jy\,km\,s$^{-1}$ for $^{12}$CO, $^{13}$CO, and C$^{18}$O, respectively) and extended (FWHM $\sim 2\farcs5$) emission that is clearly in rotation around the continuum centroid, spanning a projected velocity range of $\pm$5\,km s$^{-1}$ from the line center.  The line emission is blueshifted to the south and redshifted to the north, consistent with the orientation estimated from the continuum emission.  The peak intensities for each line are $\sim$800, 290, and 55\,mJy beam$^{-1}$ in the brightest channels (peak S/N $\approx 130$, 35, and 14) for $^{12}$CO, $^{13}$CO, and C$^{18}$O, respectively.  The $^{12}$CO channel maps show some clear evidence for structured contamination from the surrounding molecular cloud, particularly as a streamer to the west at LSRK velocities $\sim$11--13\,km s$^{-1}$ and some diffuse clumps to the north around 13--14\,km s$^{-1}$.  Those features are much fainter, but still present, in $^{13}$CO emission; they are not apparent in the C$^{18}$O maps.
 
 
- 
+
 %begin{figure*}[htb]
 %\begin{center}
 %  \includegraphics{chmaps_CO.pdf}
@@ -154,7 +154,7 @@ at the Oak Ridge Observatory (in the town of Harvard,
 Massachusetts). Each instrument was equipped with an intensified
 photon-counting Reticon detector limiting the output to a single
 echelle order 45~\AA\ wide, which was centered on the region of the
-\ion{Mg}{1}\,b triplet at 5187~\AA\ \citep[see][]{Latham1992}. The
+\ion{Mg}{1}\,b triplet at 5187~\AA\ \citep[see][]{latham92}. The
 signal-to-noise ratios of these observations range from 14 to 59 per
 resolution element of 8.5~\kms. Wavelength calibrations were based on
 exposures of a Thorium-Argon lamp taken before and after each science
@@ -179,16 +179,16 @@ measured by cross-correlation using the IRAF\footnote{IRAF is
   distributed by the National Optical Astronomy Observatories, which
   are operated by the Association of Universities for Research in
   Astronomy, Inc., under cooperative agreement with the National
-  Science Foundation.} task {\tt XCSAO} \citep{Kurtz1998}, with
+  Science Foundation.} task {\tt XCSAO} \citep{kurtz98}, with
 templates taken from a large library of calculated spectra based on
-model atmospheres by R.\ L.\ Kurucz \citep[see][]{Nordstrom1994,
-  Latham2002}. These synthetic templates cover a 300~\AA\ region
+model atmospheres by R.\ L.\ Kurucz \citep[see][]{nordstroem94,
+  latham02}. These synthetic templates cover a 300~\AA\ region
 centered on the \ion{Mg}{1}\,b triplet, and are available for a wide
 range of effective temperatures ($T_{\rm eff}$), surface gravities
 ($\log g$), metallicities ([Fe/H]), and rotational broadenings ($v
 \sin i$ when seen in projection). The optimal template was selected by
 running grids of cross-correlations over broad ranges in the template
-parameters, as described by \cite{Torres2002}, seeking the best match
+parameters, as described by \cite{torres02}, seeking the best match
 as measured by the peak cross-correlation coefficient averaged over
 all exposures. This was done separately for the DS and TRES spectra,
 using only the order centered on the \ion{Mg}{1}\,b line, for
@@ -350,7 +350,7 @@ extended time coverage in radial velocities now enables us to derive a
 robust spectroscopic orbit for the third star.
 
 We used standard weighted non-linear least-squares techniques
-\citep[e.g.,][]{Press1992} to solve for the elements of the inner and
+\citep[e.g.,][]{press92} to solve for the elements of the inner and
 outer Keplerian orbits simultaneously, assuming the inner binary acts
 as a point mass in the outer orbit, and including the effects of light
 travel time. Initial fits showed that a number of the measurements had
