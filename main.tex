@@ -64,7 +64,7 @@ We present spatially and spectrally resolved Atacama Large Millimeter/submillime
 \begin{figure*}[ht!]
 \begin{center}
   \includegraphics[width=\linewidth]{moments.pdf}
-  \figcaption{({\it left}) A 226\,GHz continuum image.  Contours start at 5$\times$ the RMS noise level and increase by factors of 2.  The synthesized beam geometry is shown in the lower left corner.  ({\it middle, left to right}) Maps of the $^{12}$CO, $^{13}$CO, and C$^{18}$O velocity-integrated intensities (contours, starting at 10, 3, and 3$\times$ the RMS noise levels, respectively, and increasing by factors of 2) overlaid on the intesity-weighted projected velocities (color-scale).  Note the prominent molecular cloud contamination in the $^{12}$CO map (see also Fig.~\ref{fig:chanmaps}).  ({\it right}) Spatially integrated spectra (inside the same {\tt CLEAN} mask, and with a clip at 2$\times$ the RMS noise level) for each CO line.
+  \figcaption{({\it left}) A 226\,GHz continuum image.  Contours start at 5$\times$ the RMS noise level and increase by factors of 2.  The synthesized beam geometry is shown in the lower left corner.  ({\it middle, left to right}) Maps of the $^{12}$CO, $^{13}$CO, and C$^{18}$O velocity-integrated intensities (contours, starting at 10, 3, and 3$\times$ the RMS noise levels, respectively, and increasing by factors of 2) overlaid on the intesity-weighted projected velocities (color-scale).  Note the prominent molecular cloud contamination in the $^{12}$CO map (see also Fig.~\ref{fig:chanmaps}).  ({\it right}) Spatially integrated spectra (inside the same {\tt CLEAN} mask, and smoothed with an 0.85\,km\,s$^{-1}$ Hanning kernel) for each CO line.
   \label{fig:moments}}
   \end{center}
 \end{figure*}
@@ -141,84 +141,11 @@ The CO isotopologue channel maps reveal bright (integrated intensities of 41.8, 
 
 \subsection{Optical Spectroscopy \label{sec:spectroscopy}}
 
-\gw\ was monitored spectroscopically at the Harvard-Smithsonian Center
-for Astrophysics for nearly 35 years, beginning in November of 1981. A
-total of 208 spectra were gathered through April of 2009 using three
-nearly identical echelle spectrographs (Digital Speedometers, DS; now
-decommissioned) with a resolving power of $R \approx 35,000$ mounted
-on three different telescopes: the 1.5m Tillinghast reflector at the
-Fred L.\ Whipple Observatory (Mount Hopkins, AZ), the 4.5m-equivalent
-Multiple Mirror Telescope (also on Mount Hopkins) before conversion to
-a monolithic mirror, and occasionally also on the 1.5m Wyeth reflector
-at the Oak Ridge Observatory (in the town of Harvard,
-Massachusetts). Each instrument was equipped with an intensified
-photon-counting Reticon detector limiting the output to a single
-echelle order 45~\AA\ wide, which was centered on the region of the
-\ion{Mg}{1}\,b triplet at 5187~\AA\ \citep[see][]{latham92}. The
-signal-to-noise ratios of these observations range from 14 to 59 per
-resolution element of 8.5~\kms. Wavelength calibrations were based on
-exposures of a Thorium-Argon lamp taken before and after each science
-exposure. Reductions were performed with a dedicated pipeline, and the
-zero-point of the velocities was monitored regularly by means of
-exposures of the evening and morning twilight sky. A further 80
-spectra of \gw\ were collected with the Tillinghast Reflector Echelle
-Spectrograph \citep[TRES;][]{furesz08}, a bench-mounted, fib-fed
-echelle instrument mounted on the 1.5m Tillinghast reflector with a
-resolving power of $R \approx 44,000$ and delivering 51 orders
-covering the wavelength interval 3900--9100~\AA. These observations
-were made between November of 2010 and April of 2016, and the
-signal-to-noise ratios at 5200~\AA\ range from 28 to 195 per
-resolution element of 6.8~\kms. Wavelength calibration was carried out
-as above, and reductions were performed as described by
-\cite{buchhave10}. Radial-velocity standard stars were observed each
-night to monitor the zero point and place it on the same system as the
-DS observations to within about 0.1~\kms.
+\gw\ was monitored spectroscopically at the Harvard-Smithsonian Center for Astrophysics for more than 35 years, beginning in 1981 November. A total of 208 spectra were gathered through 2009 April using three nearly identical echelle spectrographs (Digital Speedometers, DS; now decommissioned) with a resolving power of $R \approx 35,000$ mounted on three different telescopes: the 1.5m Tillinghast reflector at the Fred L.\ Whipple Observatory (Mount Hopkins, AZ), the 4.5m-equivalent Multiple Mirror Telescope (also on Mount Hopkins) before conversion to a monolithic mirror, and occasionally also on the 1.5m Wyeth reflector at the Oak Ridge Observatory (in the town of Harvard, MA).  Each instrument was equipped with an intensified photon-counting Reticon detector limiting the output to a single echelle order 45~\AA\ wide, which was centered on the region of the \ion{Mg}{1}\,b triplet at 5187~\AA\ \citep[see][]{latham92}. The signal-to-noise ratios of these observations range from 14 to 59 per resolution element of 8.5~\kms. Wavelength calibrations were based on exposures of a Thorium-Argon lamp taken before and after each science exposure. Reductions were performed with a dedicated pipeline, and the zero-point of the velocities was monitored regularly by means of exposures of the evening and morning twilight sky. A further 80 spectra of \gw\ were collected with the Tillinghast Reflector Echelle Spectrograph \citep[TRES;][]{furesz08}, a bench-mounted, fiber-fed echelle instrument mounted on the 1.5m Tillinghast reflector with a resolving power of $R \approx 44,000$ and delivering 51 orders covering the wavelength interval 3900--9100~\AA. These observations were made between 2010 November and 2016 April.  Signal-to-noise ratios at 5200~\AA\ range from 28 to 195 per resolution element of 6.8~\kms. Wavelength calibration was carried out as above, and reductions were performed as described by \cite{buchhave10}. Radial-velocity standard stars were observed each night to monitor the zero point and place it on the same system as the DS observations to within $\sim$0.1~\kms.
 
-All of our spectra appear single-lined.  Radial velocities were
-measured by cross-correlation using the IRAF\footnote{IRAF is
-  distributed by the National Optical Astronomy Observatories, which
-  are operated by the Association of Universities for Research in
-  Astronomy, Inc., under cooperative agreement with the National
-  Science Foundation.} task {\tt XCSAO} \citep{kurtz98}, with
-templates taken from a large library of calculated spectra based on
-model atmospheres by R.\ L.\ Kurucz \citep[see][]{nordstroem94,
-  latham02}. These synthetic templates cover a 300~\AA\ region
-centered on the \ion{Mg}{1}\,b triplet, and are available for a wide
-range of effective temperatures ($T_{\rm eff}$), surface gravities
-($\log g$), metallicities ([Fe/H]), and rotational broadenings ($v
-\sin i$ when seen in projection). The optimal template was selected by
-running grids of cross-correlations over broad ranges in the template
-parameters, as described by \cite{torres02}, seeking the best match
-as measured by the peak cross-correlation coefficient averaged over
-all exposures. This was done separately for the DS and TRES spectra,
-using only the order centered on the \ion{Mg}{1}\,b line, for
-consistency. In principle these template parameters may be interpreted
-as estimates of the physical properties of the star. In practice,
-however, the narrow wavelength range ($\sim$100~\AA\ for TRES,
-45~\AA\ for DS) limits the analysis by introducing a degeneracy
-between temperature, surface gravity, and metallicity such that a
-match of nearly equal quality is obtained by slightly increasing or
-decreasing these template parameters in tandem. We therefore made the
-reasonable assumption that \gw\ has solar metallicity, as expected for
-young stars, and we held $\log g$ fixed at a range of values between
-2.5 and 4.0, varied in steps of 0.5, and solved only for $T_{\rm eff}$
-and $v \sin i$. The best fit was found for $\log g = 3.0$, for both
-the DS and TRES spectra, and the resulting temperatures and rotational
-broadenings were very similar: 5180~K and 43~\kms\ for DS, and 5210~K
-and 44~\kms\ for TRES. For the remainder of the paper we adopt
-consensus values of $T_{\rm eff} = 5200 \pm 200$~K and $v \sin i = 44
-\pm 2~\kms$. Because of the strong dependence of temperature on the
-adopted surface gravity (and metallicity) we cannot rule a bias in
-$T_{\rm eff}$, which may also have a contribution from veiling (not
-considered in our templates), if significant in the spectral region
-analyzed.  Radial velocities were based on a template from our
-spectral library with parameters nearest to those reported above
-($T_{\rm eff} = 5250$~K, $v \sin i = 40~\kms$, $\log g = 3.0$); they
-are listed in Table~\ref{tab:RVs} in the heliocentric frame along with
-our uncertainty estimates from {\tt XCSAO}. The average internal
-errors for the DS and TRES velocities are 1.41~\kms\ and 0.98~\kms,
-respectively.
+All of our spectra appear single-lined.  Radial velocities were measured by cross-correlation using the IRAF\footnote{IRAF is distributed by the National Optical Astronomy Observatories, which are operated by the Association of Universities for Research in Astronomy, Inc., under cooperative agreement with the National Science Foundation.} task {\tt XCSAO} \citep{kurtz98}, with templates taken from a large library of calculated spectra based on model atmospheres by R.\ L.\ Kurucz \citep[see][]{nordstroem94,latham02}. These synthetic templates cover a 300~\AA\ region centered on the \ion{Mg}{1}\,b triplet, and are available for a wide range of effective temperatures ($T_{\rm eff}$), surface gravities ($\log g$), metallicities ([Fe/H]), and rotational broadenings ($v \sin i$ when seen in projection). The optimal template was selected by running grids of cross-correlations over broad ranges in the template parameters, as described by \cite{torres02}, seeking the best match as measured by the peak cross-correlation coefficient averaged over all exposures. This was done separately for the DS and TRES spectra, using only the order centered on the \ion{Mg}{1}\,b line, for consistency. 
 
+In principle these template parameters may be interpreted as estimates of the physical properties of the star. In practice, however, the narrow wavelength range ($\sim$100~\AA\ for TRES, 45~\AA\ for DS) limits the analysis by introducing a degeneracy between temperature, surface gravity, and metallicity such that a match of nearly equal quality is obtained by slightly increasing or decreasing these template parameters in tandem. We therefore made the reasonable assumption that \gw\ has solar metallicity, as expected for young stars, and we held $\log g$ fixed at a range of values between 2.5 and 4.0, varied in steps of 0.5, and solved only for $T_{\rm eff}$ and $v \sin i$. The best fit was found for $\log g = 3.0$, for both the DS and TRES spectra, and the resulting temperatures and rotational broadenings were very similar: 5180~K and 43~\kms\ for DS, and 5210~K and 44~\kms\ for TRES. For the remainder of the paper we adopt consensus values of $T_{\rm eff} = 5200 \pm 200$~K and $v \sin i = 44 \pm 2~\kms$. Because of the strong dependence of temperature on the adopted surface gravity (and metallicity) we cannot rule out a bias in $T_{\rm eff}$, which may also have a contribution from veiling (not considered in our templates), if significant in the spectral region analyzed.  Radial velocities were based on a template with parameters nearest to those reported above ($T_{\rm eff} = 5250$~K, $v \sin i = 40~\kms$, $\log g = 3.0$); they are listed in Table~\ref{tab:RVs} in the heliocentric frame along with our uncertainty estimates from {\tt XCSAO}. The average internal errors for the DS and TRES velocities are 1.41 and 0.98~\kms, respectively.
 
 \begin{deluxetable}{lcccc}
 \tablewidth{18pc}
@@ -257,7 +184,7 @@ respectively.
 
 \section{Analysis and Results}
 
-\subsection{CO Disk Modeling}
+\subsection{A Reconstruction of the Disk Velocity Field}
 
 We analyze the \twelve, \thirteen, and \eighteen\ molecular line observations using the \texttt{DiskJockey} package \citep{czekala15a}\footnote{Open source under an MIT license at \url{https://github.com/iancze/DiskJockey}.} to infer the total stellar mass and place constraints on the disk structure. Briefly, our approach works by forward-modeling the millimeter interferometric observations of molecular line emission with a parametric description of the disk structure, temperature, and velocity field. For a given set of parameters, the radiative transfer package \texttt{RADMC-3D} \citep{dullemond12} is used to solve the ray-trace a given disk structure and generate high-resolution channel maps. These images are then Fourier transformed and sampled at the same $u-v$ locations as the ALMA observations. The goodness of fit for each model is evaluated using a $\chi^2$ likelihood function, which incorporates the visibility weights determined from the radiometer equation. After multiplying by a geometrical prior on disk inclination \citep{czekala16}, this posterior distribution is explored using an MCMC ensemble sampler \citep{goodman10,foreman-mackey13}.
 
@@ -328,7 +255,7 @@ Presentation of best-fit disk parameters. Posterior on Mass vs. disk inclination
 
 Plots of disk temperatures and densities. Discussion of broad but not perfect agreement between \twelve\ and \thirteen.
 
-\subsection{Updated Spectroscopic Orbit}
+\subsection{An Updated Model of the Stellar Orbits}
 \label{sec:orbit}
 
 The discovery orbit of \gw\ by \cite{mathieu91}, with a period of
