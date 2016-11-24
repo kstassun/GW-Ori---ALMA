@@ -204,7 +204,7 @@ The basis of the parametric physical model adopted in this approach is a radial 
 \begin{equation}
 	T(r, z) = T_m + (T_a - T_m)  \sin \left [ \frac{\pi z}{8 H} \right ]^4,
 \end{equation}
-where $T_m$ and $T_a$ are the midplane and ``atmosphere" radial temperature profiles, presumed to be power-laws with independent normalizations ($T_{m,0}$, $T_{a,0}$) and indices ($q_m$, $q_a$), and $H$ is the scale height calculated for $T_m$.  The density structure, $\rho(r, z)$, is determined by numerically integrating the hydrostatic equilibrium condition for this $T(r,z)$ structure at each radius (normalized by $\Sigma$).  
+where $T_m$ and $T_a$ are the midplane and ``atmosphere" radial temperature profiles, presumed to be power-laws with independent normalizations ($T_{m,0}$, $T_{a,0}$) and indices ($q_m$, $q_a$), and $H$ is the scale height calculated for $T_m$.  The density structure, $\rho(r, z)$, is determined by numerically integrating the hydrostatic equilibrium condition for this $T(r,z)$ structure at each radius (normalized by $\Sigma$).
 
 \begin{figure*}[ht!]
 \begin{center}
@@ -217,11 +217,11 @@ where $T_m$ and $T_a$ are the midplane and ``atmosphere" radial temperature prof
 \end{figure*}
 
 
-To convert the total gas densities to molecule-specific values, we start with baseline abundances that are representative of the cold molecular interstellar medium: [$^{12}$CO/gas] = 10$^{-4}$, [$^{12}$CO/$^{13}$CO] = 70, and [$^{12}$CO/C$^{18}$O] = 540 \citep[e.g.,][]{henkel94,prantzos96}.  We then follow \citet{qi08} to crudely account for depletions relative to these baselines associated with both photodissociation in the low-density atmosphere and freezeout onto dust grains at low temperatures.  Specifically, we set the CO abundance to zero for regions where the gas column densities (vertically integrated toward the midplane) are below $10^{21}$\,cm$^{-2}$, and we deplete the baseline abundance by a factor of 100 for the disk regions where $T<19$\,K.  
+To convert the total gas densities to molecule-specific values, we start with baseline abundances that are representative of the cold molecular interstellar medium: [$^{12}$CO/gas] = 10$^{-4}$, [$^{12}$CO/$^{13}$CO] = 70, and [$^{12}$CO/C$^{18}$O] = 540 \citep[e.g.,][]{henkel94,prantzos96}.  We then follow \citet{qi08} to crudely account for depletions relative to these baselines associated with both photodissociation in the low-density atmosphere and freezeout onto dust grains at low temperatures.  Specifically, we set the CO abundance to zero for regions where the gas column densities (vertically integrated toward the midplane) are below $10^{21}$\,cm$^{-2}$, and we deplete the baseline abundance by a factor of 100 for the disk regions where $T<19$\,K.
 
-The disk kinematics are assumed to be Keplerian and dominated by the total stellar mass $M_{\ast}$, with a velocity field that appropriately accounts for the two-dimensional distribution of the emitting layer \citep[see][]{rosenfeld13a}.  The  line-spread function is characterized with a width defined by the quadrature sum of thermal and non-thermal ($\xi$; presumably turbulent) contributions.  
+The disk kinematics are assumed to be Keplerian and dominated by the total stellar mass $M_{\ast}$, with a velocity field that appropriately accounts for the two-dimensional distribution of the emitting layer \citep[see][]{rosenfeld13a}.  The  line-spread function is characterized with a width defined by the quadrature sum of thermal and non-thermal ($\xi$; presumably turbulent) contributions.
 
-For any physical structure specified by these 8 parameters, \{$\Sigma_c$, $R_c$, $T_{m,0}$, $T_{a,0}$, $q_m$, $q_a$, $M_\ast$, $\xi$\}, we solve the molecular rate equations (assuming LTE) and ray-trace the associated emission into a set of high resolution channel maps using the radiative transfer package {\tt RADMC-3D} \citep{dullemond12}.  That ray-tracing requires that we specify 3 additional geometric parameters: the disk inclination to the line-of-sight ($i_d$), the position angle of the disk rotation axis projected on the sky ($\varphi_d$), and the LSRK systemic radial velocity ($v_r$).  The model channel maps are then Fourier transformed and sampled at the same spatial frequencies observed by ALMA.  The model quality with respect to the observed visibilities is then evaluated with a $\chi^2$ likelihood function, incorporating the nominal visibility weights.  We assume flat priors on all parameters except for $i_d$, where a simple geometric prior is adopted \citep{czekala16}.  We further enforce a criterion that $T_m \leq T_a$ to ensure a realistic model of disk heating.  The posterior distribution of these parameters is explored using Markov Chain Monte Carlo simulations with the affine invariant ensemble sampler proposed by \citet{goodman10}, as implemented in the {\tt emcee} code \citep{foreman-mackey13}.    
+For any physical structure specified by these 8 parameters, \{$\Sigma_c$, $R_c$, $T_{m,0}$, $T_{a,0}$, $q_m$, $q_a$, $M_\ast$, $\xi$\}, we solve the molecular rate equations (assuming LTE) and ray-trace the associated emission into a set of high resolution channel maps using the radiative transfer package {\tt RADMC-3D} \citep{dullemond12}.  That ray-tracing requires that we specify 3 additional geometric parameters: the disk inclination to the line-of-sight ($i_d$), the position angle of the disk rotation axis projected on the sky ($\varphi_d$), and the LSRK systemic radial velocity ($v_r$).  The model channel maps are then Fourier transformed and sampled at the same spatial frequencies observed by ALMA.  The model quality with respect to the observed visibilities is then evaluated with a $\chi^2$ likelihood function, incorporating the nominal visibility weights.  We assume flat priors on all parameters except for $i_d$, where a simple geometric prior is adopted \citep{czekala16}.  We further enforce a criterion that $T_m \leq T_a$ to ensure a realistic model of disk heating.  The posterior distribution of these parameters is explored using Markov Chain Monte Carlo simulations with the affine invariant ensemble sampler proposed by \citet{goodman10}, as implemented in the {\tt emcee} code \citep{foreman-mackey13}.
 
 \begin{deluxetable}{lccl}
 \tablecaption{Inferred Disk Model Parameters\label{table:components}}
@@ -243,9 +243,9 @@ $v_r$ & $42.82_{-0.02}^{+0.01}$ & $42.82_{-0.02}^{+0.02}$ & $\mathrm{km \,s}^{-1
 \enddata
 \end{deluxetable}
 
-In all of this analysis, we adopt a distance to GW Ori of $d = 414$\,pc \citep{menten07} to make the problem more computationally tractable.  The effects of this assumption are discussed further in Section~\ref{sec:discussion}.  
+In all of this analysis, we adopt a distance to GW Ori of $d = 414$\,pc \citep{menten07} to make the problem more computationally tractable.  The effects of this assumption are discussed further in Section~\ref{sec:discussion}.
 
-Compared to previous similar work, the GW Ori modeling is considerably more computationally intensive.  Part of the reason lies with the higher dimensionality of the parameter-space, but much of it is also the fact that the disk is so physically large that the ray-tracing step to generate high resolution synthetic channel maps covering large angular scales is substantially more time-consuming.  The inference for an individual spectral line takes $\sim$30,000 CPU hours on \todo{specify cores, etc.}.  Given that restriction and the fact that the $^{12}$CO line is clearly contaminated by local cloud material, we restrict our analysis to {\it independent} inferences of the model parameters based on the $^{13}$CO and C$^{18}$O data only.  
+Compared to previous similar work, the GW Ori modeling is considerably more computationally intensive.  Part of the reason lies with the higher dimensionality of the parameter-space, but much of it is also the fact that the disk is so physically large that the ray-tracing step to generate high resolution synthetic channel maps covering large angular scales is substantially more time-consuming.  The inference for an individual spectral line takes $\sim$30,000 CPU hours on \todo{specify cores, etc.}.  Given that restriction and the fact that the $^{12}$CO line is clearly contaminated by local cloud material, we restrict our analysis to {\it independent} inferences of the model parameters based on the $^{13}$CO and C$^{18}$O data only.
 
 \begin{figure}[ht!]
 \begin{center}
@@ -254,7 +254,7 @@ Compared to previous similar work, the GW Ori modeling is considerably more comp
   \end{center}
 \end{figure}
 
-The inferred parameter values corresponding to the measurements of each spectral line are summarized together in Table~\ref{table:components}.  A comparison of the data and the best-fit models (and associated residuals) are presented in the form of channel maps in Figures~\ref{fig:13co} and \ref{fig:c18o} for $^{13}$CO and C$^{18}$O, respectively.  While overall the models successfully reproduce the observed emission, there are some interesting systematic residuals.  We will return to a discussion of their potential origins in Section~\ref{sec:discussion}.  The inferred physical structures for each line are in mild disagreement, as might be expected for an over-simplified model based on data products that are sensitive to different regions of the disk.  Nevertheless, they both yield effectively identical constraints in the marginalized projection to the \{$M_\ast$, $i_d$\}-plane, as shown in Figure~\ref{fig:posterior}, that is of most relevance to our stated goals.  Again, that is because the kinematic structure of the line emission has very little dependence on the density and temperature parameters \citep[see][]{rosenfeld12a,czekala15a}.      
+The inferred parameter values corresponding to the measurements of each spectral line are summarized together in Table~\ref{table:components}.  A comparison of the data and the best-fit models (and associated residuals) are presented in the form of channel maps in Figures~\ref{fig:13co} and \ref{fig:c18o} for $^{13}$CO and C$^{18}$O, respectively.  While overall the models successfully reproduce the observed emission, there are some interesting systematic residuals.  We will return to a discussion of their potential origins in Section~\ref{sec:discussion}.  The inferred physical structures for each line are in mild disagreement, as might be expected for an over-simplified model based on data products that are sensitive to different regions of the disk.  Nevertheless, they both yield effectively identical constraints in the marginalized projection to the \{$M_\ast$, $i_d$\}-plane, as shown in Figure~\ref{fig:posterior}, that is of most relevance to our stated goals.  Again, that is because the kinematic structure of the line emission has very little dependence on the density and temperature parameters \citep[see][]{rosenfeld12a,czekala15a}.
 
 
 
@@ -391,15 +391,16 @@ in Figure~\ref{fig:orbitboth}.
 \end{figure}
 
 
-\begin{figure}
+\begin{figure*}
 \epsscale{1.15}
-\plotone{figout.eps}
+% \plotone{figout.eps}
+\plotone{figout1.eps}
 %
 \figcaption[]{Radial-velocity measurements of \gw\ as a function of
   time, and best-fit model for the triple system. The dotted line
   represents the center-of-mass velocity.\label{fig:orbitboth}}
 %
-\end{figure}
+\end{figure*}
 
 % RV variation of ~8-10 km/s coincides with an eclipse of ~0.6 mags in R, roughly gray. Might be caused by a knife-edge that has asymmetry wrt rotation axis (R-M effect).
 
