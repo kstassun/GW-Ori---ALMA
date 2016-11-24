@@ -182,59 +182,49 @@ In principle these template parameters may be interpreted as estimates of the ph
 % \textbf{To be included? Joey?}
 % Photometry from Grankin, KELT.
 
+
+
 \section{Analysis and Results}
 
 \subsection{A Reconstruction of the Disk Velocity Field}
 
-We analyze the \twelve, \thirteen, and \eighteen\ molecular line observations using the \texttt{DiskJockey} package \citep{czekala15a}\footnote{Open source under an MIT license at \url{https://github.com/iancze/DiskJockey}.} to infer the total stellar mass and place constraints on the disk structure. Briefly, our approach works by forward-modeling the millimeter interferometric observations of molecular line emission with a parametric description of the disk structure, temperature, and velocity field. For a given set of parameters, the radiative transfer package \texttt{RADMC-3D} \citep{dullemond12} is used to solve the ray-trace a given disk structure and generate high-resolution channel maps. These images are then Fourier transformed and sampled at the same $u-v$ locations as the ALMA observations. The goodness of fit for each model is evaluated using a $\chi^2$ likelihood function, which incorporates the visibility weights determined from the radiometer equation. After multiplying by a geometrical prior on disk inclination \citep{czekala16}, this posterior distribution is explored using an MCMC ensemble sampler \citep{goodman10,foreman-mackey13}.
+The primary goal of our analysis is to place concrete constraints on the key physical parameters of the GW Ori multiple star system.  One aspect of that analysis is to use the spatially and spectrally resolved molecular line emission observed with ALMA to tomographically reconstruct a model of the disk velocity field and use it to make a dynamical measurement of the system mass.  To do that, we follow the forward modeling procedures -- with some modifications as highlighted below -- described in detail by \citet{czekala15a,czekala16}, using the associated open-source software package {\tt DiskJockey}.\footnote{Available under an MIT license at \url{https://github.com/iancze/DiskJockey}.}
 
-Further description of our standard modeling approach can be found in \citep{czekala15a,czekala16}. Motivated by the high quality and well-resolved observations of multiple CO isotopologues, we extend the package to include a disk model with a vertical temperature gradient \citep[e.g.,][]{dartois03}. Instead of assuming that the temperature at each radius is vertically isothermal, as before, we now include a parameterization \citep[following][]{rosenfeld13a,williams14} that allows a smooth transition from a ``midplane'' temperature to an ``atmosphere'' temperature. These two boundary temperatures are described by power laws
-\begin{equation}
-	T_m(r) = T_{m,10} \left ( \frac{r}{10\,\textrm{AU}} \right )^{-q_m}
-\end{equation}
-
-\begin{equation}
-	T_a(r) = T_{a,10} \left ( \frac{r}{10\,\textrm{AU}} \right )^{-q_a}
-\end{equation}
-and we enforce that $T_{m,10} \leq T_{a,10}$. The height of the atmosphere $z_q$ is calculated as a multiple $h$ of the disk scale height, $z_q(r) = h H(r)$, where we fix $h = 4$. Between the midplane ($z$$=$$0$) and atmosphere the temperature is given by
-\begin{equation}
-	T(r, z) = T_m + (T_a - T_m)  \sin \left [ \frac{\pi z}{2 z_q} \right ]^{2 \delta}
-\end{equation}
-where we fix $\delta = 2$. At altitudes above $z_q$, the disk is isothermal $T(r, z > z_q) = T_a(r)$. Because we are now considering large heights above the midplane, we more accurately calculate the velocity using the radial distance to the central stellar mass
-\begin{equation}
-	v^2(r, z) = \frac{G M_\mathrm{tot}}{(r^2 + z^2)^{1/2}}.
-\end{equation}
-The radial surface density profile of the disk is still set by the standard density prescription of $\Sigma(r)$ \citep[see][]{czekala15a}, however now the vertical density structure is calculated by solving the equation for (vertical) hydrostatic equilibrium
-\begin{equation}
-	\frac{\partial \ln \rho}{\ln z} = - \left [\left (\frac{G M_\ast z}{(r^2 + z^2)^{3/2}} \right) \left ( \frac{\mu m_H}{k T} \right ) + \frac{\partial \ln T}{\partial z} \right].
-\end{equation}
-This ordinary differential equation (ODE) is solved numerically to yield an unnormalized vertical density profile. The normalization is found by imposing the condition that $\Sigma(r) = \int_{-\infty}^{+\infty} \rho(r, z)\, \mathrm{d}z$. To incorporate the effects of photodissociation, wherever the column density of gas above a height is less than \todo{XX}, we set the CO abundance to zero. This height $z_\mathrm{phot}$ is found by the solution to the equation $\sigma_\mathrm{phot}(r) = \int_{z_\mathrm{phot}}^\infty \rho(r, z)\, \mathrm{d}z.$
-
-Lastly, we account for CO freezeout onto dust grains by decreasing the CO abundance by a factor of $100$ wherever the disk temperature is below $19\,$K. Because the distance to GW~Ori is precisely known \citep[$414 \pm 7\,\textrm{pc}$,][]{menten07}, we reduce the dimensionality of the posterior probability distribution and save computational time by keeping the distance to the source fixed. Since uncertainty in the source distance translates into $M_\ast$ uncertainty in a linear manner, this is a small effect on the precision of $M_\ast$ compared to the statistical uncertainty from the CO analysis.
-
-\todo{Discussion about disk self-gravity affecting the velocity field, especially given the large estimated mass of the disk.}
-
-We model the \twelve, \thirteen, and \eighteen\ data independently, and each posterior exploration takes approximately 30,000 CPU hours of computation on the Harvard Odyssey cluster, including discarding samples for burn-in. For more details about other aspects of the modeling procedure, please see \citet{czekala15a,czekala16}. Although the isotopologues are modeled independently, the analyses yield similar constraints on the geometrical disk parameters and most importantly agree on the central stellar mass $M_\mathrm{tot}$ and the disk inclination $i_d$. The models differ slightly in their inference of the temperature structure of the disk. The best-fit parameters are summarized in Table~\ref{table:components}, and channel maps synthesized using the best-fit models are presented in Figure~\ref{fig:chmaps_CO}, Figure~\ref{fig:chmaps_13CO}, and Figure~\ref{fig:chmaps_C18O}. The joint posteriors for $M_\mathrm{tot}$ vs. $i_d$ for the isotopologues are shown in Figure~\ref{fig:posterior}.
-
-
-\begin{figure}[htb]
+\begin{figure*}[ht!]
 \begin{center}
-	\includegraphics{posterior.pdf}
-  \figcaption{Posterior distributions for the model parameters fit to the \thirteen\ and \eighteen\ data independently. \label{fig:posterior}}
+  \includegraphics[width=\linewidth]{chanmaps_13co.pdf}
+  \includegraphics[width=\linewidth]{chanmaps_13co.pdf}
+  \includegraphics[width=\linewidth]{chanmaps_13co.pdf}
+  \figcaption{A comparison of the observed channel maps of the $^{13}$CO line emission ({\it top}) with a ``best-fit" model ({\it middle}; constructed from a synthetic visibility set based on the inferred parameters listed in Table~\ref{table:components} and then imaged in the same way as the data) and the associated residuals ({\it bottom}; the imaged data$-$model residual visibilities).  The annotation is the same as in Fig.~\ref{fig:chanmaps}.
+  \label{fig:13co}}
   \end{center}
-\end{figure}
+\end{figure*}
+
+The basis of the parametric physical model adopted in this approach is a radial surface density profile, $\Sigma(r)$, designed to mimic a simple theoretical description for a viscous accretion disk \citep{lyndenbell74,hartmann98}.  It decreases like $1/r$ interior to a characteristic radius $R_c$, and has an exponential taper $e^{-r/R_c}$ at larger radii.  The vertical distribution ($z$-direction) of these densities is controlled by the disk temperatures.  In this study, we generalize the previous {\tt DiskJockey} code to accommodate models with a vertical temperature gradient in order to better account for the observed emission in high quality ALMA datasets.  We follow the standard prescription in the literature \citep{dartois03,andrews12,rosenfeld13a} and define
+\begin{equation}
+	T(r, z) = T_m + (T_a - T_m)  \sin \left [ \frac{\pi z}{8 H} \right ]^4,
+\end{equation}
+where $T_m$ and $T_a$ are the midplane and ``atmosphere" radial temperature profiles, presumed to be power-laws with independent normalizations ($T_{m,0}$, $T_{a,0}$) and indices ($q_m$, $q_a$), and $H$ is the scale height calculated for $T_m$.  The density structure, $\rho(r, z)$, is determined by numerically integrating the hydrostatic equilibrium condition for this $T(r,z)$ structure at each radius (normalized by $\Sigma$).  
+
+\begin{figure*}[ht!]
+\begin{center}
+  \includegraphics[width=\linewidth]{chanmaps_c18o.pdf}
+  \includegraphics[width=\linewidth]{chanmaps_c18o.pdf}
+  \includegraphics[width=\linewidth]{chanmaps_c18o.pdf}
+  \figcaption{A comparison of the observed channel maps of the C$^{18}$O line emission ({\it top}) with a ``best-fit" model ({\it middle}; constructed from a synthetic visibility set based on the inferred parameters listed in Table~\ref{table:components} and then imaged in the same way as the data) and the associated residuals ({\it bottom}; the imaged data$-$model residual visibilities).  The annotation is the same as in Fig.~\ref{fig:chanmaps}.
+  \label{fig:c18o}}
+  \end{center}
+\end{figure*}
 
 
-% Discussion of fit residuals
-It is likely that \twelve\ emission suffers from cloud contamination. \todo{explain why}.
+To convert the total gas densities to molecule-specific values, we start with baseline abundances that are representative of the cold molecular interstellar medium: [$^{12}$CO/gas] = 10$^{-4}$, [$^{12}$CO/$^{13}$CO] = 70, and [$^{12}$CO/C$^{18}$O] = 540 \citep[e.g.,][]{henkel94,prantzos96}.  We then follow \citet{qi08} to crudely account for depletions relative to these baselines associated with both photodissociation in the low-density atmosphere and freezeout onto dust grains at low temperatures.  Specifically, we set the CO abundance to zero for regions where the gas column densities (vertically integrated toward the midplane) are below $10^{21}$\,cm$^{-2}$, and we deplete the baseline abundance by a factor of 100 for the disk regions where $T<19$\,K.  
 
-While the \thirteen\ and \eighteen\ model fits are in excellent agreement with the data, given the high sensitivity of the observations there are a few notable residuals that merit discussion (see Figures~\ref{fig:chmaps_13CO}~and~\ref{fig:chmaps_C18O}). At low velocities, there is a consistent excess of emission in the central region of the disk. This emission cannot be explained simply by a mis-fit surface density profile, since material in the central regions of the disk would be moving at orbital velocities. We speculate that this emission could be originating from an outflow moving along the line of sight, or perhaps a warp or accretion stream. Likewise, there is a possibility that this could be due to a smaller, unresolved, face-on disk in the central region. Given the recent discussion of dipper systems (\todo{Ansdel}), this would be an interesting connection.
+The disk kinematics are assumed to be Keplerian and dominated by the total stellar mass $M_{\ast}$, with a velocity field that appropriately accounts for the two-dimensional distribution of the emitting layer \citep[see][]{rosenfeld13a}.  The  line-spread function is characterized with a width defined by the quadrature sum of thermal and non-thermal ($\xi$; presumably turbulent) contributions.  
 
-
-% Agreement across transitions
+For any physical structure specified by these 8 parameters, \{$\Sigma_c$, $R_c$, $T_{m,0}$, $T_{a,0}$, $q_m$, $q_a$, $M_\ast$, $\xi$\}, we solve the molecular rate equations (assuming LTE) and ray-trace the associated emission into a set of high resolution channel maps using the radiative transfer package {\tt RADMC-3D} \citep{dullemond12}.  That ray-tracing requires that we specify 3 additional geometric parameters: the disk inclination to the line-of-sight ($i_d$), the position angle of the disk rotation axis projected on the sky ($\varphi_d$), and the LSRK systemic radial velocity ($v_r$).  The model channel maps are then Fourier transformed and sampled at the same spatial frequencies observed by ALMA.  The model quality with respect to the observed visibilities is then evaluated with a $\chi^2$ likelihood function, incorporating the nominal visibility weights.  We assume flat priors on all parameters except for $i_d$, where a simple geometric prior is adopted \citep{czekala16}.  We further enforce a criterion that $T_m \leq T_a$ to ensure a realistic model of disk heating.  The posterior distribution of these parameters is explored using Markov Chain Monte Carlo simulations with the affine invariant ensemble sampler proposed by \citet{goodman10}, as implemented in the {\tt emcee} code \citep{foreman-mackey13}.    
 
 \begin{deluxetable}{lccl}
-\tablecaption{Combined disk and RV constraints on component masses\label{table:components}}
+\tablecaption{Inferred Disk Model Parameters\label{table:components}}
 \tablehead{\colhead{Parameter} & \thirteen & \eighteen & \colhead{Unit}}
 \startdata
 $M_\ast$ & $5.41_{-0.09}^{+0.46}$ & $5.70_{-0.23}^{+0.29}$ & $M_\odot$ \\
@@ -248,18 +238,27 @@ $\xi$ & $0.35_{-0.02}^{+0.09}$ & $0.34_{-0.07}^{+0.05}$ & $\mathrm{km \,s}^{-1}$
 $i_d$ & $135.1_{-0.7}^{+2.3}$ & $135.0_{-1.6}^{+1.5}$ & ${}^\circ$\\
 PA & $90.6_{-0.4}^{+0.8}$ & $90.2_{-1.0}^{+0.8}$ & ${}^\circ$ \\
 $v_r$ & $42.82_{-0.02}^{+0.01}$ & $42.82_{-0.02}^{+0.02}$ & $\mathrm{km \,s}^{-1}$ \\
-$\mu_\alpha$ & $0.00_{-0.02}^{+0.01}$ & $-0.03_{-0.01}^{+0.01}$ & arcsec\\
-$\mu_\delta$ & $-0.06_{-0.01}^{+0.01}$ & $-0.07_{-0.01}^{+0.01}$ & arcsec \\
+%$\mu_\alpha$ & $0.00_{-0.02}^{+0.01}$ & $-0.03_{-0.01}^{+0.01}$ & arcsec\\
+%$\mu_\delta$ & $-0.06_{-0.01}^{+0.01}$ & $-0.07_{-0.01}^{+0.01}$ & arcsec \\
 \enddata
 \end{deluxetable}
 
+In all of this analysis, we adopt a distance to GW Ori of $d = 414$\,pc \citep{menten07} to make the problem more computationally tractable.  The effects of this assumption are discussed further in Section~\ref{sec:discussion}.  
 
-Presentation of best-fit disk parameters. Posterior on Mass vs. disk inclination.
+Compared to previous similar work, the GW Ori modeling is considerably more computationally intensive.  Part of the reason lies with the higher dimensionality of the parameter-space, but much of it is also the fact that the disk is so physically large that the ray-tracing step to generate high resolution synthetic channel maps covering large angular scales is substantially more time-consuming.  The inference for an individual spectral line takes $\sim$30,000 CPU hours on \todo{specify cores, etc.}.  Given that restriction and the fact that the $^{12}$CO line is clearly contaminated by local cloud material, we restrict our analysis to {\it independent} inferences of the model parameters based on the $^{13}$CO and C$^{18}$O data only.  
 
-Plots of disk temperatures and densities. Discussion of broad but not perfect agreement between \twelve\ and \thirteen.
+\begin{figure}[ht!]
+\begin{center}
+	\includegraphics{posterior.pdf}
+  \figcaption{Posterior distributions for the model parameters fit to the \thirteen\ and \eighteen\ data independently. \label{fig:posterior}}
+  \end{center}
+\end{figure}
 
-\subsection{An Updated Model of the Stellar Orbits}
-\label{sec:orbit}
+The inferred parameter values corresponding to the measurements of each spectral line are summarized together in Table~\ref{table:components}.  A comparison of the data and the best-fit models (and associated residuals) are presented in the form of channel maps in Figures~\ref{fig:13co} and \ref{fig:c18o} for $^{13}$CO and C$^{18}$O, respectively.  While overall the models successfully reproduce the observed emission, there are some interesting systematic residuals.  We will return to a discussion of their potential origins in Section~\ref{sec:discussion}.  The inferred physical structures for each line are in mild disagreement, as might be expected for an over-simplified model based on data products that are sensitive to different regions of the disk.  Nevertheless, they both yield effectively identical constraints in the marginalized projection to the \{$M_\ast$, $i_d$\}-plane, as shown in Figure~\ref{fig:posterior}, that is of most relevance to our stated goals.  Again, that is because the kinematic structure of the line emission has very little dependence on the density and temperature parameters \citep[see][]{rosenfeld12a,czekala15a}.      
+
+
+
+\subsection{An Updated Model of the Stellar Orbits} \label{sec:orbit}
 
 The discovery orbit of \gw\ by \cite{mathieu91}, with a period of
 242 days, was based on a small subset of the same spectra used here,
@@ -463,7 +462,7 @@ $M_C$ & 0.68 & 0.05 & $M_\odot$ \\
 %
 % Figure from KELT, ASAS, and AAVSO.
 
-\section{Discussion}
+\section{Discussion} \label{sec:discussion}
 
 \subsection{The Evolutionary State of GW Ori A}
 Pre-main sequence evolutionary models are commonly used to infer the mass and age of young stars using measurements of their photospheric properties. We now perform this exercise for the GW~Ori system and evaluate the consistency of the model predictions with our measured dynamical masses for each component.
