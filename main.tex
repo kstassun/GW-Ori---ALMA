@@ -206,7 +206,7 @@ We use the spatially and spectrally resolved molecular line emission observed wi
   \includegraphics[width=\linewidth]{chanmaps_13co.pdf}
   \includegraphics[width=\linewidth]{chanmaps_13co.pdf}
   \includegraphics[width=\linewidth]{chanmaps_13co.pdf}
-  \figcaption{A comparison of the observed channel maps of the $^{13}$CO line emission ({\it top}) with a ``best-fit" model ({\it middle}; constructed from a synthetic visibility set based on the inferred parameters listed in Table~\ref{table:components} and then imaged in the same way as the data) and the associated residuals ({\it bottom}; the imaged data$-$model residual visibilities).  The annotation is the same as in Fig.~\ref{fig:chanmaps}.
+  \figcaption{A comparison of the observed channel maps of the $^{13}$CO line emission ({\it top}) with a ``best-fit'' model ({\it middle}; constructed from a synthetic visibility set based on the inferred parameters listed in Table~\ref{table:components} and then imaged in the same way as the data) and the associated residuals ({\it bottom}; the imaged data$-$model residual visibilities).  The annotation is the same as in Fig.~\ref{fig:chanmaps}.
   \label{fig:13co}}
   \end{center}
 \end{figure*}
@@ -215,14 +215,14 @@ The basis of the parametric physical model adopted in this approach is a radial 
 \begin{equation}
 	T(r, z) = T_m + (T_a - T_m)  \sin \left [ \frac{\pi z}{8 H} \right ]^4,
 \end{equation}
-where $T_m$ and $T_a$ are the midplane and ``atmosphere" radial temperature profiles, presumed to be power-laws with independent normalizations ($T_{m,0}$, $T_{a,0}$) and indices ($q_m$, $q_a$), and $H$ is the scale height calculated for $T_m$.  The density structure, $\rho(r, z)$, is determined by numerically integrating the hydrostatic equilibrium condition for this $T(r,z)$ structure at each radius (normalized by $\Sigma$).
+where $T_m$ and $T_a$ are the midplane and ``atmosphere'' radial temperature profiles, presumed to be power-laws with independent normalizations ($T_{m,0}$, $T_{a,0}$) and indices ($q_m$, $q_a$), and $H$ is the scale height calculated for $T_m$.  The density structure, $\rho(r, z)$, is determined by numerically integrating the hydrostatic equilibrium condition for this $T(r,z)$ structure at each radius (normalized by $\Sigma$).
 
 \begin{figure*}[ht!]
 \begin{center}
   \includegraphics[width=\linewidth]{chanmaps_c18o.pdf}
   \includegraphics[width=\linewidth]{chanmaps_c18o.pdf}
   \includegraphics[width=\linewidth]{chanmaps_c18o.pdf}
-  \figcaption{A comparison of the observed channel maps of the C$^{18}$O line emission ({\it top}) with a ``best-fit" model ({\it middle}; constructed from a synthetic visibility set based on the inferred parameters listed in Table~\ref{table:components} and then imaged in the same way as the data) and the associated residuals ({\it bottom}; the imaged data$-$model residual visibilities).  The annotation is the same as in Fig.~\ref{fig:chanmaps}.
+  \figcaption{A comparison of the observed channel maps of the C$^{18}$O line emission ({\it top}) with a ``best-fit'' model ({\it middle}; constructed from a synthetic visibility set based on the inferred parameters listed in Table~\ref{table:components} and then imaged in the same way as the data) and the associated residuals ({\it bottom}; the imaged data$-$model residual visibilities).  The annotation is the same as in Fig.~\ref{fig:chanmaps}.
   \label{fig:c18o}}
   \end{center}
 \end{figure*}
@@ -413,9 +413,27 @@ in Figure~\ref{fig:orbitboth}.
 
 % RV variation of ~8-10 km/s coincides with an eclipse of ~0.6 mags in R, roughly gray. Might be caused by a knife-edge that has asymmetry wrt rotation axis (R-M effect).
 
+\subsection{Joint Disk and Orbital Constraints on Individual Component Masses}
+
+We combine the constraints from the disk velocity field with the updated orbital constraints to infer individual component masses in the \gw\ system. The disk modeling produced a joint constraint on the total stellar mass of $M_\ast = 5.5 \pm 0.2\, M_\odot$ and the disk inclination of $i_\mathrm{disk} = 135 \pm 2^\circ$ (see Figure~\ref{fig:posterior}). The radial velocity modeling produced a joint constraint on the semi-major axes of the inner and outer orbits modulo their unknown inclination, $a_\mathrm{A} \sin i_\mathrm{inner}$ and $a_\mathrm{AB} \sin i_\mathrm{outer}$. By virtue of the Levenberg-Marquardt minimization used to fit the orbit, we are assuming that orbital posterior is well-described by a multi-dimensional Gaussian. To translate these constraints into constraints on the individual component masses, for each sample from the $\{M_\ast, i_\mathrm{disk}\}$ posteriors, we we draw multivariate Gaussian variables from the $\{ a_\mathrm{A} \sin i_\mathrm{inner}, a_\mathrm{AB} \sin i_\mathrm{outer}\}$ posteriors and then compute individual component masses using Kepler's Law and the boundary condition that $M_A + M_B + M_C = M_\ast$ and assuming that $i_\mathrm{inner} = i_\mathrm{outer} = i_\mathrm{disk}$. The results are are summarized in Table~\ref{table:component_masses}. Placing a geometrical prior on the values of $i_\mathrm{inner}$ and $i_\mathrm{outer}$ and allowing them to vary over their full range permits a variety of mass ratios, although marginalizing over all of these configurations still yields $p(M_A > 4.0) = 84\%$.
+
+\todo{Alternatively}, we fit a joint orbit of our radial velocity measurements, the radial velocity measurements provided by \citet{fang14}, and the three astrometric data points provided by \citet{berger11}. We include a parameter for radial velocity ``jitter,'' which we infer to be $0.37\,\kms$ and a parameter for the RV offset of the \citet{fang14} measurements. While \citet{berger11} had noted that they were unable to derive a satisfactory joint fit of their astrometric data with the \citet{mathieu91} radial velocity data, we are able to achieve a satisfactory fit within the uncertainties of the measurements \todo{(values listed in comments)}. This leads to the remarkable conclusion that the planes of the stellar orbits are misaligned by $45 \pm 5^\circ$ with respect to the protoplanetary disk.
+
+We also note that one can infer that the disk and outer orbital planes are misaligned without resorting to a full joint fit, which may be affected by unknown systematic issues. Using only our radial velocity dataset and a wide range of permissible orbital elements and stellar mass ratios, one would infer that at the first epoch of the \citet{berger11} astrometric measurements (2003) the C component would be moving with a large positive radial velocity (relative to the systemic velocity) and by the last epoch (2005) would be moving at approximately the systemic velocity, suggesting that the line of nodes for the outer orbit is close to the E-W axis. However, our disk results clearly demonstrate that the line of nodes for the disk is the N-S axis, suggesting that these orbits must be misaligned. (There is a $90^\circ$ difference between our disk convention, which uses the projection of the disk angular momentum vector onto the sky). \todo{This joint fit yields $M_A = 3.72 \pm 0.32\,M_\odot$, is it worth mentioning in some capacity to hedge against future results that may prove the misalignment? Would this text suffice or is a joint fit figure necessary?}
+
+% RV + astrometric fit gives
+% M_A = 3.72 +/- 0.32
+% M_B = 0.66 +/- 0.25
+% M_C = 1.13 +/- 0.22
+% e_outer = 0.23 +/- 0.05
+
+
+% Which is more consistent with the predictions from the evolutionary models, but predicts a 45 degree misalignment between the inner orbit and the disk, and a similar misalignment between the outer orbit and the disk.
+
+
 
 \begin{deluxetable}{lr@{\,$\pm$\,}ll}
-\tablecaption{Combined disk and RV constraints on component masses\label{table:components}}
+\tablecaption{Combined disk and RV constraints on component masses\label{table:component_masses}}
 \tablehead{\colhead{Parameter} & \multicolumn{2}{c}{Value} & \colhead{Unit}}
 \startdata
 $M_\mathrm{tot}$ & 5.50 & 0.20 & $M_\odot$ \\
@@ -587,6 +605,8 @@ Diagram showing the as-measured stellar orbits.
 Is the tertiary in the disk? What is the effect of the tertiary orbit on the disk.
 
 \citep{offner16}. Outflows (jets) and protostellar spins are misaligned. Does this match our central excess?
+
+\todo{Motivate high resolution Cycle 5 ALMA observations}.
 
 \section{Summary and Conclusions} \label{sec:summary}
 
