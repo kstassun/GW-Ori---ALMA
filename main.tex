@@ -12,34 +12,60 @@
 \newcommand{\thirteen}{${}^{13}$CO}
 \newcommand{\eighteen}{C${}^{18}$O}
 
+
+% standardization of notation
+%
+% disk parameters
+% i_\mathrm{disk} (not i_d or i)
+%
+% orbit parameters
+% i_\mathrm{inner}
+% i_\mathrm{outer}
+
+% stellar masses
+% M_\mathrm{tot} (not M_\ast)
+% M_A, M_B, M_C (not M_1, M_2, M_3)
+
 \begin{document}
 
-\title{GW Ori: A Massive Triple System with a Circum-triple Disk, Caught at a Young Age}
+\title{GW Ori: A Young and Massive Triple System with a Circum-triple Disk}
 
 \correspondingauthor{Ian Czekala}
 \email{iczekala@stanford.edu}
 
-\author[0000-0002-1483-8811]{Ian Czekala} % ORCID ID
-\affiliation{Department of Physics and Astronomy,\\
-Stanford University, \\
-452 Lomita Mall, Stanford, CA 94305 \\}
+\author[0000-0002-1483-8811]{Ian Czekala}
+\altaffiliation{KIPAC Postdoctoral Fellow}
+\affiliation{Kavli Institute for Particle Astrophysics and Cosmology,
+Stanford University, 452 Lomita Mall, Stanford, CA 94305}
 
-\author{Sean M. Andrews}
-\affiliation{Harvard-Smithsonian Center for Astrophysics, \\
-60 Garden Street, Cambridge, MA 02138 \\}
+\author[0000-0003-2253-2270]{Sean M. Andrews}
+\affiliation{Harvard-Smithsonian Center for Astrophysics,
+60 Garden Street, Cambridge, MA 02138}
 
-\author{Guillermo Torres}
-\affiliation{Harvard-Smithsonian Center for Astrophysics, \\
-60 Garden Street, Cambridge, MA 02138 \\}
+\author[0000-0002-5286-0251]{Guillermo Torres}
+\affiliation{Harvard-Smithsonian Center for Astrophysics,
+60 Garden Street, Cambridge, MA 02138}
 
-\author{et al.}
+\author[0000-0002-4625-7333]{Eric L. N. Jensen}
+\affiliation{Department of Physics and Astronomy,
+Swarthmore College, 500 College Avenue, Swarthmore, PA 19081}
 
- % E.~L.~N.~Jensen\altaffilmark{2}, K.~G.~Stassun\altaffilmark{3,4}, G.~Torres\altaffilmark{1}, D.~J.~Wilner\altaffilmark{1}, \& Joseph Rodriguez\altaffilmark{2}.}
-% \altaffiltext{1}{}
-% \altaffiltext{2}{}
-% \altaffiltext{3}{Department of Physics and Astronomy, Swarthmore College, 500 College Avenue, Swarthmore, PA 19081}
-% \altaffiltext{4}{Department of Physics and Astronomy, Vanderbilt University, Nashville, TN 37235}
-% \altaffiltext{5}{Department of Physics, Fisk University, Nashville, TN 37208}
+\author[0000-0002-3481-9052]{Keivan G. Stassun}
+\affiliation{Department of Physics and Astronomy, Vanderbilt University, Nashville, TN 37235}
+\affiliation{Department of Physics, Fisk University, Nashville, TN 37208}
+
+\author[0000-0003-1526-7587]{David J. Wilner}
+\affiliation{Harvard-Smithsonian Center for Astrophysics,
+60 Garden Street, Cambridge, MA 02138}
+
+\author[0000-0001-9911-7388]{David W. Latham}
+\affiliation{Harvard-Smithsonian Center for Astrophysics,
+60 Garden Street, Cambridge, MA 02138}
+
+\author[0000-0001-8812-0565]{Joseph E. Rodriguez}
+\affiliation{Harvard-Smithsonian Center for Astrophysics,
+60 Garden Street, Cambridge, MA 02138}
+
 
 \begin{abstract}
 We present spatially and spectrally resolved Atacama Large Millimeter/submillimeter Array (ALMA) observations of gas and dust in the disk orbiting the pre-main sequence triple GW Ori. We forward-model the \thirteen\ and \eighteen\ $J$=2--1 transitions to put precise constraint on the total stellar mass of $5.5 \pm 0.2\,M_\odot$. We use 35 years of radial velocity monitoring to update the orbital solution and place constraints on the orbital parameters of the secondary and tertiary components. Combining the measurements from these two datasets yields a precise constraint on the primary stellar mass of $M_A = 4.4\pm 0.18\,M_\odot$. We show that this precise mass is consistent with the predictions of leading pre-main sequence evolutionary models based upon its observed photospheric properties and suggests that \gw\ system is caught at a very young (and rare) evolutionary state for an intermediate mass star, less than 1~Myr. We put constraints on the orbital configuration of the triple system within the massive disk and discuss this in the context of star and planet formation.
@@ -49,10 +75,9 @@ We present spatially and spectrally resolved Atacama Large Millimeter/submillime
 \section{Introduction} \label{sec:intro}
 
 Pre-main sequence stars in multiple systems--for which it is possible to precisely measure their fundamental stellar properties--can serve as touchstones for understanding the final stages of stellar formation and the conditions under which planetary systems are assembled. While recent decades have seen steady progress in understanding binary formation in general, lingering uncertainties still remain about the characteristics of young close-in spectroscopic binaries and higher order systems \citep{duchene13}.
+\gw\ was one of the first T Tauri stars to be revealed as a single-lined spectroscopic binary \citep{mathieu91}, with a composite spectral type of late G and an orbital period of 240 days. Long term radial velocity monitoring hinted at the presence of a third body in the system with a period of $\sim$$10\,$ years, and was subsequently confirmed by infrared interferometry \citep{berger11}. Despite concerted efforts, there have not been any detections of the spectroscopic lines from the secondary or tertiary stars in optical spectra to date, suggesting a large flux contrast between A and the other components of the system at optical wavelengths. \gw\ is a member of the $\lambda$ Orionis star forming complex, a young OB association \citep{dolan00,dolan01,dolan02} in Orion. The most recent and precise measurements of the distance to Orion Nebula Complex is a VLBA parallax measurement of $388\pm5\,$pc \citep{kounkel17}, which we adopt as the distance to \gw.
 
-\gw\ was one of the first T Tauri stars to be revealed as a single-lined spectroscopic binary \citep{mathieu91}, with a composite spectral type of late G and an orbital period of 240 days. Long term radial velocity monitoring hinted at the presence of a third body in the system with a period of $\sim$$10\,$ years, and was subsequently confirmed by infrared interferometry \citep{berger11}. Despite concerted efforts, there have not been any detections of the spectroscopic lines from the secondary or tertiary stars in optical spectra to date, suggesting a large flux contrast between A and the other components of the system. \gw\ is a member of the $\lambda$ Orionis star forming complex, a young OB association \citep{dolan00,dolan01,dolan02} in Orion. The most recent and precise measurements of the distance to Orion Nebula Complex is a VLBA parallax measurement of $388\pm5\,$pc \citep{kounkel16}, which we adopt as the distance to \gw.
-
-A reservoir of circumstellar material orbiting \gw\ was inferred from near and far-infrared emission in excess of the stellar photosphere \citep{mathieu91}, and was subsequently confirmed by a strong single-dish sub-millimeter detection of the dust continuum, suggesting a massive circumstellar disk \citep[$M_\mathrm{disk} \gtrsim 0.1\,M_\odot$;][]{mathieu95}. Quasi-periodic photometric dimminings of \gw\ have been observed to occur on $\sim100\,$ day timescales, and are suspected to be due from material in the circumstellar disk occulting the primary star \citep{shevchenko92,shevchenko98}, although the fact that edge-on orbital inclinations are ruled out complicates this interpretation. \todo{correspond with Joey about KELT dimmings}.
+A reservoir of circumstellar material orbiting \gw\ was inferred from near and far-infrared emission in excess of the stellar photosphere \citep{mathieu91}, and was subsequently confirmed by a strong single-dish sub-millimeter detection of the dust continuum, suggesting a massive circumstellar disk \citep[$M_\mathrm{disk} \gtrsim 0.1\,M_\odot$;][]{mathieu95}. Quasi-periodic photometric dimminings of \gw\ have been observed to occur on $\sim100\,$ day timescales, and are suspected to be due from material in the circumstellar disk occulting the primary star \citep{shevchenko92,shevchenko98}, although the fact that edge-on orbital inclinations are ruled out complicates this interpretation.
 
 Mid-infrared spectroscopic observations of \gw\ detected CO fundamental emission with line profiles that have both a narrow and broad component, requiring a complicated emission region and temperature structure in the inner disk \citep{najita03}. \citet{fang14} compile several epochs of spectral energy distributions (SEDs) spanning decades and find that the mid-infrared emission is variable on the timescale of years. The SED and its variability can be explained by a gapped disk with changes in the structure of the inner disk.
 % There is a paper about \ion{Mg}{2} observations from IUE and HST on GW Ori, which include it as part of a survey. I'm not sure if there is much we say about it in this introduction, other than there is a warm wind at several AU. \citep{lopez-martinez15}.
@@ -61,8 +86,7 @@ Mid-infrared spectroscopic observations of \gw\ detected CO fundamental emission
 % \todo{{\it circle back to big picture/context}}: why GW Ori is interesting in the larger astrophysics landscape.  probably most interesting to mention here the nominal masses are large, and so its like a super-young version of Max Moe's multiple systems (possible SNe progenitors?).  also interesting from the perspective of forming high-order multiples (compact triple system).  finally note that its a particularly interesting test of pre-main sequence models at the high mass end of the IMF.  explain that its useful to get a mass measurement and why.
 
 Orbital constraints from radial velocity \citep{mathieu91,fang14} and astrometric \citep{berger11} monitoring imply that the \gw\ system is massive ($M_\mathrm{tot} > 5\,M_\odot$), with A being the dominant component ($M_A > 3\, M_\odot$). Such a large mass with only a late G spectral type implies that \gw\ A (and the system) must be very young according to models of pre-main sequence stellar evolution ($< 1$\,Myr).
-
-When it reaches the main sequence in $\sim$$10\,$ Myr, \gw\ A will have a B spectral type. B star lifetimes are notoriously short--this means that the current state of \gw\ represents an interesting if brief snapshot of the evolutionary history of high mass stars. Interestingly, \gw\ might represent a younger analogue to the new class of binaries recently discovered by \citet{moe15}, which are comprised of a main sequence B star with a pre-main sequence T~Tauri star companion. Refining the stellar properties of the \gw\ system will enable important tests of our understanding of pre-main sequence evolutionary models at the high mass end of the initial mass function.
+When it reaches the main sequence in $\sim$$10\,$ Myr, \gw\ A will become a very luminous B star. B star lifetimes are notoriously short--this means that the current state of \gw\ represents an interesting if brief snapshot of the evolutionary history of high mass stars. Interestingly, \gw\ might represent a younger analogue to the new class of binaries recently discovered by \citet{moe15}, which are comprised of a main sequence B star with a pre-main sequence T~Tauri star companion. Refining the stellar properties of the \gw\ system will enable important tests of our understanding of pre-main sequence evolutionary models at the high mass end of the initial mass function.
 
 % \todo{{\it paper overview}}: one sentence reminding people that we can use the disk to get the mass (cite our previous papers).  what data we have for GW Ori and what we will do with it here.  section breakdowns.
 
@@ -232,13 +256,14 @@ To convert the total gas densities to molecule-specific values, we start with ba
 
 The disk kinematics are assumed to be Keplerian and dominated by the total stellar mass $M_{\ast}$, with a velocity field that appropriately accounts for the two-dimensional distribution of the emitting layer \citep[see][]{rosenfeld13a}.  The  line-spread function is characterized with a width defined by the quadrature sum of thermal and non-thermal ($\xi$; presumably turbulent) contributions.
 
-For any physical structure specified by these 8 parameters, \{$\Sigma_c$, $R_c$, $T_{m,0}$, $T_{a,0}$, $q_m$, $q_a$, $M_\ast$, $\xi$\}, we solve the molecular rate equations (assuming LTE) and ray-trace the associated emission into a set of high resolution channel maps using the radiative transfer package {\tt RADMC-3D} \citep{dullemond12}.  That ray-tracing requires that we specify 3 additional geometric parameters: the disk inclination to the line-of-sight ($i_d$), the position angle of the disk rotation axis projected on the sky ($\varphi_d$), and the LSRK systemic radial velocity ($v_r$).  The model channel maps are then Fourier transformed and sampled at the same spatial frequencies observed by ALMA.  The model quality with respect to the observed visibilities is evaluated with a $\chi^2$ likelihood function, incorporating the nominal visibility weights.  We assume flat priors on all parameters except for $i_d$, where a simple geometric prior is adopted \citep{czekala16}.  We further enforce a criterion that $T_m \leq T_a$ to ensure a realistic model of disk heating. We adopt a fixed distance to GW Ori of $d = 388\,$pc \citep{kounkel16} to make the problem more computationally tractable.  The effects of this assumption are discussed further in Section~\ref{sec:joint}. The posterior distribution of these parameters is explored using Markov Chain Monte Carlo simulations with the affine invariant ensemble sampler proposed by \citet{goodman10}, as implemented in the {\tt emcee} code \citep{foreman-mackey13} and ported to the {\tt Julia} programming language, which we include in {\tt DiskJockey}.
+For any physical structure specified by these 8 parameters, \{$\Sigma_c$, $R_c$, $T_{m,0}$, $T_{a,0}$, $q_m$, $q_a$, $M_\mathrm{tot}$, $\xi$\}, we solve the molecular rate equations (assuming LTE) and ray-trace the associated emission into a set of high resolution channel maps using the radiative transfer package {\tt RADMC-3D} \citep{dullemond12}.  That ray-tracing requires that we specify 3 additional geometric parameters: the disk inclination to the line-of-sight ($i_\mathrm{disk}$), the position angle of the disk rotation axis projected on the sky ($\varphi$), and the LSRK systemic radial velocity ($v_r$).  The model channel maps are then Fourier transformed and sampled at the same spatial frequencies observed by ALMA.  The model quality with respect to the observed visibilities is evaluated with a $\chi^2$ likelihood function, incorporating the nominal visibility weights.
+We assume flat priors on all parameters except for $i_\mathrm{disk}$, where a simple geometric prior is adopted \citep{czekala16}.  We further enforce a criterion that $T_m \leq T_a$ to ensure a realistic model of disk heating. We adopt a fixed distance to GW Ori of $d = 388\,$pc \citep{kounkel17} to make the problem more computationally tractable.  The effects of this assumption are discussed further in Section~\ref{sec:joint}. The posterior distribution of these parameters is explored using Markov Chain Monte Carlo simulations with the affine invariant ensemble sampler proposed by \citet{goodman10}, as implemented in the {\tt emcee} code \citep{foreman-mackey13} and ported to the {\tt Julia} programming language, which we include in {\tt DiskJockey}.
 
 \begin{deluxetable}{lccl}
 \tablecaption{Inferred Disk Model Parameters\label{table:components}}
 \tablehead{\colhead{Parameter} & \thirteen & \eighteen & \colhead{Unit}}
 \startdata
-$M_\ast$ & $5.41_{-0.09}^{+0.46}$ & $5.70_{-0.23}^{+0.29}$ & $M_\odot$ \\
+$M_\mathrm{tot}$ & $5.41_{-0.09}^{+0.46}$ & $5.70_{-0.23}^{+0.29}$ & $M_\odot$ \\
 $r_c$ & $1522_{-393}^{+106}$ & $1082_{-129}^{+182}$ & AU\\
 $T_{10m}$ & $16_{-3}^{+2}$ & $16_{-12}^{+16}$ & K\\
 $q_m$ & $0.005_{-0.004}^{+0.031}$ & $0.843_{-0.298}^{+0.109}$ & \\
@@ -246,7 +271,7 @@ $T_{10a}$ & $164_{-93}^{+24}$ & $279_{-86}^{+116}$ & K\\
 $q_a$ & $0.41_{-0.26}^{+0.03}$ & $0.49_{-0.11}^{+0.12}$ & \\
 $\log \Sigma_c$ & $-0.58_{-0.06}^{+0.38}$ & $-0.42_{-0.09}^{+0.08}$ & $\log [\mathrm{g/cm}^2]$\\
 $\xi$ & $0.35_{-0.02}^{+0.09}$ & $0.34_{-0.07}^{+0.05}$ & $\mathrm{km \,s}^{-1}$\\
-$i_d$ & $135.1_{-0.7}^{+2.3}$ & $135.0_{-1.6}^{+1.5}$ & ${}^\circ$\\
+$i_\mathrm{disk}$ & $135.1_{-0.7}^{+2.3}$ & $135.0_{-1.6}^{+1.5}$ & ${}^\circ$\\
 PA & $90.6_{-0.4}^{+0.8}$ & $90.2_{-1.0}^{+0.8}$ & ${}^\circ$ \\
 $v_r$ & $42.82_{-0.02}^{+0.01}$ & $42.82_{-0.02}^{+0.02}$ & $\mathrm{km \,s}^{-1}$ \\
 %$\mu_\alpha$ & $0.00_{-0.02}^{+0.01}$ & $-0.03_{-0.01}^{+0.01}$ & arcsec\\
@@ -263,7 +288,7 @@ Compared to previous similar work, the GW Ori modeling is considerably more comp
   \end{center}
 \end{figure}
 
-The inferred parameter values corresponding to the measurements of each spectral line are summarized together in Table~\ref{table:components}.  A comparison of the data and the best-fit models (and associated residuals) is presented in the form of channel maps in Figures~\ref{fig:13co} and \ref{fig:c18o} for $^{13}$CO and C$^{18}$O, respectively.  While overall the models successfully reproduce the observed emission, there are some interesting systematic residuals.  We will return to a discussion of their potential origins in Section~\ref{sec:discussion}.  The inferred physical structures for each line are in mild disagreement, as might be expected for an over-simplified model based on data products that are sensitive to different regions of the disk.  Nevertheless, they both yield effectively identical constraints in the marginalized projection to the \{$M_\ast$, $i_d$\}-plane, as shown in Figure~\ref{fig:posterior}, that are of most relevance to our stated goals.  Again, that is because the kinematic structure of the line emission has very little dependence on the density and temperature parameters \citep[see][]{rosenfeld12a,czekala15a}.
+The inferred parameter values corresponding to the measurements of each spectral line are summarized together in Table~\ref{table:components}.  A comparison of the data and the best-fit models (and associated residuals) is presented in the form of channel maps in Figures~\ref{fig:13co} and \ref{fig:c18o} for $^{13}$CO and C$^{18}$O, respectively.  While overall the models successfully reproduce the observed emission, there are some interesting systematic residuals.  We will return to a discussion of their potential origins in Section~\ref{sec:discussion}.  The inferred physical structures for each line are in mild disagreement, as might be expected for an over-simplified model based on data products that are sensitive to different regions of the disk.  Nevertheless, they both yield effectively identical constraints in the marginalized projection to the \{$M_\ast$, $i_\mathrm{disk}$\}-plane, as shown in Figure~\ref{fig:posterior}, that are of most relevance to our stated goals.  Again, that is because the kinematic structure of the line emission has very little dependence on the density and temperature parameters \citep[see][]{rosenfeld12a,czekala15a}.
 
 
 
@@ -415,9 +440,11 @@ in Figure~\ref{fig:orbitboth}.
 
 \subsection{Joint Disk and Orbital Constraints on Individual Component Masses} \label{sec:joint}
 
-We combine the constraints from the disk velocity field with the updated orbital constraints to infer individual component masses in the \gw\ system. The disk modeling produced a joint constraint on the total stellar mass of $M_\ast = 5.5 \pm 0.2\, M_\odot$ and the disk inclination of $i_\mathrm{disk} = 135 \pm 2^\circ$ (see Figure~\ref{fig:posterior}). The uncertainty in the distance to \gw\ \citep[$388 \pm 5\,$pc,][]{kounkel16} linearly translates into a mass uncertainty, and so we convolve an additional 1.3\% mass uncertainty with this posterior.
+We combine the constraints from the disk velocity field with the updated orbital constraints to infer individual component masses in the \gw\ system. The disk modeling produced a joint constraint on the total stellar mass of $M_\mathrm{tot} = 5.5 \pm 0.2\, M_\odot$ and the disk inclination of $i_\mathrm{disk} = 135 \pm 2^\circ$ (see Figure~\ref{fig:posterior}). The uncertainty in the distance to \gw\ \citep[$388 \pm 5\,$pc,][]{kounkel17} linearly translates into a mass uncertainty, and so we convolve an additional 1.3\% mass uncertainty with this posterior.
 
-The radial velocity modeling produced a joint constraint on the semi-major axes of the inner and outer orbits modulo their unknown inclination, $a_\mathrm{A} \sin i_\mathrm{inner}$ and $a_\mathrm{AB} \sin i_\mathrm{outer}$. By virtue of the Levenberg-Marquardt minimization used to fit the orbit and derive covariances, we made the (justified) assumption that orbital posterior is well-described by a multi-dimensional Gaussian. To translate these constraints into constraints on the individual component masses, for each sample from the $\{M_\ast, i_\mathrm{disk}\}$ posteriors, we we draw multivariate Gaussian variables from the $\{ a_\mathrm{A} \sin i_\mathrm{inner}, a_\mathrm{AB} \sin i_\mathrm{outer}\}$ posteriors and then compute individual component masses using Kepler's Law and the boundary condition that $M_A + M_B + M_C = M_\ast$ and assuming that $i_\mathrm{inner} = i_\mathrm{outer} = i_\mathrm{disk}$. The results are are summarized in Table~\ref{table:component_masses}. Placing a geometrical prior on the values of $i_\mathrm{inner}$ and $i_\mathrm{outer}$ and allowing them to vary over their full range permits a variety of mass ratios, although marginalizing over all of these configurations still yields $p(M_A > 4.0) = 84\%$.
+The radial velocity modeling produced a joint constraint on the semi-major axes of the inner and outer orbits modulo their unknown inclination, $a_\mathrm{A} \sin i_\mathrm{inner}$ and $a_\mathrm{AB} \sin i_\mathrm{outer}$. By virtue of the Levenberg-Marquardt minimization used to fit the orbit and derive covariances, we made the (justified) assumption that orbital posterior is well-described by a multi-dimensional Gaussian.
+To translate these constraints into constraints on the individual component masses, for each sample from the $\{M_\mathrm{tot}, i_\mathrm{disk}\}$ posteriors, we we draw multivariate Gaussian variables from the $\{ a_\mathrm{A} \sin i_\mathrm{inner}, a_\mathrm{AB} \sin i_\mathrm{outer}\}$ posteriors and then compute individual component masses using Kepler's Law and the boundary condition that $M_A + M_B + M_C = M_\mathrm{tot}$ and assuming that $i_\mathrm{inner} = i_\mathrm{outer} = i_\mathrm{disk}$. The results are are summarized in Table~\ref{table:component_masses}.
+Placing a geometrical prior on the values of $i_\mathrm{inner}$ and $i_\mathrm{outer}$ and allowing them to vary over their full range permits a variety of mass ratios, although marginalizing over all of these configurations still yields $p(M_A > 4.0) = 84\%$.
 
 \todo{Alternatively (should this be included?)}, we fit a joint orbit of our radial velocity measurements, the radial velocity measurements provided by \citet{fang14}, and the three astrometric data points provided by \citet{berger11}. We include a parameter for radial velocity ``jitter,'' which we infer to be $0.37\,\kms$ and a parameter for the RV offset of the \citet{fang14} measurements. While \citet{berger11} had noted that they were unable to derive a satisfactory joint fit of their astrometric data with the \citet{mathieu91} radial velocity data, we are able to achieve a satisfactory fit within the uncertainties of the measurements \todo{(values listed in comments)}. This leads to the remarkable conclusion that the planes of the stellar orbits are misaligned by $45 \pm 5^\circ$ with respect to the protoplanetary disk.
 
@@ -536,12 +563,12 @@ MIST & $3.86^{+0.27}_{-0.34}$ & $0.38^{+0.33}_{-0.11}$ & 27\%\\
 \end{figure}
 
 \subsection{Formation of the \gw\ system}
-It is now clear that \gw\ is a massive triple star system ($M_\ast = 5.5\,M_\odot$), hosting a massive and large disk ($M_\mathrm{disk} \gtrsim 0.5\,M_\odot$, $r_c \sim 250\,\mathrm{AU}$). Given the observed composite spectrum (G8) and inferred component masses ($M_A > 4.0\,M_\odot$) it is also probably quite young, making \gw\ an extremely interesting system to study in the context of star and planet theories about formation, migration, and stability.
+It is now clear that \gw\ is a massive triple star system ($M_\mathrm{tot} = 5.5\,M_\odot$), hosting a massive and large disk ($M_\mathrm{disk} \gtrsim 0.5\,M_\odot$, $r_c \sim 250\,\mathrm{AU}$). Given the observed composite spectrum (G8) and inferred component masses ($M_A > 4.0\,M_\odot$) it is also probably quite young, making \gw\ an extremely interesting system to study in the context of star and planet theories about formation, migration, and stability.
 
 \textbf{Is the disk stable today?}
 Given the large disk mass and the massive components, we investigate whether whether the disk is Toomre stable today and whether it is possible that the stars formed from disk fragmentation due to gravitational instability. We estimate Toomre's Q parameter using
 \begin{equation}
-Q = \frac{c_s \Omega}{\pi G \Sigma} = \sqrt{\frac{k_\mathrm{B} M_\ast}{\pi^2 \mu m_\mathrm{H} G}} \sqrt{\frac{T(r)}{r^2 \Sigma^2(r)}}
+Q = \frac{c_s \Omega}{\pi G \Sigma} = \sqrt{\frac{k_\mathrm{B} M_\mathrm{tot}}{\pi^2 \mu m_\mathrm{H} G}} \sqrt{\frac{T(r)}{r^2 \Sigma^2(r)}}
 \end{equation}
 For the range of disk parameters determined from our CO fitting, the minimum value is $Q \approx 10$, which occurs far in the outer disk, at $r \sim 300\,$AU. So, the disk is not currently undergoing disk instability. \todo{How do our estimates of the disk mass from the dust compare to the large values determined by \citet{mathieu91,mathieu95}?}
 
@@ -617,7 +644,7 @@ Is the tertiary in the disk? What is the effect of the tertiary orbit on the dis
 \acknowledgments
 IC acknowledges support from the Smithsonian Institution for the production of this manuscript. IC acknowledges helpful conversations with Maxwell Moe about GW Ori and related systems.  SA acknowledges the very helpful support provided by the NRAO Student Observing Support program related to the early development of this project.  This paper makes use of the following ALMA data: XX  ALMA is a partnership of ESO (representing its member states), NSF (USA), and NINS (Japan), together with NRC (Canada) and NSC and ASIAA (Taiwan), in cooperation with the Republic of Chile.  The Joint ALMA Observatory is operated by ESO, AUI/NRAO, and NAOJ.  This research made extensive use of the Julia programming language \citep{julia12} and Astropy \citep{astropy13}.
 
-\bibliographystyle{aasjournal.bst}
+\bibliographystyle{yahapj.bst}
 \bibliography{GWOri.bib}
 
 \end{document}
