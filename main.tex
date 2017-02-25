@@ -135,9 +135,7 @@ C$^{18}$O $J$=2$-$1 & $0\farcs92\times0\farcs58$, 126\degr\ & 5     \\
 
 \begin{figure*}[ht!]
 \begin{center}
-  \includegraphics[width=\linewidth]{chanmaps_12co.pdf}
-  \includegraphics[width=\linewidth]{chanmaps_13co.pdf}
-  \includegraphics[width=\linewidth]{chanmaps_c18o.pdf}
+  \includegraphics{chmaps_all.pdf}
   \figcaption{Channel maps of the $^{12}$CO, $^{13}$CO, and C$^{18}$O ({\it from top to bottom}) line emission from the GW Ori disk.  Each channel represents the emission in a 170\,m\,s$^{-1}$-wide velocity bin.  LSRK velocities are indicated in the upper left, and synthesized beam sizes in the lower left, or each panel.  Scale bars are provided at the bottom right of each set of channel maps.
   \label{fig:chanmaps}}
   \end{center}
@@ -227,9 +225,7 @@ We use the spatially and spectrally resolved molecular line emission observed wi
 
 \begin{figure*}[ht!]
 \begin{center}
-  \includegraphics[width=\linewidth]{chanmaps_13co.pdf}
-  \includegraphics[width=\linewidth]{chanmaps_13co.pdf}
-  \includegraphics[width=\linewidth]{chanmaps_13co.pdf}
+  \includegraphics{chmaps_13CO.pdf}
   \figcaption{A comparison of the observed channel maps of the $^{13}$CO line emission ({\it top}) with a ``best-fit'' model ({\it middle}; constructed from a synthetic visibility set based on the inferred parameters listed in Table~\ref{table:components} and then imaged in the same way as the data) and the associated residuals ({\it bottom}; the imaged data$-$model residual visibilities).  The annotation is the same as in Fig.~\ref{fig:chanmaps}.
   \label{fig:13co}}
   \end{center}
@@ -243,9 +239,7 @@ where $T_m$ and $T_a$ are the midplane and ``atmosphere'' radial temperature pro
 
 \begin{figure*}[ht!]
 \begin{center}
-  \includegraphics[width=\linewidth]{chanmaps_c18o.pdf}
-  \includegraphics[width=\linewidth]{chanmaps_c18o.pdf}
-  \includegraphics[width=\linewidth]{chanmaps_c18o.pdf}
+  \includegraphics{chmaps_C18O.pdf}
   \figcaption{A comparison of the observed channel maps of the C$^{18}$O line emission ({\it top}) with a ``best-fit'' model ({\it middle}; constructed from a synthetic visibility set based on the inferred parameters listed in Table~\ref{table:components} and then imaged in the same way as the data) and the associated residuals ({\it bottom}; the imaged data$-$model residual visibilities).  The annotation is the same as in Fig.~\ref{fig:chanmaps}.
   \label{fig:c18o}}
   \end{center}
@@ -437,10 +431,18 @@ in Figure~\ref{fig:orbitboth}.
 \end{figure*}
 
 % RV variation of ~8-10 km/s coincides with an eclipse of ~0.6 mags in R, roughly gray. Might be caused by a knife-edge that has asymmetry wrt rotation axis (R-M effect).
+\todo{Expand text}
+Alternative radial velocity analysis using the \citet{fang14} points.
+Scaled by an inferred offset. Notable changes from the CfA only no-jitter orbit are
+$K_\mathrm{A} = 3.28 \pm 0.08\,\kms$, $e_\mathrm{inner} = 0.05 \pm 0.03$, $K_\mathrm{AB} = 2.27 \pm 0.13\,\kms$, $e_\mathrm{outer} = 0.29 \pm 0.05\,\kms$, for a jitter value of $\sigma_\mathrm{jitter} = 0.55 \pm 0.05\,\kms$.
+
+We also perform an additional orbital fit using the CfA velocities, \citet{fang14} radial velocities, and the three astrometric measurements in \citet{berger11}.
+The addition of the astrometric points allow us to constrain $a_\mathrm{inner} = 1.24 \pm 0.02\,\mathrm{AU}$, $i_\mathrm{inner} = 155 \pm 8^\circ$, $\Omega_\mathrm{inner} = 265 \pm 12^\circ$, $a_\mathrm{outer} = 9.1 \pm 0.1\,\mathrm{AU}$, $i_\mathrm{outer} = 153 \pm 6^\circ$, and
+$\Omega_\mathrm{outer} = 266 \pm 7^circ$ and constrains masses to be $M_A = 3.72 \pm 0.3 M_\odot$, $M_B = 0.66 \pm 0.20 M_\odot$, and $M_C = 1.13 \pm 0.23 M_\odot$. This orbit yields acceptable residuals to all points within the measurement uncertainties, although we note that the model predicts separations $\rho_\mathrm{inner}$ that are all smaller than the measurements. We are skeptical of the results of this fit, compared to the next section, the disk inclination is off.
 
 \subsection{Joint Disk and Orbital Constraints on Individual Component Masses} \label{sec:joint}
 
-We combine the constraints from the disk velocity field with the updated orbital constraints to infer individual component masses in the \gw\ system. The disk modeling produced a joint constraint on the total stellar mass of $M_\mathrm{tot} = 5.5 \pm 0.2\, M_\odot$ and the disk inclination of $i_\mathrm{disk} = 135 \pm 2^\circ$ (see Figure~\ref{fig:posterior}). The uncertainty in the distance to \gw\ \citep[$388 \pm 5\,$pc,][]{kounkel17} linearly translates into a mass uncertainty, and so we convolve an additional 1.3\% mass uncertainty with this posterior.
+We combine the constraints from the disk velocity field with the updated orbital constraints to infer individual component masses in the \gw\ system. The disk modeling produced a joint constraint on the total stellar mass of $M_\mathrm{tot} = 5.5 \pm 0.2\, M_\odot$ and the disk inclination of $i_\mathrm{disk} = 135 \pm 2^\circ$ (see Figure~\ref{fig:posterior}). The uncertainty in the distance to \gw\ \citep[$388 \pm 5\,$pc;][]{kounkel17} linearly translates into a mass uncertainty, and so we convolve an additional 1.3\% mass uncertainty with this posterior.
 
 The radial velocity modeling produced a joint constraint on the semi-major axes of the inner and outer orbits modulo their unknown inclination, $a_\mathrm{A} \sin i_\mathrm{inner}$ and $a_\mathrm{AB} \sin i_\mathrm{outer}$. By virtue of the Levenberg-Marquardt minimization used to fit the orbit and derive covariances, we made the (justified) assumption that orbital posterior is well-described by a multi-dimensional Gaussian.
 To translate these constraints into constraints on the individual component masses, for each sample from the $\{M_\mathrm{tot}, i_\mathrm{disk}\}$ posteriors, we we draw multivariate Gaussian variables from the $\{ a_\mathrm{A} \sin i_\mathrm{inner}, a_\mathrm{AB} \sin i_\mathrm{outer}\}$ posteriors and then compute individual component masses using Kepler's Law and the boundary condition that $M_A + M_B + M_C = M_\mathrm{tot}$ and assuming that $i_\mathrm{inner} = i_\mathrm{outer} = i_\mathrm{disk}$. The results are are summarized in Table~\ref{table:component_masses}.
