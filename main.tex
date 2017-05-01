@@ -143,33 +143,8 @@ C$^{18}$O $J$=2$-$1 & $0\farcs92\times0\farcs58$, 126\degr\ & 5     \\
 
 The 226\,GHz (1.3\,mm) continuum map shows a bright (flux density = 202\,mJy), compact but marginally resolved (deconvolved Gaussian FWHM $\approx 0\farcs9$) source centered on the GW Ori stellar system, with a peak intensity of 67\,mJy beam$^{-1}$ (S/N $\approx 1200$).  A crude estimate of the emission geometry (from a Gaussian fit to the visibilities) suggests an inclination of 35--40\degr\ from face-on, with the major axis oriented $\sim$170\degr\ E of N.
 
-The CO isotopologue channel maps reveal bright (integrated intensities of 41.8, 5.7, and 0.8\,Jy\,km\,s$^{-1}$ for $^{12}$CO, $^{13}$CO, and C$^{18}$O, respectively) and extended (FWHM $\sim 2\farcs5$) emission that is clearly in rotation around the continuum centroid, spanning a projected velocity range of $\pm$5\,km s$^{-1}$ from the line center.  The line emission is blueshifted to the south and redshifted to the north, consistent with the orientation estimated from the continuum emission.  The peak intensities for each line are $\sim$800, 290, and 55\,mJy beam$^{-1}$ in the brightest channels (peak S/N $\approx 130$, 35, and 14) for $^{12}$CO, $^{13}$CO, and C$^{18}$O, respectively.  The $^{12}$CO channel maps show some clear evidence for structured contamination from the surrounding molecular cloud, particularly as a streamer to the west at LSRK velocities $\sim$11--13\,km s$^{-1}$ and some diffuse clumps to the north around 13--14\,km s$^{-1}$.  Those features are much fainter, but still present, in $^{13}$CO emission; they are not apparent in the C$^{18}$O maps.
-
-
-
-%begin{figure*}[htb]
-%\begin{center}
-%  \includegraphics{chmaps_CO.pdf}
-%  \figcaption{\twelve\ channel maps. Due to the nearby cloud contamination, we do not model these. (Or, we model only the XX channels.)
-%  \label{fig:chmaps_CO}}
-%  \end{center}
-%\end{figure*}
-
-%\begin{figure*}[htb]
-%\begin{center}
-%  \includegraphics{chmaps_13CO.pdf}
-%  \figcaption{\thirteen\ channel maps, model, and residuals.
-%  \label{fig:chmaps_13CO}}
-%  \end{center}
-%\end{figure*}
-
-%\begin{figure*}[htb]
-%\begin{center}
-%  \includegraphics{chmaps_C18O.pdf}
-%  \figcaption{\eighteen\ channel maps, model, and residuals.
-%  \label{fig:chmaps_C18O}}
-%  \end{center}
-%\end{figure*}
+The CO isotopologue channel maps reveal bright (integrated intensities of 41.8, 5.7, and 0.8\,Jy\,km\,s$^{-1}$ for $^{12}$CO, $^{13}$CO, and C$^{18}$O, respectively) and extended (FWHM $\sim 2\farcs5$) emission that is clearly in rotation around the continuum centroid, spanning a projected velocity range of $\pm$5\,km s$^{-1}$ from the line center.  The line emission is blueshifted to the south and redshifted to the north, consistent with the orientation estimated from the continuum emission.
+The peak intensities for each line are $\sim$800, 290, and 55\,mJy beam$^{-1}$ in the brightest channels (peak S/N $\approx 130$, 35, and 14) for $^{12}$CO, $^{13}$CO, and C$^{18}$O, respectively.  The $^{12}$CO channel maps show some clear evidence for structured contamination from the surrounding molecular cloud, particularly as a streamer to the west at LSRK velocities $\sim$11--13\,km s$^{-1}$ and some diffuse clumps to the north around 13--14\,km s$^{-1}$.  Those features are much fainter, but still present, in $^{13}$CO emission; they are not apparent in the C$^{18}$O maps.
 
 
 
@@ -177,9 +152,11 @@ The CO isotopologue channel maps reveal bright (integrated intensities of 41.8, 
 
 \gw\ was monitored spectroscopically at the Harvard-Smithsonian Center for Astrophysics for more than 35 years, beginning in 1981 November. A total of 208 spectra were gathered through 2009 April using three nearly identical echelle spectrographs (Digital Speedometers, DS; now decommissioned) with a resolving power of $R \approx 35,000$ mounted on three different telescopes: the 1.5m Tillinghast reflector at the Fred L.\ Whipple Observatory (Mount Hopkins, AZ), the 4.5m-equivalent Multiple Mirror Telescope (also on Mount Hopkins) before conversion to a monolithic mirror, and occasionally also on the 1.5m Wyeth reflector at the Oak Ridge Observatory (in the town of Harvard, MA).  Each instrument was equipped with an intensified photon-counting Reticon detector limiting the output to a single echelle order 45~\AA\ wide, which was centered on the region of the \ion{Mg}{1}\,b triplet at 5187~\AA\ \citep[see][]{latham92}. The signal-to-noise ratios of these observations range from 14 to 59 per resolution element of 8.5~\kms. Wavelength calibrations were based on exposures of a Thorium-Argon lamp taken before and after each science exposure. Reductions were performed with a dedicated pipeline, and the zero-point of the velocities was monitored regularly by means of exposures of the evening and morning twilight sky. A further 80 spectra of \gw\ were collected with the Tillinghast Reflector Echelle Spectrograph \citep[TRES;][]{furesz08}, a bench-mounted, fiber-fed echelle instrument mounted on the 1.5m Tillinghast reflector with a resolving power of $R \approx 44,000$ and delivering 51 orders covering the wavelength interval 3900--9100~\AA. These observations were made between 2010 November and 2016 April.  Signal-to-noise ratios at 5200~\AA\ range from 28 to 195 per resolution element of 6.8~\kms. Wavelength calibration was carried out as above, and reductions were performed as described by \cite{buchhave10}. Radial-velocity standard stars were observed each night to monitor the zero point and place it on the same system as the DS observations to within $\sim$0.1~\kms.
 
-All of our spectra appear single-lined.  Radial velocities (RVs) were measured by cross-correlation using the IRAF\footnote{IRAF is distributed by the National Optical Astronomy Observatories, which are operated by the Association of Universities for Research in Astronomy, Inc., under cooperative agreement with the National Science Foundation.} task {\tt XCSAO} \citep{kurtz98}, with templates taken from a large library of calculated spectra based on model atmospheres by R.\ L.\ Kurucz \citep[see][]{nordstroem94,latham02}. These synthetic templates cover a 300~\AA\ region centered on the \ion{Mg}{1}\,b triplet, and are available for a wide range of effective temperatures ($T_{\rm eff}$), surface gravities ($\log g$), metallicities ([Fe/H]), and rotational broadenings ($v \sin i$ when seen in projection). The optimal template was selected by running grids of cross-correlations over broad ranges in the template parameters, as described by \cite{torres02}, seeking the best match as measured by the peak cross-correlation coefficient averaged over all exposures. This was done separately for the DS and TRES spectra, using only the order centered on the \ion{Mg}{1}\,b line, for consistency.
+All of our spectra appear single-lined.  Radial velocities (RVs) were measured by cross-correlation using the IRAF\footnote{IRAF is distributed by the National Optical Astronomy Observatories, which are operated by the Association of Universities for Research in Astronomy, Inc., under cooperative agreement with the National Science Foundation.} task {\tt XCSAO} \citep{kurtz98}, with templates taken from a large library of calculated spectra based on model atmospheres by R.\ L.\ Kurucz \citep[see][]{nordstroem94,latham02}.
+These synthetic templates cover a 300~\AA\ region centered on the \ion{Mg}{1}\,b triplet, and are available for a wide range of effective temperatures ($T_{\rm eff}$), surface gravities ($\log g$), metallicities ([Fe/H]), and rotational broadenings ($v \sin i$ when seen in projection). The optimal template was selected by running grids of cross-correlations over broad ranges in the template parameters, as described by \cite{torres02}, seeking the best match as measured by the peak cross-correlation coefficient averaged over all exposures. This was done separately for the DS and TRES spectra, using only the order centered on the \ion{Mg}{1}\,b line, for consistency.
 
-In principle these template parameters may be interpreted as estimates of the physical properties of the star. In practice, however, the narrow wavelength range ($\sim$100~\AA\ for TRES, 45~\AA\ for DS) limits the analysis by introducing a degeneracy between temperature, surface gravity, and metallicity such that a match of nearly equal quality is obtained by slightly increasing or decreasing these template parameters in tandem. We therefore made the reasonable assumption that \gw\ has solar metallicity, as expected for young stars, and we held $\log g$ fixed at a range of values between 2.5 and 4.0, varied in steps of 0.5, and solved only for $T_{\rm eff}$ and $v \sin i$. The best fit was found for $\log g = 3.0$, for both the DS and TRES spectra, and the resulting temperatures and rotational broadenings were very similar: 5180~K and 43~\kms\ for DS, and 5210~K and 44~\kms\ for TRES. For the remainder of the paper we adopt consensus values of $T_{\rm eff} = 5200 \pm 200$~K and $v \sin i = 44 \pm 2~\kms$. Because of the strong dependence of temperature on the adopted surface gravity (and metallicity) we cannot rule out a bias in $T_{\rm eff}$, which may also have a contribution from veiling (not considered in our templates), if significant in the spectral region analyzed.  Radial velocities were based on a template with parameters nearest to those reported above ($T_{\rm eff} = 5250$~K, $v \sin i = 40~\kms$, $\log g = 3.0$); they are listed in Table~\ref{tab:RVs} in the heliocentric frame along with our uncertainty estimates from {\tt XCSAO}. The average internal errors for the DS and TRES velocities are 1.41 and 0.98~\kms, respectively.
+In principle these template parameters may be interpreted as estimates of the physical properties of the star. In practice, however, the narrow wavelength range ($\sim$100~\AA\ for TRES, 45~\AA\ for DS) limits the analysis by introducing a degeneracy between temperature, surface gravity, and metallicity such that a match of nearly equal quality is obtained by slightly increasing or decreasing these template parameters in tandem. We therefore made the reasonable assumption that \gw\ has solar metallicity, as expected for young stars, and we held $\log g$ fixed at a range of values between 2.5 and 4.0, varied in steps of 0.5, and solved only for $T_{\rm eff}$ and $v \sin i$. The best fit was found for $\log g = 3.0$, for both the DS and TRES spectra, and the resulting temperatures and rotational broadenings were very similar: 5180~K and 43~\kms\ for DS, and 5210~K and 44~\kms\ for TRES. For the remainder of the paper we adopt consensus values of $T_{\rm eff} = 5200 \pm 200$~K and $v \sin i = 44 \pm 2~\kms$.
+Because of the strong dependence of temperature on the adopted surface gravity (and metallicity) we cannot rule out a bias in $T_{\rm eff}$, which may also have a contribution from veiling (not considered in our templates), if significant in the spectral region analyzed.  Radial velocities were based on a template with parameters nearest to those reported above ($T_{\rm eff} = 5250$~K, $v \sin i = 40~\kms$, $\log g = 3.0$); they are listed in Table~\ref{tab:RVs} in the heliocentric frame along with our uncertainty estimates from {\tt XCSAO}. The average internal errors for the DS and TRES velocities are 1.41 and 0.98~\kms, respectively.
 
 \begin{deluxetable}{lcccc}
 \tablewidth{18pc}
@@ -212,8 +189,10 @@ In principle these template parameters may be interpreted as estimates of the ph
 \end{deluxetable}
 
 
-% \subsection{Photometric Observations}
-% \textbf{To be included? Joey?}
+\subsection{Time-series Photometry}
+\textbf{Joey Rodriguez, KELT photometry. Description of KELT, reduction procedures, and full presentation of the data.}
+
+
 % Photometry from Grankin, KELT.
 
 
@@ -288,40 +267,12 @@ The inferred parameter values corresponding to the measurements of each spectral
 
 \subsection{An Updated Model of the Stellar Orbits} \label{sec:orbit}
 
-The discovery orbit of \gw\ by \cite{mathieu91}, with a period of
-242 days, was based on a small subset of the same spectra used here,
-covering slightly more than seven years. The present data set is six
-times larger and extends the time coverage to nearly 35 years.
-\cite{mathieu91} noted a drift in the residuals from their
-spectroscopic orbit that they speculated could be due to a third
-component, or perhaps an asymmetry in a massive circumbinary disk,
-causing the reflex motion of the inner binary with a period exceeding
-their time coverage. As our data set expanded over the years, our own
-preliminary spectroscopic solutions for the 242-day orbit displayed an
-increasingly clear periodic pattern in the residuals with a period of
-about 11.5 years, strongly suggesting the presence of a third body in
-the \gw\ system with a nearly circular orbit. Direct near-infrared
-imaging by \cite{berger11} revealed the stellar nature of the third
-component for the first time, and also resolved the inner binary.  Our
-extended time coverage in radial velocities now enables us to derive a
-robust spectroscopic orbit for the third star.
+The discovery orbit of \gw\ by \cite{mathieu91}, with a period of 242 days, was based on a small subset of the same spectra used here, covering slightly more than seven years. The present data set is six times larger and extends the time coverage to nearly 35 years. \cite{mathieu91} noted a drift in the residuals from their spectroscopic orbit that they speculated could be due to a third component, or perhaps an asymmetry in a massive circumbinary disk,
+causing the reflex motion of the inner binary with a period exceeding their time coverage. As our data set expanded over the years, our own preliminary spectroscopic solutions for the 242-day orbit displayed an
+increasingly clear periodic pattern in the residuals with a period of about 11.5 years, strongly suggesting the presence of a third body in the \gw\ system with a nearly circular orbit. Direct near-infrared
+imaging by \cite{berger11} revealed the stellar nature of the third component for the first time, and also resolved the inner binary.  Our extended time coverage in radial velocities now enables us to derive a robust spectroscopic orbit for the third star.
 
-We used standard weighted non-linear least-squares techniques
-\citep[e.g.,][]{press92} to solve for the elements of the inner and
-outer Keplerian orbits simultaneously, assuming the inner binary acts
-as a point mass in the outer orbit, and including the effects of light
-travel time. Initial fits showed that a number of the measurements had
-very large residuals, including instances of several consecutive
-exposures over periods of a few days or weeks with residuals of the
-same sign, possibly resulting from real phenomena such as flaring or
-accretion events. A total of 23 such outliers were removed, and are
-flagged in Table~\ref{tab:RVs}. The derived elements of the inner and
-outer orbits are presented in Table~\ref{tab:elements}, along with
-other properties derived from them. The residuals from our initial fit
-indicated our formal velocity errors are slightly underestimated, so
-for our final solution we have scaled them by a factor of 1.12 to
-achieve a reduced $\chi^2$ of unity.
-
+We used standard weighted non-linear least-squares techniques \citep[e.g.,][]{press92} to solve for the elements of the inner and outer Keplerian orbits simultaneously, assuming the inner binary acts as a point mass in the outer orbit, and including the effects of light travel time. Initial fits showed that a number of the measurements had very large residuals, including instances of several consecutive exposures over periods of a few days or weeks with residuals of the same sign, possibly resulting from real phenomena such as flaring or accretion events. A total of 23 such outliers were removed, and are flagged in Table~\ref{tab:RVs}. The derived elements of the inner and outer orbits are presented in Table~\ref{tab:elements}, along with other properties derived from them. The residuals from our initial fit indicated our formal velocity errors are slightly underestimated, so for our final solution we have scaled them by a factor of 1.12 to achieve a reduced $\chi^2$ of unity.
 
 \begin{deluxetable}{lc}
 \tablewidth{0pc}
@@ -380,28 +331,16 @@ Time interval [cycles]\dotfill            &             3.0 \\
 \end{deluxetable}
 
 
-The period of the inner orbit is consistent with that of
-\cite{mathieu91}, and the eccentricity is insignificant, as was
-also found by them. On the other hand, the velocity semi-amplitude of
-our inner orbit, $K_{\rm A} = 3.54 \pm 0.11~\kms$, is significantly
-smaller than theirs ($K_{\rm A} = 4.7 \pm 0.3~\kms$), but similar to
-the one by \cite{fang14} ($K_{\rm A} = 3.41 \pm 0.17~\kms$).
-Graphical representations of our observations and the inner and outer
-orbit models as a function of orbital phase are shown in
-Figure~\ref{fig:orbitin} and Figure~\ref{fig:orbitout}, respectively,
-and a representation of the full motion as a function of time is seen
-in Figure~\ref{fig:orbitboth}.
+The period of the inner orbit is consistent with that of \cite{mathieu91}, and the eccentricity is insignificant, as was
+also found by them. On the other hand, the velocity semi-amplitude of our inner orbit, $K_{\rm A} = 3.54 \pm 0.11~\kms$, is significantly smaller than theirs ($K_{\rm A} = 4.7 \pm 0.3~\kms$), but similar to the one by \cite{fang14} ($K_{\rm A} = 3.41 \pm 0.17~\kms$). Graphical representations of our observations and the inner and outer
+orbit models as a function of orbital phase are shown in Figure~\ref{fig:orbitin} and Figure~\ref{fig:orbitout}, respectively, and a representation of the full motion as a function of time is seen in Figure~\ref{fig:orbitboth}.
 
 
 \begin{figure}
 \epsscale{1.15}
 \plotone{figorbit1.eps}
 %
-\figcaption[]{Radial-velocity measurements of \gw\ and best-fit model
-  for the inner orbit, after subtracting the motion in the outer
-  orbit. The dotted line in the top panel represents the
-  center-of-mass velocity of the triple system. The bottom panel
-  displays the residuals.\label{fig:orbitin}}
+\figcaption[]{Radial-velocity measurements of \gw\ and best-fit model for the inner orbit, after subtracting the motion in the outer orbit. The dotted line in the top panel represents the center-of-mass velocity of the triple system. The bottom panel displays the residuals.\label{fig:orbitin}}
 %
 \end{figure}
 
@@ -410,11 +349,7 @@ in Figure~\ref{fig:orbitboth}.
 \epsscale{1.15}
 \plotone{figorbit2.eps}
 %
-\figcaption[]{Radial-velocity measurements of \gw\ and best-fit model
-  for the outer orbit, after subtracting the motion in the inner
-  orbit. The dotted line in the top panel represents the
-  center-of-mass velocity of the triple system. The bottom panel
-  displays the residuals.\label{fig:orbitout}}
+\figcaption[]{Radial-velocity measurements of \gw\ and best-fit model for the outer orbit, after subtracting the motion in the inner orbit. The dotted line in the top panel represents the center-of-mass velocity of the triple system. The bottom panel displays the residuals.\label{fig:orbitout}}
 %
 \end{figure}
 
@@ -424,9 +359,7 @@ in Figure~\ref{fig:orbitboth}.
 % \plotone{figout.eps}
 \plotone{figout1.eps}
 %
-\figcaption[]{Radial-velocity measurements of \gw\ as a function of
-  time, and best-fit model for the triple system. The dotted line
-  represents the center-of-mass velocity.\label{fig:orbitboth}}
+\figcaption[]{Radial-velocity measurements of \gw\ as a function of time, and best-fit model for the triple system. The dotted line represents the center-of-mass velocity.\label{fig:orbitboth}}
 %
 \end{figure*}
 
@@ -460,12 +393,12 @@ $M_C$ & 0.68 & 0.05 & $M_\odot$ \\
 \enddata
 \end{deluxetable}
 
-%
-% \subsection{Expanded Catalog of Photometric Eclipses}
-%
-% % Presentation of photometry.
-% % Catalog of eclipse dates
-% % Discussion of possible occulter radius
+
+\subsection{Catalog of Photometric Eclipses}
+
+Catalog of eclipse dates
+Presentation of photometry.
+Discussion of possible occulter radius
 %
 % \begin{figure}[htb]
 % \begin{center}
@@ -486,7 +419,7 @@ $M_C$ & 0.68 & 0.05 & $M_\odot$ \\
 % % \tablewidth{dimen}
 % % \tablenum{text}
 % % \tablecolumns{6}
-% \tablecaption{Photometric Eclipse Catalog\label{table:eclipses} \todo{NOTE: this eclipse data is only for reference when doing the RV fit to exclude outliers. NOT for publication until appropriate authors (Shevchenko et al.) have been contacted and their permission granted.}
+% \tablecaption{Photometric Eclipse Catalog\label{table:eclipses} \todo{NOTE: this eclipse data is only for reference. when doing the RV fit to exclude outliers. NOT for publication until appropriate authors (Shevchenko et al.) have been contacted and their permission granted.}
 % }
 % \tablehead{\colhead{Eclipse Number} & \colhead{Start} & \colhead{End} & \colhead{Duration} & \colhead{Decrement} & \colhead{Telescope}\\
 % & [JD] & [JD] & [days] & [mmag] & }
@@ -504,12 +437,12 @@ $M_C$ & 0.68 & 0.05 & $M_\odot$ \\
 % \enddata
 % \end{deluxetable}
 %
-% Figure from KELT, ASAS, and AAVSO.
+Figure from KELT and ASAS.
 
 \section{Discussion} \label{sec:discussion}
 
 \subsection{The Evolutionary State of GW Ori A}
-Pre-main sequence evolutionary models are commonly used to infer the mass and age of young stars using measurements of their photospheric properties. We perform this exercise for \gw~A and evaluate the consistency of the model predictions with our measured dynamical mass. Given our inability to detect secondary or tertiary spectral lines in our high S/N optical spectra, we assume that the photosphere of \gw~A dominates the luminosity of the system, and the contributions from the B and C components are negligible. We adopt the photospheric properties of \gw~A as determined by \citet{fang14}: $T_\mathrm{eff} = 5500 \pm 200\,\mathrm{K}$ and $L = 48 \pm 10\,L_\odot$. These measurements clearly place \gw~A in a high mass region of the Hertzsprung Russell Diagram (see Figure~\ref{fig:PMS}, left).
+Pre-main sequence evolutionary models are commonly used to infer the mass and age of young stars using measurements of their photospheric properties. We perform this exercise for \gw~A and evaluate the consistency of the model predictions with our measured dynamical mass. Given our inability to detect secondary or tertiary spectral lines in our high S/N optical spectra, we assume that the photosphere of \gw~A dominates the luminosity of the system, and the contributions from the B and C components are negligible. We adopt the photospheric properties of \gw~A as determined by \citet{fang14}: $T_\mathrm{eff} = 5500 \pm 200\,\mathrm{K}$ and $L = 48 \pm 10\,L_\odot$. These measurements clearly place \gw~A in a high mass region of the Hertzsprung Russell Diagram (see Figure~\ref{fig:PMS}, left). \todo{Redo these measurements assuming that the optical light ratio is actually $\sim 15\%$.}
 
 % List the models.
 We evaluate the concordance of the following pre-main sequence models: \citet{choi16} models, \citet{dotter08}, \citet{tognelli11}, and \citet{siess00}. We cannot test the \citet{baraffe15} models because they do not include models with sufficiently massive stars. We evaluate the model predictions in a Bayesian manner, following the approach in \citet{jorgensen05,rosenfeld12b,czekala15a}. The models deliver (among other quantities) the photospheric properties as a function of stellar mass and age,
