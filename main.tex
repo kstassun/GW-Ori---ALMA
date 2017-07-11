@@ -579,30 +579,38 @@ We show that this misalignment is probable without needing to invoke the astrome
 % Also note that combining all of these would just result in tighter constraints on the components. But given the mis-match of the astrometric points, we claim this RV + disk analysis as our main conclusion (our data, too).
 
 
-
-
 \section{Discussion} \label{sec:discussion}
 
+% With the disk-based and radial velocity constraints now in place, we shift discussion to the photospheric properties of the stars, age of the system. Then, we use these constraints to discuss the dynamic inner environment, given rise to by the triple nature of the system, including the quasi-periodic nature of the photometric eclipses and pulsed accretion. Finally, we discuss the system architecture in context of other triple systems and possible formation mechanisms.
+
 \subsection{The Age and Photospheric Properties of the GW Ori Stars}
-% This needs to be changed from "evaluating the models" to instead "what are the stellar properties?" The fact that this is a triple and we don't have good photospheric constraints nor truly solid orbital constraints, means that we are not able to "evaluate" the PMS models the same way we did for AK Sco and DQ Tau. Instead, I think we need to take the previous mass and inclination meauserements, and then discuss where to place these stars on the HR diagram.
 
-% First, discuss Keivan's compilation of the SED, and how he did the fitting.
-% Discuss how the spectroscopic constraints give us a rough estimate of V-band flux ratio
-
-% Do a fit for using age, Teff, M_A, M_B, M_C and L_star using the MIST models. As constraints, we have total luminosity, H-band flux ratio, and broad posteriors on T_eff1 and T_eff2. Look in Master-crib.py first to see what's been done. Then, compare the posteriors on the masses to the posteriors on the masses from the RV + Disk fits.
-
-% Figure: Use posteriors on Teff, L to plot A, B, and C on an HR diagram.
+% First, discuss Keivan's compilation of the SED, and how he did the fitting, and what we are using as our estimates for Teff priors and total system luminosity.
 
 
-% Redo figure 14 (the Teffs and f_ratios as a function of age) using the mean best predictions for the stellar properties.
+% Discuss/rehash how the spectroscopic constraints give us a rough estimate of V-band flux ratio and effective temperatures
 
-Pre-main sequence evolutionary models are commonly used to infer the mass and age of young stars using measurements of their photospheric properties. We perform this exercise for \gw~A and evaluate the consistency of the model predictions with our measured dynamical mass. Given our inability to detect secondary or tertiary spectral lines in our high S/N optical spectra, we assume that the photosphere of \gw~A dominates the luminosity of the system, and the contributions from the B and C components are negligible. We adopt the photospheric properties of \gw~A as determined by \citet{fang14}: $T_\mathrm{eff} = 5500 \pm 200\,\mathrm{K}$ and $L = 48 \pm 10\,L_\odot$. These measurements clearly place \gw~A in a high mass region of the Hertzsprung Russell Diagram (see Figure~\ref{fig:PMS}, left). \todo{Redo these measurements assuming that the optical light ratio is actually $\sim 15\%$.}
+% Report on the fit for age, Teff, M_A, M_B, M_C and L_star using the MIST models. As constraints, we have total luminosity, H-band flux ratio, total stellar mass, and broad posteriors on T_eff1 and T_eff2. Compare these masses as inferred to that using the joint RV + disk results. They seem to be similar.
+
+% Figure: Use posteriors on Teff, L to plot A, B, and C on an HR diagram, which we'll reference.
+
+% Update Figure 14 (the Teffs and f_ratios as a function of age) using the mean best predictions for the stellar properties.
+
+Pre-main sequence evolutionary models are commonly used to infer the mass and age of young stars using measurements of their photospheric properties. We perform this exercise for \gw~A and evaluate the consistency of the model predictions with our measured dynamical mass. Due to the lingering uncertainties in the orbital constraints and thus the individual component masses, rather than evaluating the consistency of the pre-Main Sequence model predictions compared to our measured fundamental properties, instead we simply use the pre-Main Sequence models to guide discussion about the individual component properties and assess consistency.
+
+We adopt the luminosity constraints and extinction values of \obj\ as determined by \citet{fang14}: $L = 48 \pm 10\,L_\odot$ and $A_\mathrm{V} = \todo{XX}$.
+
+
 
 % List the models.
 We evaluate the concordance of the following pre-main sequence models: \citet{choi16} models, \citet{dotter08}, \citet{tognelli11}, and \citet{siess00}. We cannot test the \citet{baraffe15} models because they do not include models with sufficiently massive stars. We evaluate the model predictions in a Bayesian manner, following the approach in \citet{jorgensen05,rosenfeld12b,czekala15a}. The models deliver (among other quantities) the photospheric properties as a function of stellar mass and age,
 e.g., $T_\mathrm{eff}(M_\ast, \tau)$ and $L(M_\ast, \tau)$.
 The posterior probability distribution is found by evaluating the consistency of the model predictions for a given \{$M_\ast$, $\tau$\} with the measured photospheric properties by \citet{fang14}, multiplied by any priors on  \{$M_\ast$, $\tau$\} (in this case, flat)\footnote{Our code used to perform this analysis is available under an MIT open source license here: \url{https://github.com/iancze/ScottiePippen}}.
 The resulting posterior probability distributions are shown in Figure~\ref{fig:PMS} and are listed in Table~\ref{table:agreement}. In general, all four models make similar predictions about GW~Ori~A, $\langle M_A \rangle = 3.9 \pm 0.3\,M_\odot$ and $\langle \tau \rangle = 0.6 \pm 0.3\,$Myr. We assess the probability of consistency between the model-predicted mass and our dynamical mass by evaluating $p(M_\mathrm{model} = M_\mathrm{dyn}) = \int_0^\infty p_\mathrm{model}(M) \, p_\mathrm{dyn}(M) \, \mathrm{d}M$. For most models, the predicted stellar mass is significantly less than our measured dynamical mass, $M_A = 4.40 \pm 0.18\,M_\odot$, and is consistent only at the $2\sigma$ level. \todo{Notably, the value of $M_A$ predicted by our joint radial velocity and astrometric fit ($M_A = 3.72 \pm 0.32\,M_\odot$) is in complete agreement with the model predictions.} As mentioned by \citet{fang14}, \gw~A is likely at an earlier evolutionary stage than Herbig Be stars, although it will eventually become one.
+
+\citet{berger11} modeled the H-band visibilities of the \gw\ system measured by the IOTA/IONIC3 interferometer, and measured the positions of all three \gw\ components and their flux ratios. Their mean H-band flux ratios (computed as the weighted mean of all measurements) are $f_B/f_A = 0.57 \pm 0.05$ and $f_C/f_A = 0.23 \pm 0.01$. In Figure~\ref{fig:evolution}, we plot the ratio of effective temperatures and the computed flux ratios in Bessell I band and 2MASS H band. Bessell I roughly corresponds to the reddest echelle orders of the TRES spectrograph that we used to search for companion spectral lines. These flux ratios are generally very small and provide an explanation for why we were unable to detect secondary or tertiary spectral lines in our searches. Moreover, this means that the excess H-band flux of the B and C components is likely due to the presence of a circumstellar disk or accretion signatures above the photospheric emission of these stars, as \citet{berger11} speculated. \gw\ thus presents itself as an ideal candidate for long-term high resolution infrared radial velocity monitoring to detect spectral lines from the secondary and tertiary.
+
+% Discuss the conversation about how massive GW Ori is by Berger 11, Fang 14, and Fang 17. Our revised mass is lower.
 
 \begin{figure}[htb]
 \begin{center}
@@ -612,9 +620,6 @@ The resulting posterior probability distributions are shown in Figure~\ref{fig:P
   \end{center}
 \end{figure}
 
-
-\paragraph{Constraints on GW~Ori~B and GW~Ori~C}
-\citet{berger11} modeled the H-band visibilities of the \gw\ system measured by the IOTA/IONIC3 interferometer, and measured the positions of all three \gw\ components and their flux ratios. Their mean H-band flux ratios (computed as the weighted mean of all measurements) are $f_B/f_A = 0.57 \pm 0.05$ and $f_C/f_A = 0.23 \pm 0.01$. In Figure~\ref{fig:evolution}, we plot the ratio of effective temperatures and the computed flux ratios in Bessell I band and 2MASS H band. Bessell I roughly corresponds to the reddest echelle orders of the TRES spectrograph that we used to search for companion spectral lines. These flux ratios are generally very small and provide an explanation for why we were unable to detect secondary or tertiary spectral lines in our searches. Moreover, this means that the excess H-band flux of the B and C components is likely due to the presence of a circumstellar disk or accretion signatures above the photospheric emission of these stars, as \citet{berger11} speculated. \gw\ thus presents itself as an ideal candidate for long-term high resolution infrared radial velocity monitoring to detect spectral lines from the secondary and tertiary.
 
 \begin{figure}[htb]
 \begin{center}
@@ -627,76 +632,74 @@ The resulting posterior probability distributions are shown in Figure~\ref{fig:P
 
 \subsection{The dynamic center of the GW~Ori system} \label{sec:inner disk}
 
-\todo{CO sub-mm excess seen in \thirteen\ and \eighteen.}
+% 1 paragraph discussing that GW Ori is a triple system with misaligned orbits, photometric eclipses, and possible CO excess in the center.
 
-\todo{Fundamental CO emission}
+% Is the tertiary in the disk? What is the effect of the tertiary orbit on the disk, regarding inclination?
+% Photometric eclipses. This complicated tertiary flow may also contribute to photometric eclipses seen in the optical.
 
-\todo{Revise this to link discussion of Joey's new outer-period folded lightcurve}.
+% How does this relate to the pulsed accretion population? UZ Tau E, TWA 3A, DQ Tau?
+% Brief discussion of pulsed accretion and linking to UZ Tau, TWA3, DQ Tau, etc..
 
-Brief discussion of pulsed accretion and linking to UZ Tau, TWA3, DQ Tau, etc..
+% How does this relate to the Dipper population?
 
-Najita's blended fundamental emission peaks \citep{najita03}, while \citet{bast11} suggest that these might actually be the blended profiles of emission originating from physically distinct regions. In this case, perhaps individual circumstellar disks around the A and B stars. Or, the CO fundamental emission is consistent with with radius at the inner edge of the circumtriple disk, cleared by the C component. The tertiary star makes a complicated accretion flow than that studied for other well-known binaries \citep[e.g., DQ~Tau;]{artymowicz94,mathieu97}.
-
-\todo{Eclipses}
-Photometric eclipses. This complicated tertiary flow may also contribute to photometric eclipses seen in the optical. Not all are periodic, but some regularity with period? Can we record what orbital phases they occur at? Maybe there is some correlation with A and B.
-
-\todo{Speculation about dippers}
-Ansdell dippers
-
-Is the tertiary in the disk? What is the effect of the tertiary orbit on the disk.
+% Najita's blended fundamental emission peaks \citep{najita03}, while \citet{bast11} suggest that these might actually be the blended profiles of emission originating from physically distinct regions. In this case, perhaps individual circumstellar disks around the A and B stars. Or, the CO fundamental emission is consistent with with radius at the inner edge of the circumtriple disk, cleared by the C component. The tertiary star makes a complicated accretion flow than that studied for other well-known binaries \citep[e.g., DQ~Tau;]{artymowicz94,mathieu97}.
 
 
-\subsection{The \gw\ system in context}
+\subsection{The \gw\ triple system in context}
 
-\todo{Summary of basic properties of the system}
-It is now clear that \gw\ is a massive triple star system ($M_\mathrm{tot} = 5.5\,M_\odot$), hosting a massive and large disk ($M_\mathrm{disk} \gtrsim 0.5\,M_\odot$, $r_c \sim 250\,\mathrm{AU}$). Given the observed composite spectrum (G8) and inferred component masses it is also probably quite young, making \gw\ an extremely interesting system to study in the context of star and planet theories about formation, migration, and stability.
+% probably quite young, making \gw\ an extremely interesting system to study in the context of star and planet theories about formation, migration, and stability.
 
-\todo{Toomre analysis: Is the disk stable today?}
-Given the large disk mass and the massive components, we investigate whether whether the disk is Toomre stable today and whether it is possible that the stars formed from disk fragmentation due to gravitational instability. We estimate Toomre's Q parameter using
-\begin{equation}
-Q = \frac{c_s \Omega}{\pi G \Sigma} = \sqrt{\frac{k_\mathrm{B} M_\mathrm{tot}}{\pi^2 \mu m_\mathrm{H} G}} \sqrt{\frac{T(r)}{r^2 \Sigma^2(r)}}
-\end{equation}
-For the range of disk parameters determined from our CO fitting, the minimum value is $Q \approx 10$, which occurs far in the outer disk, at $r \sim 300\,$AU. So, the disk is not currently undergoing disk instability. \todo{How do our estimates of the disk mass from the dust compare to the large values determined by \citet{mathieu91,mathieu95}?}
 
-% Discussion of GW~Ori disk mass in context of \citet{andrews13}.
+% Discussion about the disk, its size, mass, etc. in context
+% GW~Ori disk mass in context of \citet{andrews13}.
 % Note Eisner 12, Sheehan and Eisner 14 discuss high disk masses in Taurus class I (younger sources).
 % Mann 15 also suggests young sources have more massive disks. NGC 2024.
 
-
-\todo{Analysis of multiple star formation and disk processing}
-
-\textbf{How did the various components form?}
-Fragmentation can be due to cooling or accretion. Highly variable accretion can force disks up to the fragmentation threshold, where binarity is a frequent outcome. Consensus that GI-formed objects will become brown dwarfs or stellar binary companions \citep{kratter10}, due to moderate disk temperatures and active accretion, which will grow these GI formed objects to higher masses.
-
-\citep{stamatellos09} BD formed in massive disks, but disks should be short lived. (Prediction for GW Ori lifetime?) Clearly disks are older than a few thousand years (their prediction). Predict lower mass objects are ejected by dynamical interactions. Disk fragmentation is a robust mechanism for brown dwarf formation. Again, most objects formed in disk grow to brown dwarf or hydrogen burning masses.
-
-\citep{forgan13} objects that form via GI, 90\% are above deuterium burning limits. Population synthesis model. GI then tidal downsizing is not principal mode of planet formation, but is primary means of forming brown dwarfs and low mass stars at large $a$.
-
-\citep{offner10}.
-Turbulent fragmentation is dominant channel for binary formation for \emph{low mass} stars. Is disk accretion ever so violent that it induces disk fragmentation? The fact (assumption?) that everything is coplanar and low eccentricity are expected from fragmentation from a single disk. Conclude that binaries are formed via turbulent core fragmentation (not disk). Disks are not massive enough to have gravitational instability in the disk. \citet{offner10} cite Howe \& Clarke 2009 for a review of observations.
-
-\citet{tokovinin97} finds that the distribution of mutual inclinations of the orbits in triple systems is inconsistent both with complete alignment of the inner and outer orbits, but also with independent inclinations of the two orbits.  However, we should note that this is for a population of much older systems, in which significant dynamical evolution could have occurred, particularly for the shorter-period systems.  The fact that GW Ori appears to have roughly-aligned, circular inner and outer orbits (!! does it?  to be confirmed) is suggestive of formation of one or both companions from the massive disk surrounding the system.  (Wild speculation here.)
-
-Speculation from \citet{berger11} about whether the stellar system is actual stable.
+%  Toomre analysis: Is the disk stable today?
+% Given the large disk mass and the massive components, we investigate whether whether the disk is Toomre stable today and whether it is possible that the stars formed from disk fragmentation due to gravitational instability. We estimate Toomre's Q parameter using
+% \begin{equation}
+% Q = \frac{c_s \Omega}{\pi G \Sigma} = \sqrt{\frac{k_\mathrm{B} M_\mathrm{tot}}{\pi^2 \mu m_\mathrm{H} G}} \sqrt{\frac{T(r)}{r^2 \Sigma^2(r)}}
+% \end{equation}
+% For the range of disk parameters determined from our CO fitting, the minimum value is $Q \approx 10$, which occurs far in the outer disk, at $r \sim 300\,$AU. So, the disk is not currently undergoing disk instability. \todo{How do our estimates of the disk mass from the dust compare to the large values determined by \citet{mathieu91,mathieu95}?}
 
 
-\todo{The stellar multiplicity in context of other systems}
-\textbf{Eric}: Some notes from Eric from reading literature on what is known about triple systems.  Is this extreme?
+%% Switch to discussion about stellar properties, and orbital properties in context
 
-While the ratio between the outer orbital period and the inner orbital period is smaller than in many hierarchical systems, it is not an outlier among triple systems.  In a detailed analysis of higher-order multiple systems, \citet{tokovinin97} found that the ratio $P_\mathrm{long} / P_{\rm short}$ in almost all systems was greater than 10, presumably reflecting which orbits are stable.  In GW Ori, this ratio is 16.
+% 1 sentence summary about the basics of the system (period, mass, mass ratio)
+% It is now clear that \gw\ is a massive triple star system ($M_\mathrm{tot} = 5.5\,M_\odot$), hosting a massive and large disk ($M_\mathrm{disk} \gtrsim 0.5\,M_\odot$, $r_c \sim 250\,\mathrm{AU}$). Given the observed composite spectrum (G8) and inferred component masses it is also
 
-(Tokovinin has an updated catalog on his website with about twice as many systems as in the CDS version from this paper, but it would be non-trivial to figure out how to remake the above plot.  Not sure it's necessary.)
+% While the ratio between the outer orbital period and the inner orbital period is smaller than in many hierarchical systems, it is not an outlier among triple systems.  In a detailed analysis of higher-order multiple systems, \citet{tokovinin97} found that the ratio $P_\mathrm{long} / P_{\rm short}$ in almost all systems was greater than 10, presumably reflecting which orbits are stable.  In GW Ori, this ratio is 16.
 
-Among late B star primaries (which GW Ori A will be on the main sequence), 13\% of systems have multiplicity of three or higher \citep{eggleton08}; this fraction is roughly constant across spectral types B--G.
+% (Tokovinin has an updated catalog on his website with about twice as many systems as in the CDS version from this paper, but it would be non-trivial to figure out how to remake the above plot.  Not sure it's necessary.)
+
+% Among late B star primaries (which GW Ori A will be on the main sequence), 13\% of systems have multiplicity of three or higher \citep{eggleton08}; this fraction is roughly constant across spectral types B--G.
+
+% Bate 2012 on his big fragmentation simulation: ``In particular, despite the fact that no objects form closer than $\approx 10$ au from each other, at the end of the calculation there exist 21 binary systems and one triple system with separations $<10$ au.''
+
+% In his simulations, of the triples that form, the orbits are misaligned with each other (though three are $\leq 6$ degrees, and 8 out of 9 are $\leq 36$ degrees).
+
+% Bate:  ``Observations also indicate that eccentricities $e < 0.1$ are rare for periods greater than $\approx$ 100 d (separations $\gtrsim$ 1 au). Raghavan et al. (2010) find no binaries with $e < 0.1$ and orbital periods greater than 100 d, though they do find that the outer orbits of two triples and one quadruple have $e < 0.1$. Duquennoy \& Mayor (1991) and Raghavan et al. (2010) also find that the upper-eccentricity envelope is dominated by components of triple systems, possibly due to the action of the Kozai mechanism (Kozai 1962).''
+%
+% Important for us to see what constraints we have on eccentricity of the orbits. The low eccentricity of the outer orbit is interesting in context of other systems.
 
 
-Bate 2012 on his big fragmentation simulation: ``In particular, despite the fact that no objects form closer than $\approx 10$ au from each other, at the end of the calculation there exist 21 binary systems and one triple system with separations $<10$ au.''
+%% Given the disk properties in context, and stellar properties in context, can we make any conclusions about how the system formed?
+% How did the various components form?
 
-In his simulations, of the triples that form, the orbits are misaligned with each other (though three are $\leq 6$ degrees, and 8 out of 9 are $\leq 36$ degrees).
+% Fragmentation can be due to cooling or accretion. Highly variable accretion can force disks up to the fragmentation threshold, where binarity is a frequent outcome. Consensus that GI-formed objects will become brown dwarfs or stellar binary companions \citep{kratter10}, due to moderate disk temperatures and active accretion, which will grow these GI formed objects to higher masses.
+%
+% \citep{stamatellos09} BD formed in massive disks, but disks should be short lived. (Prediction for GW Ori lifetime?) Clearly disks are older than a few thousand years (their prediction). Predict lower mass objects are ejected by dynamical interactions. Disk fragmentation is a robust mechanism for brown dwarf formation. Again, most objects formed in disk grow to brown dwarf or hydrogen burning masses.
+%
+% \citep{forgan13} objects that form via GI, 90\% are above deuterium burning limits. Population synthesis model. GI then tidal downsizing is not principal mode of planet formation, but is primary means of forming brown dwarfs and low mass stars at large $a$.
+%
+% \citep{offner10}.
+% Turbulent fragmentation is dominant channel for binary formation for \emph{low mass} stars. Is disk accretion ever so violent that it induces disk fragmentation? The fact (assumption?) that everything is coplanar and low eccentricity are expected from fragmentation from a single disk. Conclude that binaries are formed via turbulent core fragmentation (not disk). Disks are not massive enough to have gravitational instability in the disk. \citet{offner10} cite Howe \& Clarke 2009 for a review of observations.
+%
+% \citet{tokovinin97} finds that the distribution of mutual inclinations of the orbits in triple systems is inconsistent both with complete alignment of the inner and outer orbits, but also with independent inclinations of the two orbits.  However, we should note that this is for a population of much older systems, in which significant dynamical evolution could have occurred, particularly for the shorter-period systems.  The fact that GW Ori appears to have roughly-aligned, circular inner and outer orbits (!! does it?  to be confirmed) is suggestive of formation of one or both companions from the massive disk surrounding the system.  (Wild speculation here.)
+%
+% Speculation from \citet{berger11} about whether the stellar system is actual stable.
 
-Bate:  ``Observations also indicate that eccentricities $e < 0.1$ are rare for periods greater than $\approx$ 100 d (separations $\gtrsim$ 1 au). Raghavan et al. (2010) find no binaries with $e < 0.1$ and orbital periods greater than 100 d, though they do find that the outer orbits of two triples and one quadruple have $e < 0.1$. Duquennoy \& Mayor (1991) and Raghavan et al. (2010) also find that the upper-eccentricity envelope is dominated by components of triple systems, possibly due to the action of the Kozai mechanism (Kozai 1962).''
 
-Important for us to see what constraints we have on eccentricity of the orbits.
 
 % Need some comments on KH 15D (Chiang and Murray-Clay 2004, Capelo 2012). Disk around binary is misaligned by 10 - 20 degrees.
 
