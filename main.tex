@@ -16,7 +16,7 @@
 \newcommand{\eighteen}{C${}^{18}$O}
 
 
-% standardization of notation
+% standardizing notation
 %
 % disk parameters
 % i_\mathrm{disk} (not i_d or i)
@@ -31,7 +31,8 @@
 
 \begin{document}
 
-\title{Evidence for Disk--Stellar Mutual Inclinations in the Young and Massive GW Ori Triple System}
+\title{Evidence for Disk--Stellar Mutual Inclinations in the \\
+Young and Massive GW Ori Triple System}
 
 \correspondingauthor{Ian Czekala}
 \email{iczekala@stanford.edu}
@@ -449,61 +450,71 @@ imaging by \cite{berger11} revealed the stellar nature of the third component fo
 
 We used standard weighted non-linear least-squares techniques \citep[e.g.,][]{press92} to solve for the elements of the inner and outer Keplerian orbits simultaneously, assuming the inner binary acts as a point mass in the outer orbit, and including the effects of light travel time. \textbf{Initial fits showed that a number of the measurements had very large residuals, including instances of several consecutive exposures over periods of a few days or weeks with residuals of the same sign, possibly resulting from real phenomena such as flaring or accretion events. A total of 23 such outliers were removed, and are flagged in Table~\ref{tab:RVs}} \todo{Might no longer be true, with the SB2 orbit.} The derived elements of the inner and outer orbits are presented in Table~\ref{tab:elements}, along with other properties derived from them. The residuals from our initial fit indicated our formal velocity errors are slightly underestimated, so for our final solution we have scaled them by a factor of 1.12 to achieve a reduced $\chi^2$ of unity.
 
-\begin{deluxetable}{lc}
+\begin{deluxetable*}{lcc}
 \tablewidth{0pc}
-\tablecaption{Spectroscopic orbital elements of \gw. \todo{To be updated with SB2 orbit.} \label{tab:elements}}
+\tablecaption{Orbital elements of \gw. \label{tab:elements}}
 \tablehead{
-\colhead{~~~~~~~~~~~~Parameter~~~~~~~~~~~~} & \colhead{Value}
+\colhead{~~~~~~~~~~~~Parameter~~~~~~~~~~~~} & \colhead{RV} & \colhead{RV + astrometry}
 }
 \startdata
-\multicolumn{2}{c}{Inner orbit} \\
+\multicolumn{3}{c}{Inner orbit} \\
 \noalign{\vskip 1pt}
 \noalign{\hrule}
 \noalign{\vskip 3pt}
-$P$ [days]\dotfill                        &    241.446~$\pm$~0.066\phn\phn \\
-$\gamma$ [\kms]\dotfill                   &    +27.726~$\pm$~0.082\phn\phs \\
-$K_{\rm A}$ [\kms]\dotfill                 &        3.54~$\pm$~0.11 \\
-$e$\dotfill                               &      0.016~$\pm$~0.029 \\
-$\omega$ [deg]\dotfill                    &        210~$\pm$~100 \\
-$T_{\rm peri}$ [HJD$-$2,400,000]\dotfill   &      51861~$\pm$~67\phm{222} \\
+$P$ [days]\dotfill                        &    241.446~$\pm$~0.066\phn\phn  & \\
+$\gamma$ [\kms]\dotfill                   &    +27.726~$\pm$~0.082\phn\phs & \\
+$\Delta v_\mathrm{B}$\tablenotemark{a} [\kms] \dotfill & ? & \\
+$K_\mathrm{A}$ [\kms]\dotfill                 &        3.54~$\pm$~0.11 & \\
+$q$ \dotfill & & \\
+$e$\dotfill                               &      0.016~$\pm$~0.029 & \\
+$\omega_\mathrm{A}$ [deg]\dotfill                    &        210~$\pm$~100 & \\
+$\Omega$\tablenotemark{b} [deg]\dotfill                    &  \nodata      & \\
+$T_{\rm peri}$ [HJD$-$2,400,000]\dotfill   &      51861~$\pm$~67\phm{222} & \\
+$M_\mathrm{A}$ [$M_{\odot}$] \dotfill & \nodata & \\
+$M_\mathrm{B}$ [$M_{\odot}$] \dotfill & \nodata & \\
 \noalign{\vskip 2pt}
 \noalign{\hrule}
 \noalign{\vskip 2pt}
-\multicolumn{2}{c}{Derived properties from inner orbit} \\
+\multicolumn{3}{c}{Derived properties from inner orbit} \\
 \noalign{\vskip 1pt}
 \noalign{\hrule}
 \noalign{\vskip 3pt}
-$a_{\rm A} \sin i$ [AU]\dotfill   &      0.0787~$\pm$~0.0024\phn \\
-$f(M)$ [$M_{\sun}$]\dotfill                &    0.00111~$\pm$~0.00010 \\
-$M_{\rm B} \sin i /(M_A + M_B)^{2/3} \;$[$M_{\sun}$]\dotfill            &     0.1036~$\pm$~0.0031 \\
-Time interval [days]\dotfill              &            12574 \\
-Time interval [cycles]\dotfill            &             52.1 \\
+$a_{\rm A} \sin i$ [AU]\dotfill   &      0.0787~$\pm$~0.0024\phn & \\
+$f(M)$ [$M_{\sun}$]\dotfill                &    0.00111~$\pm$~0.00010 & \\
+$M_{\rm B} \sin i /(M_A + M_B)^{2/3} \;$[$M_{\sun}$]\dotfill            &     0.1036~$\pm$~0.0031 & \\
+Time interval [days]\dotfill              &            12574 & \\
+Time interval [cycles]\dotfill            &             52.1 & \\
 \noalign{\vskip 2pt}
 \noalign{\hrule}
 \noalign{\vskip 2pt}
-\multicolumn{2}{c}{Outer orbit} \\
+\multicolumn{3}{c}{Outer orbit} \\
 \noalign{\vskip 1pt}
 \noalign{\hrule}
 \noalign{\vskip 3pt}
-$P$ [days]\dotfill                        &       4187~$\pm$~42\phn\phn \\
-$K_{\rm AB}$ [\kms]\dotfill                &       2.04~$\pm$~0.12 \\
-$e$\dotfill                               &      0.061~$\pm$~0.058 \\
-$\omega$ [deg]\dotfill                    &        276~$\pm$~48\phn \\
-$T_{\rm peri}$ [HJD$-$2,400,000]\dotfill   &      53560~$\pm$~565\phn\phn \\
+$P$ [days]\dotfill                        &       4187~$\pm$~42\phn\phn & \\
+$K_{\rm AB}$ [\kms]\dotfill                &       2.04~$\pm$~0.12 & \\
+$e$\dotfill                               &      0.061~$\pm$~0.058 & \\
+$\omega_\mathrm{AB}$ [deg]\dotfill                    &        276~$\pm$~48\phn & \\
+$\Omega$\tablenotemark{b} [deg]\dotfill                    &    \nodata    & \\
+$T_{\rm peri}$ [HJD$-$2,400,000]\dotfill   &      53560~$\pm$~565\phn\phn & \\
+$M_\mathrm{C}$ [$M_{\odot}$] \dotfill & \nodata & \\
 \noalign{\vskip 2pt}
 \noalign{\hrule}
 \noalign{\vskip 2pt}
-\multicolumn{2}{c}{Derived properties from outer orbit} \\
+\multicolumn{3}{c}{Derived properties from outer orbit} \\
 \noalign{\vskip 1pt}
 \noalign{\hrule}
 \noalign{\vskip 3pt}
-$a_{\rm AB} \sin i$ [AU]\dotfill  &      0.782~$\pm$~0.045\phn\phn \\
-$f(M)$ [$M_{\sun}$]\dotfill                &    0.00364~$\pm$~0.00062 \\
-$M_{\rm C} \sin i / ((M_A + M_B + M_C) / M_\odot)^{2/3} \; $[$M_{\sun}$]\dotfill            &     0.1539~$\pm$~0.0088 \\
-Time interval [cycles]\dotfill            &             3.0 \\
+$a_{\rm AB} \sin i$ [AU]\dotfill  &      0.782~$\pm$~0.045\phn\phn & \\
+$f(M)$ [$M_{\sun}$]\dotfill                &    0.00364~$\pm$~0.00062 & \\
+$M_{\rm C} \sin i / (M_\mathrm{tot}\tablenotemark{c} / M_\odot)^{2/3} \; $[$M_{\sun}$]\dotfill            &     0.1539~$\pm$~0.0088 & \\
+Time interval [cycles]\dotfill            &             3.0 & \\
 \enddata
-%\tablecomments{.}
-\end{deluxetable}
+\tablenotetext{a}{We fit for a possible velocity offset  between the primary and secondary radial velocities. In reality, this term should be $0$, however, the non zero value likely indicates that there may be a degree of template mismatch between the stellar spectra and the synthetic spectra used as cross correlation templates.}
+\tablenotetext{b}{We follow the convention of the visual binary field and define the ascending node as the line of nodes where the secondary component (e.g., star B for the inner orbit, and star C for the outer orbit) crosses the plane of the sky moving \emph{away} from the observer.}
+\tablenotetext{c}{$M_\mathrm{tot} = M_\mathrm{A} + M_\mathrm{B} + M_\mathrm{C}$.}
+% \tablecomments{$M_\mathrm{tot} = M_\mathrm{A} + M_\mathrm{B} + M_\mathrm{C}$.}
+\end{deluxetable*}
 
 \todo{To be updated with SB2 orbit}.
 The period of the inner orbit is consistent with that of \cite{mathieu91}, and the eccentricity is insignificant, as was
