@@ -523,6 +523,13 @@ The period of the inner orbit is consistent with that of \cite{mathieu91}, and t
 also found by them. On the other hand, the velocity semi-amplitude of our inner orbit, $K_{\rm A} = 3.54 \pm 0.11~\kms$, is significantly smaller than theirs ($K_{\rm A} = 4.7 \pm 0.3~\kms$), but similar to the one by \cite{fang14} ($K_{\rm A} = 3.41 \pm 0.17~\kms$). Graphical representations of our observations and the inner and outer
 orbit models as a function of orbital phase are shown in Figure~\ref{fig:orbitin} and Figure~\ref{fig:orbitout}, respectively, and a representation of the full motion as a function of time is seen in Figure~\ref{fig:orbitboth}.
 
+\begin{figure*}
+\begin{center}
+  \includegraphics{lightcurve-rv.pdf}
+  \figcaption{Figures for the lightcurve and radial velocities. Radial-velocity measurements of \gw\ as a function of time, and best-fit model for the triple system. The dotted line represents the center-of-mass velocity.
+  \label{fig:orbitboth}}
+\end{center}
+\end{figure*}
 
 \begin{figure}
 \epsscale{1.15}
@@ -542,13 +549,6 @@ orbit models as a function of orbital phase are shown in Figure~\ref{fig:orbitin
 \end{figure}
 
 
-\begin{figure*}
-\epsscale{1.15}
-\plotone{figout1.pdf}
-%
-\figcaption[]{Radial-velocity measurements of \gw\ as a function of time, and best-fit model for the triple system. The dotted line represents the center-of-mass velocity.\label{fig:orbitboth}}
-%
-\end{figure*}
 
 Due to the uncertainty in measured radial velocities due to the unknown flux ratio, we explore radial velocity fits using a ``robust'' likelihood advocated by \citet[Sec. 8.3.1]{sivia06} as a conservative formulation for cases where the quoted uncertainty on each data point (in this case, the statistical errors from the \texttt{TODCOR} RV analysis) are treated as lower limits on the actual uncertainty, and have the possibility of growing by some scale factor. This likelihood has wider ``tails'' than the Gaussian likelihood function used in $\chi^2$ analysis, and is less sensitive to outliers at a (minor) expense of statistical power to constrain the orbital parameters. Given the large residuals from the orbital fit, we conclude that the statistical uncertainty of each measurement is an underestimate of the true uncertainty, and that there is a large contribution from unknown systematic effects and that a more robust likelihood function is warranted until the sources of the systematic errors can be identified.
 
