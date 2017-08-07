@@ -113,22 +113,8 @@ Swarthmore College, 500 College Avenue, Swarthmore, PA 19081, USA}
 \affiliation{Millennium Institute of Astrophysics, Santiago, Chile}
 
 
-%Michael B. Lund    Department of Physics and Astronomy, Vanderbilt University, 6301 Stevenson Center, Nashville, TN 37235, USA
-%Rudolf B. Kuhn     South African Astronomical Observatory, P.O. Box 9, Observatory 7935, South Africa
-%Daniel J. Stevens  Department of Astronomy, The Ohio State University, Columbus, OH 43210, USA
-%Robert J. Siverd   Las Cumbres Observatory Global Telescope Network, 6740 Cortona Drive, Suite 102, Santa Barbara, CA 93117, USA
-%David James        Astronomy Department, University of Washington, Box 351580, Seattle, WA 98195, USA
-%B. Scott Gaudi     Department of Astronomy, The Ohio State University, Columbus, OH 43210, USA
-%\author{ASAS-SN Co-Authors}
-%Benjamin J. Shappee$^{4,5}$,
-%Krzysztof Z. Stanek$^{2,15}$,
-%Thomas W.-S. Holoien$^{2,15,19}$,
-%Jose L. Prieto$^{20,21}$,
-%Christopher S. Kochanek$^{2,15}$,
-
-
 \begin{abstract}
-We present spatially and spectrally resolved Atacama Large Millimeter/submillimeter Array (ALMA) observations of gas and dust in the disk orbiting the pre-main sequence triple GW Ori. We forward-model the \thirteen\ and \eighteen\ $J$=2--1 transitions to put precise constraint on the total stellar mass of $5.29 \pm 0.09\,M_\odot$, and disk inclination of $i_\mathrm{disk} = 137.6 \pm 2.0^\circ$. We use 35 years of optical radial velocity monitoring and spectroscopic dentangling techniques to reveal \obj\ as a near equal-flux double-lined spectroscopic binary. Combining the measurements from these two datasets yields a precise constraint on the stellar masses of \todo{XX}. We publish a light curve with a 30-year baseline that shows several eclipse events. We show that this precise mass is consistent with the predictions of leading pre-main sequence evolutionary models based upon its observed photospheric properties. We put constraints on the orbital configuration of the triple system within the massive disk and discuss this in the context of star and planet formation.
+We present spatially and spectrally resolved Atacama Large Millimeter/submillimeter Array (ALMA) observations of gas and dust in the disk orbiting the pre-main sequence triple star GW Ori. We forward-model the \thirteen\ and \eighteen\ $J$=2--1 transitions to put precise constraint on the total stellar mass of $5.29 \pm 0.09\,M_\odot$, and disk inclination of $i_\mathrm{disk} = 137.6 \pm 2.0^\circ$. We use 35 years of optical radial velocity monitoring and spectroscopic dentangling techniques to reveal \obj\ as a near equal-flux double-lined spectroscopic binary. Combining the measurements from these two datasets yields a precise constraint on the stellar masses of \todo{XX}, and a strong indication that the disk is misaligned with at least one of the stellar orbits. Incorporating archival astrometry into a radial-velocity + astrometric reinforces the conclusion that the stellar and disk orbital planes are misaligned by as much as $45^\circ$. We publish a light curve with a 30-year baseline that shows several eclipse events, and suggest that these eclipses are linked to the strong mutual inclinations. We also conclude that the stellar masses and photospheric properties suggest that show that this precise mass is consistent with the predictions of leading pre-main sequence evolutionary models based upon its observed photospheric properties. We put constraints on the orbital configuration of the triple system within the massive disk and discuss this in the context of star and planet formation.
 \end{abstract}
 \keywords{ protoplanetary disks -- stars: fundamental parameters -- stars: pre-main sequence -- stars: individual (GW Ori)}
 
@@ -532,23 +518,20 @@ orbit models as a function of orbital phase are shown in Figure~\ref{fig:orbitin
 \end{figure*}
 
 \begin{figure}
-\epsscale{1.15}
-\plotone{figorbit1.pdf}
-%
-\figcaption[]{Radial-velocity measurements of \gw\ and best-fit model for the inner orbit, after subtracting the motion in the outer orbit. The dotted line in the top panel represents the center-of-mass velocity of the triple system. The bottom panel displays the residuals.\label{fig:orbitin}}
-%
+\begin{center}
+  \includegraphics{inner-orbit.pdf}
+  \figcaption{Radial-velocity measurements of \gw\ and best-fit model for the inner orbit, after subtracting the motion in the outer orbit. The dotted line in the top panel represents the center-of-mass velocity of the triple system. The bottom panel displays the residuals.
+  \label{fig:orbitin}}
+\end{center}
 \end{figure}
-
 
 \begin{figure}
-\epsscale{1.15}
-\plotone{figorbit2.pdf}
-%
-\figcaption[]{Radial-velocity measurements of \gw\ and best-fit model for the outer orbit, after subtracting the motion in the inner orbit. The dotted line in the top panel represents the center-of-mass velocity of the triple system. The bottom panel displays the residuals.\label{fig:orbitout}}
-%
+\begin{center}
+  \includegraphics{outer-orbit.pdf}
+  \figcaption{Radial-velocity measurements of \gw\ and best-fit model for the outer orbit, after subtracting the motion in the inner orbit. The dotted line in the top panel represents the center-of-mass velocity of the triple system. The bottom panel displays the residuals.
+  \label{fig:orbitout}}
+\end{center}
 \end{figure}
-
-
 
 Due to the uncertainty in measured radial velocities due to the unknown flux ratio, we explore radial velocity fits using a ``robust'' likelihood advocated by \citet[Sec. 8.3.1]{sivia06} as a conservative formulation for cases where the quoted uncertainty on each data point (in this case, the statistical errors from the \texttt{TODCOR} RV analysis) are treated as lower limits on the actual uncertainty, and have the possibility of growing by some scale factor. This likelihood has wider ``tails'' than the Gaussian likelihood function used in $\chi^2$ analysis, and is less sensitive to outliers at a (minor) expense of statistical power to constrain the orbital parameters. Given the large residuals from the orbital fit, we conclude that the statistical uncertainty of each measurement is an underestimate of the true uncertainty, and that there is a large contribution from unknown systematic effects and that a more robust likelihood function is warranted until the sources of the systematic errors can be identified.
 
@@ -562,7 +545,7 @@ The stellar components are $M_A = 3.24 \pm 0.40\,M_\odot$, $M_B = 1.56 \pm 0.20\
   \includegraphics{astro.pdf}
   \figcaption{Orbits from the joint RV-astrometric fit. Orbits are shaded according to their phase, where black represents periastron and color hue increases with orbital phase. \emph{top left}: orbits relative to the primary star A, in the plane of the sky, with the three epochs of astrometry from \citet{berger11}. \emph{top right}:, sky plane, relative to center of mass. Bottom left, looking down North axis. Bottom right, looking down East axis.
   Positive Z axis points towards observer.
-  Representative disk orbit shown as grey dashed line.
+  Representative circular disk orbit shown as grey dashed line.
   \label{fig:astro}}
 \end{center}
 \end{figure*}
