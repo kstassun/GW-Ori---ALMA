@@ -346,7 +346,7 @@ The uncertainty in the distance to \gw\ \citep[$388 \pm 5\,$pc;][]{kounkel17} li
 \begin{figure*}
 \begin{center}
   \includegraphics{lightcurve-rv.pdf}
-  \figcaption{\emph{top}: The photometric observations of GW Ori from 1987 until mid 2017. All photometric observations displayed here are in the $V$-band (ASAS, ASAS-SN, and Grankin et al.) or a broader filter (KELT) which has been shifted to align with $V$-band where the time series overlap. \emph{bottom}: primary and secondary radial velocities overlaid with several realizations of the most probable orbits, to show uncertainty in the orbit. Reticon velocities are shown with square points, TRES velocities are shown with circles, and the dotted line represents the center-of-mass velocity. Residuals for this orbit are shown in the panels below.
+  \figcaption{\emph{top}: photometric observations of GW Ori from 1987 until mid 2017. All photometric observations displayed here are in the $V$-band (ASAS, ASAS-SN, and Maidanak) or a broader filter (KELT) which has been shifted to align with $V$-band where the time series overlap. \emph{bottom}: primary (blue) and secondary (orange) radial velocities overlaid with several realizations of the most probable orbits, to show uncertainty in the orbit. Reticon velocities are shown with squares, TRES velocities are shown with circles, and the dotted line represents the center-of-mass velocity. Residuals for this orbit are shown in the panels below.
   \label{fig:orbitboth}}
 \end{center}
 \end{figure*}
@@ -355,15 +355,14 @@ The uncertainty in the distance to \gw\ \citep[$388 \pm 5\,$pc;][]{kounkel17} li
 \begin{figure}
 \begin{center}
   \includegraphics{inner-orbit.pdf}
-  \figcaption{Radial-velocity measurements of \gw\ and best-fit model for the inner orbit, after subtracting the motion in the outer orbit. The dotted line in the top panel represents the center-of-mass velocity of the triple system. The bottom panel displays the residuals.
-  \label{fig:orbitin}}
+  \figcaption{\emph{top}: $V$-band light curve phased to the inner orbital period. No discernible correlation is detected. \emph{bottom}: RV measurements of \gw\ and best-fit model for the inner orbit, after subtracting the motion due to the outer orbit.  \label{fig:orbitin}}
 \end{center}
 \end{figure}
 
 \begin{figure}
 \begin{center}
   \includegraphics{outer-orbit.pdf}
-  \figcaption{Radial-velocity measurements of \gw\ and best-fit model for the outer orbit, after subtracting the motion in the inner orbit. The dotted line in the top panel represents the center-of-mass velocity of the triple system. The bottom panel displays the residuals. The ASAS (red), ASAS-SN (purple), and Maidanak (yellow) $V$-band photometric observations of GW Ori phased to $\sim$4121 days, the derived orbital period of the outer companion.
+  \figcaption{\emph{top}: $V$-band light curve phased to the outer orbital period, showing an emerging trend that dimmings and eclipse events tend to cluster near and after apoastron ($\sim 0.4 - 0.8$). \emph{bottom}: RV measurements of \gw\ and best-fit model for the outer orbit, after subtracting the motion due to the inner orbit.
   \label{fig:orbitout}}
 \end{center}
 \end{figure}
@@ -380,11 +379,11 @@ In this section, we first discuss our orbital fit to the RVs determined in \S\re
 We fit a hierarchical triple orbit and solve for the elements of the inner and outer Keplerian orbits simultaneously, assuming the inner binary acts as a point mass in the outer orbit. To address possible systematic offsets present in the RV dataset, we fit for three offset terms: 1) $\Delta v$ TRES,  applied as a shift to all TRES RVs to account for the offset of the instrumental RV zeropoint 2) $\Delta v_2$ Reticon and 3) $\Delta v_2$ TRES, offsets which are applied to the secondary RVs to account for possible offset velocities due to template mismatch between the synthetic spectrum used as a cross-correlation template and the true spectrum of the secondary star. The residuals from our initial fit indicated our formal velocity errors are underestimated, and so the uncertainties on each data point are scaled until the final reduced $\chi_\nu^2 = 1$ for our final solution.
 
 The period of the inner orbit is consistent with that of \citet{mathieu91,fang14}; however, due to the SB2 nature of the system, most other orbital parameters have significantly changed. We find a larger semi-amplitude for the primary, $K_{\rm A} = 8.36 \pm 0.14~\kms$, a mass ratio of $q \equiv M_\mathrm{B} / M_\mathrm{A} = 0.60 \pm 0.02$, and a statistically significant eccentricity $e_\mathrm{in} = 0.13 \pm 0.02$.
-We find the outer orbit has an orbital period of $P_\mathrm{out} = 4218 \pm 60$ days, or 11.5 years, and a statistically significant eccentricity, $e_\mathrm{out} = 0.22 \pm 0.09$. All parameters of the RV fit are listed in the first column of Table~\ref{tab:elements} and the full orbit as a function of time is shown in the second panel of Figure~\ref{fig:orbitboth}.
+We find the outer orbit has an orbital period of $P_\mathrm{out} = 4218 \pm 60$ days, or 11.5 years, and a statistically significant eccentricity, $e_\mathrm{out} = 0.22 \pm 0.09$. We find offset terms statistically inconsistent with zero: a small but non-negligable offset between the Reticon and TRES zeropoints of $0.49\;\kms$ and larger offsets for the secondary velocities of $8.77\;\kms$ and $6.41\;\kms$, for the Reticon and TRES RVs, respectively. Given the large intrinsic linewidth ($v \sin i \approx 40\;\kms$), these large offsets can reasonably be ascribed to template mismatch. All parameters of the RV fit are listed in the first column of Table~\ref{tab:elements} and the full orbit as a function of time is shown in the second panel of Figure~\ref{fig:orbitboth}.
 Graphical representations of our observations and the inner and outer orbit models as a function of orbital phase are shown in Figure~\ref{fig:orbitin} and Figure~\ref{fig:orbitout}, respectively.
 
-Although there are only three epochs of published astrometry in \citet{berger11}, these points may still considerably constrain the parameter space of possible orbits. Therefore, we explore a joint RV-astrometric analysis built upon a model of the ``three-dimensional orbit'' following \citet{murray10}, which adds new model parameters like the semi-major axis, inclination, and position angle on the sky for both inner and out orbits. For a likelihood function, we combine the $\chi^2$ radial velocity likelihood and a $\chi^2$ likelihood function for the separation and azimuth measurements. As with the disk analysis, we also use a geometric prior on the orbital inclinations. For their last epoch of measurements in 2005, \citet{berger11} report an alternate position for the C component, and so we do a separate fit considering that this is the true location of C. The newly constrained parameters are in the second and third columns of Table~\ref{tab:elements}.
-With the addition of astrometric constraints, we are able to constrain the masses of individual stellar components and the inclinations of the orbital planes, which are also listed in Table~\ref{tab:elements}. Depending on whether the reported or alternate postition for C is used, we find the total mass to be $M_\mathrm{tot} = 5.7 \pm 0.7$ or $M_\mathrm{tot} = 6.1 \pm 0.9$, respectively, both of which are nicely consistent with that independently measured by the disk-based analysis.
+Although there are only three epochs of published astrometry in \citet{berger11}, these points may still considerably constrain the parameter space of possible orbits. Therefore, we explore a joint RV-astrometric analysis built upon a model of the ``three-dimensional orbit'' following \citet{murray10}, which adds new model parameters like semi-major axis, orbital inclination, and position angle of the ascending node for both inner and outer orbits. For a likelihood function, we combine the $\chi^2$ RV likelihood and a new $\chi^2$ likelihood for the separation and azimuth measurements of the B and C components relative to the position of A. As with the disk analysis, we also use a geometric prior on the orbital inclinations. For their last measurement epoch (2005), \citet{berger11} report an alternate position for the C component, and so we also perform a separate fit as if this were the true location of C. The newly constrained parameters are in the second and third columns of Table~\ref{tab:elements}.
+With the addition of the astrometric dataset, we are able to constrain the individual stellar masses and the inclinations of the orbital planes, which are also listed in Table~\ref{tab:elements}. Depending on whether the original or alternate position for C is used, we find the total stellar mass to be $M_\mathrm{tot} = 5.7 \pm 0.7\,M_\odot$ or $M_\mathrm{tot} = 6.1 \pm 0.9\,M_\odot$, respectively. Both measurements are nicely consistent with the $M_\mathrm{tot}$ independently measured by the disk-based analysis ($M_\mathrm{tot} = 5.29 \pm 0.09\,M_\odot$).
 
 \begin{deluxetable*}{lccc}
 \tablewidth{0pc}
@@ -442,7 +441,7 @@ $M_{\rm B} \sin i \;$[$M_{\sun}$]\dotfill            &     0.18~$\pm$~0.01 & \no
 $M_{\rm C} \sin i / (M_\mathrm{tot} / M_\odot)^{2/3} \; $[$M_{\sun}$]\dotfill            &     0.22~$\pm$~0.02 & \nodata  & \nodata \\
 $M_\mathrm{tot}\;$ [$M_{\sun}$]\dotfill & \nodata & $5.7 \pm 0.7$ & $6.1 \pm 0.9 $ \\
 \enddata
-\tablenotetext{a}{We fit for a potential velocity offset between the primary and secondary radial velocities. In principle, this term should be consistent with $0$; the non-zero value likely indicates that there is some moderate template mismatch between the secondary stellar spectrum and the synthetic spectrum used as a cross correlation template.}
+\tablenotetext{a}{We include parameters for a potential velocity offset between the primary and secondary radial velocities for each instrument. In principle, this term should be consistent with $0$; the non-zero value likely indicates that there is some moderate template mismatch between the secondary stellar spectrum and the synthetic spectrum used as a cross correlation template.}
 \tablenotetext{b}{We follow the convention of the visual binary field and define the ascending node as the line of nodes where the secondary component (e.g., star B for the inner orbit, and star C for the outer orbit) crosses the plane of the sky moving \emph{away} from the observer.}
 \tablenotetext{\dagger}{Fit using the ``alternate'' C position for the 2005 epoch of astrometry in \citet{berger11}.}
 % \tablecomments{}
@@ -454,29 +453,32 @@ $M_\mathrm{tot}\;$ [$M_{\sun}$]\dotfill & \nodata & $5.7 \pm 0.7$ & $6.1 \pm 0.9
   \includegraphics{astro.pdf}
   \figcaption{Orbits from the joint RV-astrometric fit. Orbits are shaded according to their phase, where black represents periastron and color hue increases with orbital phase. \emph{top left}: orbits relative to the primary star A, in the plane of the sky, with the three epochs of astrometry from \citet{berger11}. \emph{top right}:, sky plane, relative to center of mass. Bottom left, looking down North axis. Bottom right, looking down East axis.
   Positive Z axis points towards observer.
-  Representative circular disk orbit shown as grey dashed line.
+  A ficticious particle, on a circular orbit coplanar with the circumtriple disk a \todo{XX} au., Representative circular disk orbit shown as grey dashed line.
   \label{fig:astro}}
 \end{center}
 \end{figure*}
 
-Perhaps most interestingly, the inner orbital plane is inferred to be misaligned with the circum-triple disk at a statistically significant level ($i_\mathrm{disk} \approx 137^\circ$, $\Omega_\mathrm{disk} \approx 180.6^\circ$), and the outer orbital plane also appears to be inconsistent with the disk inclination, as well. Using our radial velocity results and a wide range of permissible orbital elements, one would infer that at the first epoch (2003) of the \citet{berger11} astrometric measurements the tertiary would be moving with a large positive radial velocity (relative to the systemic velocity) and by the last epoch (2005) it would be moving at approximately the systemic velocity, suggesting that the line of nodes for the outer orbit is close to the E-W axis.
-Meanwhile, our disk results clearly demonstrate that the line of nodes for the disk is the N-S axis, suggesting that these orbits must be misaligned. We note that both of these claims of misalignment rest upon only three astrometric epochs, however, so we caution against overinterpretating the exact results. In the next section, we use only our newly derived radial velocity and disk modeling results to form a more conservative estimate of the relative inclinations, but also find strong evidence that the inner stellar orbit and disk are at least mildly misaligned. We advocate future astrometric monitoring of the \gw\ system to further improve the three-dimensional orbit and confirm the inclinations of the stellar orbits.
+To measure the degree of misalignment between the orbital planes and the circumtriple disk, we calculate the angle $\Phi$ between the angular momentum vectors of each orbit according to \citet{fekel81}
+\begin{equation}
+  \cos \Phi = \cos i_1 \cos i_2 + \sin i_1 \sin i_2 \cos(\Omega_1 - \Omega_2).
+\end{equation}
+We find that the mutual inclination between the disk and the inner stellar orbit is $\Phi_\mathrm{in} = 44\pm5^\circ$ and the mutual inclination between the disk and the outer stellar orbit is $\Phi_\mathrm{out} = 54\pm 7^\circ$; these values are similar if one uses the ``alternate'' C position ($\Phi_\mathrm{in} = 45 \pm 5^\circ$, $\Phi_\mathrm{out} = 50 \pm 6^\circ$). Such a large misalignment is surprising given the naive expectation that the stellar orbits and disk would be roughly co-planar.  Since these results only rest upon three astrometric epochs, however, there is a possibility that the large inferred mutual inclinations may be the result of unaccounted for systematic effects. In the next section, we use only the newly derived RVs and disk inclination to formulate a more conservative estimate of the mutual inclinations. We advocate continued astrometric monitoring of the \gw\ system to further improve the three-dimensional orbit and definitively confirm the inclinations of the stellar orbits.
 
-\subsection{Joint Radial Velocity and Disk Constraints on Individual Component Masses} \label{sec:joint}
-
-In this section, we combine the double-lined spectroscopic binary constraints with the constraints on the total disk mass to infer the individual stellar masses of the \gw\ system without referencing the \citet{berger11} astrometry. We construct a joint likelihood function with the following five parameters: $M_\mathrm{A}$, $M_\mathrm{B}$, $M_\mathrm{C}$, $i_\mathrm{inner}$, and $i_\mathrm{outer}$.
-The double-lined radial velocity constraints are sufficiently captured by the summary statistics $M_\mathrm{A} \sin^3 i_\mathrm{inner}$, $M_\mathrm{B} \sin^3 i_\mathrm{inner}$ and $M_\mathrm{C} \sin i_\mathrm{outer} / (M_\mathrm{tot} / M_\odot)^{2/3}$ and the covariances between them, which are well represented by a multivariate Gaussian distribution.\footnote{Note that we do not use additional constraints on $q_\mathrm{inner}$ or other derived parameters, as this would amount to double-counting the radial velocity points in the fit.} The disk constraint on the total stellar mass $M_\mathrm{tot}$ is well-represented by a Gaussian, as well.
+\subsection{Joint Radial Velocity and Disk Constraints on Individual Component Masses}
+\label{sec:joint}
+In this section, we combine the double-lined RV constraints with the disk-based constraints on the total stellar mass to form an independent constraint on the individual stellar masses of the \gw\ system without referencing the \citet{berger11} astrometry. We construct a joint likelihood function with the following five parameters: $M_\mathrm{A}$, $M_\mathrm{B}$, $M_\mathrm{C}$, $i_\mathrm{in}$, and $i_\mathrm{out}$.
+The double-lined radial velocity constraints are sufficiently captured by the summary statistics $M_\mathrm{A} \sin^3 i_\mathrm{in}$, $M_\mathrm{B} \sin^3 i_\mathrm{in}$, $M_\mathrm{C} \sin i_\mathrm{out} / (M_\mathrm{tot} / M_\odot)^{2/3}$ and the covariances between them, which are well represented by a multivariate Gaussian distribution.\footnote{Note that we do not use additional constraints on $q_\mathrm{inner}$ or other derived parameters, as this would amount to double-counting the RV constraints.} The disk constraint on the total stellar mass $M_\mathrm{tot}$ is well-represented by a Gaussian, as well.
 We enforce flat priors on the stellar masses and geometrical priors on the inclinations. We use the ensemble sampler MCMC \citep{goodman10,foreman-mackey13} with 20 walkers to explore the posterior for 50,000 iterations, burn 25,000 iterations, and assess convergence by ensuring the Gelman-Rubin statistic \citep{gelman14} is $\hat{R} < 1.1$ for all parameters.
 
 \begin{deluxetable}{lcc}
 \tablecaption{Joint constraints on stellar masses and orbital inclinations \label{table:component_masses}}
 \tablehead{\colhead{Parameter} & \colhead{RV + astrometry} & \colhead{RV + disk}}
 \startdata
-$M_\mathrm{A}$ [$M_\odot$] & $3.09_{-0.59}^{+0.13}$ & $2.47_{-0.53}^{+0.15}$  \\
-$M_\mathrm{B}$ [$M_\odot$] & $1.49_{-0.28}^{+0.07}$ & $1.65_{-0.32}^{+0.10}$ \\
-$M_\mathrm{C}$ [$M_\odot$] & $0.69_{-0.17}^{+0.89}$ & $0.88_{-0.20}^{+0.87}$ \\
-$i_\mathrm{inner}$ [deg] & $36.7_{-0.8}^{+3.1}$ & $151.5_{-2.3}^{+0.9}$ \\
-$i_\mathrm{outer}$ [deg] & $48_{-29}^{+29}$ & $130_{-27}^{+28}$ \\
+$M_\mathrm{A}$ [$M_\odot$] & $2.80_{-0.31}^{+0.36}$ & $2.74_{-0.52}^{+0.15}$  \\
+$M_\mathrm{B}$ [$M_\odot$] & $1.68_{-0.18}^{+0.21}$ & $1.65_{-0.31}^{+0.10}$ \\
+$M_\mathrm{C}$ [$M_\odot$] & $1.15_{-0.23}^{+0.40}$ & $0.88_{-0.19}^{+0.85}$ \\
+$i_\mathrm{in}$ [deg] & $157_{-1}^{+1}$ & $151_{-2}^{+1}$ \\
+$i_\mathrm{out}$ [deg] & $150_{-7}^{+7}$ & $130_{-27}^{+28}$ \\
 \enddata
 \tablecomments{The RV + astrometry values are replicated from Table~\ref{tab:elements} for comparison purposes. We note that we are not able to infer the absolute inclination of the stellar orbits directly from the radial velocity data, so there is in fact an alternate solution for the RV + disk results that yields $i_\mathrm{alt} = 180^\circ - i$. This solution would be inconsistent with the astrometric motion, however, so we opt to only report the solutions with $i \geq 90^\circ$.}
 \end{deluxetable}
@@ -484,13 +486,13 @@ $i_\mathrm{outer}$ [deg] & $48_{-29}^{+29}$ & $130_{-27}^{+28}$ \\
 \begin{figure}[ht!]
 \begin{center}
   \includegraphics{incl_posterior.pdf}
-  \figcaption{The inclination posteriors on the disk inclination, inner stellar orbit (A - B), and outer stellar orbit (AB - C), as determined from various joint fits. Because $i_\mathrm{out}$ is essentially unconstrained by the RV + disk analysis, we leave it off the plot for aesthetic reasons. The geometric prior on inclination (uniform orientation of orbits in 3D space) is shown as a thin grey dotted line.
+  \figcaption{The inclination posteriors on the disk inclination, inner stellar orbit, and outer stellar orbit, as determined from various joint fits. Because $i_\mathrm{out}$ is essentially unconstrained by the RV + disk analysis, it is not plotted for aesthetic reasons. The geometric prior on inclination (uniform orientation of orbits in 3D space) is shown as a thin grey dotted line.
   \label{fig:incl_posterior}}
   \end{center}
 \end{figure}
 
-This analysis produces the following non-symmetric posteriors on the individual component masses and orbital inclinations, summarized in Table~\ref{table:component_masses}. Although the RV + disk analysis is only able to constrain the inclination of the stellar orbits and not the position angle as well (as in the astrometric fit), there is still evidence that the stellar orbital plane is misaligned by the disk. If the inferred orbital inclinations are different, then this sets a lower limit on the total mutual inclination between the orbits (i.e., the angle between the angluar momentum vectors of the stellar orbit and that of the disk). Even if the inclinations were inferred to be the same, if the position angles were different, the orbits would be misaligned. However, if the inclinations are not the same, then the orbits are misaligned. To highlight these findings, we overplot our newly derived constraints on the disk inclination and the stellar orbits in Figure~\ref{fig:incl_posterior}.
-
+This analysis produces consistent but less precise constraints on the stellar masses as the joint RV + astrometric fits (see Table~\ref{table:component_masses}). Like the RV + astrometric analysis, the disk + RV analysis also indicates that the inner stellar orbit must be significantly misaligned with the disk, since the difference between $i_\mathrm{in}$ and $i_\mathrm{disk}$ provides a lower limit on the mutual inclination because the true mutual inclination must consider the position angles of the orbits as well. To highlight these findings, we overplot our newly derived constraints on the disk inclination and the stellar orbits in Figure~\ref{fig:incl_posterior}.
+Interestingly, the constraints on $i_\mathrm{in}$ differ between the RV + astrometry and the RV + disk results at a significant level. We speculate that this difference could be due to unknown systematics in the astrometry or RV datasets, or potentially if our assumption about the distance to \gw\ is incorrect, and that it might be at a further distance. This is because the astrometry + RV analysis does not require a distance to the source, while the disk-based analysis does require a distance in order to break the $M_\mathrm{tot} / d$ degeneracy.
 
 At the lowest inclinations (nearest to edge-on, $i = 90^\circ$) are the measurements for the disk in \thirteen\ and \eighteen. This is commensurate with the disk inclination measurements from \citet{fang17}, and so we consider these results to be robust. Next, we show the inferred inner inclination from the joint RV + disk mesaurements. The outer inclination is essentially unconstrained by the RV + disk fit. The fact that the RV + astrometric fit is inconsistent with this, tells us that perhaps there is unknown systematics affecting the fit.
 
