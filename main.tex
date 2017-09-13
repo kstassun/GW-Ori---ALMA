@@ -511,13 +511,21 @@ In light of this, the process of inferring stellar parameters becomes rather dif
 
 
 \subsection{Photometric Analysis}
-Using the Lomb-Scargle (LS) periodicity search algortithim \citep{Lomb76,Scargle82} within the VARTOOLS analysis package \citep{Hartman:12}, we searched for periodic variability in the high cadenced KELT observations. Specifically, we remove the eclipses shown in Table \ref{tab:eclipses} from the KELT data and searched for a periodic signal from 1.1 to 100 days. The top two periods we recover are 74.798 and 2.931 days. See Figure \ref{figure:phased} for the phase-folded lightcurves. Additionally, we remove the KELT observations and phase the $V$-band observations from ASAS, ASAS-SN, and Maidanak to our derived orbital periods of 241.79 and 4121.12 days. We find no convincing coherent signal at the $\sim$242 days but the photometric observations phased to the $\sim$4121 day period show a coherent sinusoidal variability with a peak-to-peak amplitude of $\sim$0.15 mag.
+Using the Lomb-Scargle (LS) periodicity search algorithm \citep{lomb76,scargle82} within the VARTOOLS analysis package \citep{Hartman:12}, we searched for periodic variability in the high cadenced KELT observations. Specifically, we remove the eclipses shown in Table \ref{tab:eclipses} from the KELT data and searched for a periodic signal from 1.1 to 100 days. The top two periods we recover are 74.798 and 2.931 days. See Figure \ref{fig:phased} for the phase-folded lightcurves. Additionally, we remove the KELT observations and phase the $V$-band observations from ASAS, ASAS-SN, and Maidanak to our derived orbital periods of 241.79 and 4121.12 days. We find no convincing coherent signal at the $\sim$242 days but the photometric observations phased to the $\sim$4121 day period show a coherent sinusoidal variability with a peak-to-peak amplitude of $\sim$0.15 mag.
+
+We identify several new eclipse events listed in Table~\ref{tab:eclipses} and plotted in Figure~\ref{fig:eclipse-gallery}.
 
 \begin{figure}[!ht]
 \centering\includegraphics[width=0.99\linewidth, trim = 0 3.5in 0 0]{Figure_Phased.pdf}
 \caption{The KELT photometric observations of GW Ori, with the three eclipses removed, phased to the 2.931 (Top) and 74.798 (Bottom) day periods recovered from our LS analysis. }%The red line represents a simple sinusoidal fit to the phased lightcurve.}
-\label{figure:phased}
+\label{fig:phased}
 \end{figure}
+
+\begin{figure*}[!ht]
+\includegraphics{eclipse-gallery.pdf}
+\caption{A gallery of the eclipse events noted in Table~\ref{tab:eclipses}. It is possible that there are more eclispse, though we only selected for the events that had multiple consecutive dips, so as not to be the effect of a spurious measurement. The first two panels are the eclipses identified by \citet{shevchenko92}. Figure is started centered relative to eclipse start, which is labeled in the bottom corner of each subpanel. Note that the y-axis scale is substantially different for each panel. Some dips are as large as 0.7 magnitudes while others are less than 0.1 magnitudes. There may be a brightening event seen in the bottom panel starting at date \todo{XX}.}
+\label{fig:eclipse-gallery}
+\end{figure*}
 
 
 \todo{Discussion of possible occulter size and orbital radius}
@@ -580,6 +588,8 @@ As noted by \citet{berger11}, it is possible that one, two, or all three of the 
 Early on, it was exciting to see that \obj\ exhibited quasi-periodic photometric dimmings, which were attributed to the presence of an edge-on disk. With our new orbital solutions, we now know that \obj\ is a massive triple system, with orbital planes that are likely misaligned with the circumtriple disk by as much as $45^\circ$. Outstanding questions about the system remain, for example, what is the structure of the disk on these scales, and can the disk geometry account for the photometric dimmings?
 
 By modeling the spectral energy distribution of \obj, \citet{fang14} determine that there is a variable reservoir of small grains in the center of the disk, possibly cleared and replenished due to the actions of the teritary. An outstanding question is what the disk looks like on these scales. Our ALMA observations do not have sufficient angular resolution to probe the disk at the physical scales corresponding to the orbit of the triple, although at its longest baselines, ALMA would have the spatial resolution (0.02 arcsec) to probe the disk on 8 au scales, more than sufficient to resolve an inner hole 16 au or larger in diameter.
+
+It is also clear that the distribution of solids within the \obj\ disk is not well constrained at small radii, although the solids are constrained to be at smaller radii ($r_\mathrm{dust} \sim 600$\,au) than the gas ($r_\twelve \sim 1300\,$au). We know from the SED that it changes, and we know that many disks exhibit substructure.
 
 It is interesting to draw parallels to the dipper phenomena discussed by \citet{cody},  \citet{ansdell}, who else? Ongoing invtigations suggest that these phenomemon might be due to accretion streams in the magnetosphere \citep{romanova} obscuring the star on ~weeklong timescales. The longer duration dimmings of \obj\ (events lasting 20+ days) as well as the longer timescales suggest that this dipping phenomenon might not be directly physically linked to the dipper mechanism (magnetospheric), but instead that the multiplicity might be affecting the structure of the disk, and material flowing in or out of the disk would be responsible for the effects, although certainly magnetospheric effects could certainly play a role.
 
@@ -652,7 +662,7 @@ Fragmentation can be due to cooling or accretion. Highly variable accretion can 
 \end{itemize}
 
 \acknowledgments
-IC acknowledges support from the Smithsonian Institution for the production of this manuscript. IC acknowledges helpful conversations with Maxwell Moe about \obj\ and related systems. IC would like to thank Eric Nielsen, Bruce Macintosh, and Bekki Dawson for helpful discussions about astrometry and orbital dynamics. SA acknowledges the very helpful support provided by the NRAO Student Observing Support program related to the early development of this project.  This paper makes use of the following ALMA data: \todo{XX}. ALMA is a partnership of ESO (representing its member states), NSF (USA), and NINS (Japan), together with NRC (Canada) and NSC and ASIAA (Taiwan), in cooperation with the Republic of Chile.  The Joint ALMA Observatory is operated by ESO, AUI/NRAO, and NAOJ.  This research made extensive use of the Julia programming language \citep{julia12} and Astropy \citep{astropy13}.
+IC acknowledges support from the Smithsonian Institution for the production of this manuscript. IC acknowledges helpful conversations with Maxwell Moe about \obj\ and related systems. IC would like to thank Eric Nielsen, Bruce Macintosh, and Bekki Dawson for helpful discussions about astrometry and orbital dynamics. SA acknowledges the very helpful support provided by the NRAO Student Observing Support program related to the early development of this project.  This paper makes use of the following ALMA data: \todo{XX}. ALMA is a partnership of ESO (representing its member states), NSF (USA), and NINS (Japan), together with NRC (Canada) and NSC and ASIAA (Taiwan), in cooperation with the Republic of Chile.  The Joint ALMA Observatory is operated by ESO, AUI/NRAO, and NAOJ.  This research made extensive use of the Julia programming language \citep{bezanson17} and Astropy \citep{astropy13}.
 
 \bibliographystyle{yahapj.bst}
 \bibliography{GWOri.bib}
