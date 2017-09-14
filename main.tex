@@ -556,22 +556,18 @@ After removing obvious eclipse events, we used the Lomb-Scargle (LS) periodicity
 \tablehead{\colhead{Start} & \colhead{End} & \colhead{Duration} & \colhead{Depth} & \colhead{Telescope} \\
 \colhead{JD} & \colhead{JD} & \colhead{days} & \colhead{mmag} & }
 \startdata
-2447043 & 2447056 & 13 & 600 & Maidanak \\
-2447153 & 2447179 & 26 & 300 & Maidanak \\
-2447418 & 2447435 & 17 & 450 & Maidanak \\
-2447809 & 2447824 & 15 & 130 & Maidanak \\
-2448137 & 2448162 & 25 & 300 & Maidanak \\
-2448545 & 2448586 & 41 & 150 & Maidanak \\
-$\geq$2450399 & $\leq$2450414 & $\leq$15 & 300 & Maidanak \\
-2452184 & $\geq$2452209 & $\geq$25 & 750 & Maidanak \\
-2454445 & 2454502 & 57 & 100 & ASAS \\
-2455507 & 2455535 & 28 & 60 & KELT \\
-2456212 & 2456248 & 36 & 110 & KELT \\
-2456709 & 2456742 & 33 & 150 & KELT \\
-2456989 & 2457032 & $\leq$43 & $\geq$250 & KELT \\ % Nov 28th, 2014
+2447418 & 2447435 & 17 & 400 & Maidanak \\
+2448140 & 2448161 & 21 & 350 & Maidanak \\
+2448543 & 2448589 & 46 & 150 & Maidanak \\
+2452184 & $\geq$2452215 & $\geq$31 & 700 & Maidanak \\
+2454450 & 2454508 & 58 & 100 & ASAS \\
+2454862 & 2454912 & 50 & 150 & ASAS \\
+2456216 & 2456259 & 43 & 110 & KELT \\
+2456705 & 2456744 & 39 & 200 & KELT \\
+2456967 & 2457100 & 30-130 & 250 & KELT/ASAS-SN \\
+2457310 & 2457405 & 95 & 100 & ASAS-SN \\
 \enddata
 \end{deluxetable}
-
 
 \section{Discussion} \label{sec:discussion}
 With the newly derived component masses now established, we turn to discussion of the photospheric properties of the stars and the age of the \obj\ system. With these in place, we discuss the system architecture in context of other triple systems and possible formation mechanisms.
@@ -603,61 +599,42 @@ As noted by \citet{berger11}, it is possible that one, two, or all three of the 
 \end{figure}
 
 \subsection{The \obj\ Triple System in Context}
-The many unique datasets presented in this paper have enabled us to paint a detailed picture of the \obj\ system. In this final section, we aim to place \obj\ in context with other pre-Main Sequence multiple systems and hierarchical triple systems in general. The \obj\ system is young (0.7 - 1.5 Myr), massive ($M_\mathrm{tot} = 5.29\pm0.09\,M_\odot$), and hosts a very massive disk ($M_\mathrm{disk} \approx 0.1\,M_\odot$), which makes it an extremely interesting system to study in the context of star and planet theories about formation, migration, and stability.
+The many unique datasets presented in this paper have enabled us to paint a detailed picture of the \obj\ system. In this final section, we aim to place \obj\ in context with other pre-Main Sequence multiple systems and hierarchical triple systems in general. The \obj\ system is young (0.7 - 1.5 Myr), contains a considerable amount of stellar mass ($M_\mathrm{tot} = 5.29\pm0.09\,M_\odot$), and hosts a very massive disk ($M_\mathrm{disk} \approx 0.1\,M_\odot$), which makes it an extremely interesting system to study in the context of theories about star and planet formation, migration, and stability.
 
 % Discussion about the disk mass and size in context. Toomre analysis.
-We estimate the total disk mass using the results from our \thirteen\ and \eighteen\ modeling in \S\ref{sec:disk}, which we remind readers are actually indirect measurements of disk mass relying upon an uncertain conversion factor between \twelve\ and $\mathrm{H}_2$ (and to a lesser degree, the gas to dust ratio). We find slightly larger disk masses when modeling \eighteen\ compared to \thirteen, which is actually in conflict with the finding of \citet{fang17} that \eighteen\ must be depleted relative to \thirteen. We attribute the differences in our disk masses to oversimplification of the disk temperature structure and note that in general estimating disk masses from CO is notoriously difficult \citep{yu17}. In the context of the large disk mass survey by \citet{andrews13}, \obj's disk mass is slightly larger than the mean predicted value for the stellar mass, although still consistent with the large $1\sigma$ envelope at high stellar masses.
-Given the large disk mass, we investigate whether the disk is Toomre stable today. We use the more massive $M_\mathrm{disk}$ values from the \eighteen\ results to derive a lower bound on Toomre's Q parameter
+We estimated the total disk mass using the results from our \thirteen\ and \eighteen\ modeling in \S\ref{sec:disk}, which we remind readers are actually indirect measurements that rely upon an uncertain conversion factor between \twelve\ and $\mathrm{H}_2$ (and to a lesser degree, the gas to dust ratio). We find slightly larger disk masses when modeling \eighteen\ compared to \thirteen. This is in conflict with the finding of \citet{fang17} that \eighteen\ must be depleted relative to \thirteen. We attribute the differences in our disk masses to insufficiently complex models of disk structure and note that in general estimating disk masses from CO is notoriously difficult \citep{yu17}. In the context of the large disk mass survey by \citet{andrews13}, \obj's disk mass is slightly larger than the mean predicted value for its stellar mass, although still consistent with the large $1\sigma$ envelope in this relationship at high stellar masses.
+In light of this large disk mass, we investigate whether the disk is Toomre stable today. We use the more massive $M_\mathrm{disk}$ values from the \eighteen\ results to derive a lower bound on Toomre's Q parameter
 \begin{equation}
 Q = \frac{c_s \Omega}{\pi G \Sigma} = \sqrt{\frac{k_\mathrm{B} M_\mathrm{tot}}{\pi^2 \mu m_\mathrm{H} G}} \sqrt{\frac{T(r)}{r^2 \Sigma^2(r)}}.
 \end{equation}
 For the range of disk parameters determined from our CO fitting, the minimum value is $Q \approx 100$, which occurs far in the outer disk at $r \sim 300\,$au---the disk is not currently undergoing disk instability ($Q \approx 1$).
 
 % Discussion of GW Ori system in context of other pre-Main Sequence multiple systems.
-Now we turn to discussion of a few relevant analogues to the \obj\ system.
-A system younger than \obj\ but nonetheless still similar is the Class 1 binary system L1551 IRS 5, which hosts a large circumbinary disk \citep[$r\sim500$\,au, $M_\mathrm{disk} \approx 0.07 \,M_\odot$;][]{eisner12,takakuwa17}. The binary is on a wide orbit ($a = 70\,\mathrm{au}$), to which the circumstellar disks are misaligned by up to 25 degrees. However, the circumstellar disks are probably aligned with the rotation of the outer circumbinary envelope, which agrees with predictions that the stars were formed by rotationally-driven fragmentation \citep{lim16}. If the disks were not aligned with the outer envelope, then the canonical explanation of turbulent fragmentation would suffice \todo{CITE? turbulent frag?}
-Surprisingly, Keplerian models of the central stellar mass suggest that only $0.8\,M_\odot$ is required to explain the rotational velocity of the circumbinary disk, so the particulars of this system differ from \obj\ in meaningful ways.
+Now we turn to a brief discussion of a few relevant analogues to the \obj\ system. % Discussion of circumbinary disks
+An exciting trend of recent disk-based dynamical mass research is the finding that there are now at least four circumbinary disks around short period eccentric binaries with periods 10-20 days and a range of stellar masses which all show alignment between the stellar orbital plane and the circumbinary disk within 3 deg: UZ~Tau~E, V4046~Sgr, AK~Sco, and DQ~Tau \citep{jensen07,rosenfeld12b,czekala15b,czekala16}. This result agrees well with the low mutual inclinations found for \emph{Kepler} circumbinary planets \citep{winn15}, and if statistically significant, has exciting implications for a large circumbinary planet occurrence rate \citep{li16}. Of course, severe selection effects are at work in both samples, and so care must be taken when extrapolating these results to the population at large. Within this context, \obj\ stands apart due to the fact that its stellar orbit is \emph{not} aligned with the disk. This may be a consequence of the larger stellar masses involved, the longer orbital period, and/or the presence of a tertiary. Here we examine several other longer period systems which show significantly non-zero mutual inclinations, and show that the large mutual inclinations found in \obj\ are also present to some degree in several other longer period systems.
 
-The HK~Tau binary system is another notable example where the two protoplanetary disks are misaligned with each other \citep{jensen14}. Although the orbital period is long ($a \sim$\todo{XX}) and not yet well defined, this indicates that at least one and possibly both protoplanetary disks are misaligned with the stellar orbit. \todo{Why?}
-The stars in \obj\ are much closer together than these two systems, and so it is unclear if these relationships would hold down to these scales.
+KH 15D is at a slightly longer period than the aforementioned systems, it is an eccentric ($e=0.6$) binary on a 48 day period which hosts a circumbinary dust ring misaligned by 10 - 20 deg from the stellar orbit \citep{chiang04,capelo12}. The precession of this ring causes the eclipses to come and go, and the sharp outer edge of the disk leads to the idea that the ring is confined to a narrow region by a planet at 4\,au. The disk and stellar orbital misalignement may be driven by dynamical interactions between the eccentric binary and the disk \citep[e.g.,]{martin17,zanazzi17}.
 
-% Discussion of circumbinary disks
-Among the group of well studied circumbinary disks, \obj\ stands apart due to the fact that its stellar orbit is \emph{not} aligned with the disk. There are three circumbinary disks around short period eccentric binaries with periods 10-15 days and a range of stellar masses which all show alignment between the stellar orbital plane and the circumbinary disk within 3 deg: V4046~Sgr, AK~Sco, and DQ~Tau \citep{rosenfeld12b,czekala15b,czekala16}.
-\todo{Where does UZ Tau E fit in this?}
+Moving to still larger orbital separations, the prevalence of disk-stellar orbital alignment becomes less clear, mainly due to incomplete orbital coverage due to longer periods. Consider GG~Tau~A, which is a triple system with circumstellar disks around each of three components as well as a larger circumtriple disk. The circumtriple disk is comprised of a dense ring containing 80\% of the mass and an outer disk extending up to 800\,au in size in \thirteen, and is of similar mass to that of the \obj\ disk \citep[$0.12\,M_\odot$;][]{guilloteau99}. The stellar architecture of GG~Tau~A is rather different than \obj, however. The primary star Aa is $0.78\,M_\odot$, which is in an ``outer'' orbit with another binary, Ab1 - Ab2, which together have a combined mass of less than $0.7\,M_\odot$ \citep{dutrey16}. The orbital elements of the triple system still have some uncertainty, but \citet{nelson16} make a convincing dynamical argument that the outer orbit has a semi-major axis of 62\,au and is likely coplanar with the outer circumtriple ring. Further astrometric observations are required to definitively confirm this low mutual inclination.
 
-% Do we need to talk about GG Tau?
-Perhaps the most similar disk might be the GG~Tau~A system, which is a triple system with resolved circumstellar disks around each of three components as well as a larger circumtriple disk in a dense ring containing 80\% of the mass and an outer disk extending up to 800\,au in size in \thirteen, and is of similar mass to that of \obj \citep[$0.12\,M_\odot$;][]{guilloteau99}. Aa is $0.78\,M_\odot$.  but again has lower mass. 0.78 for Aa,  \citep{dutrey16}. The orbit and torus are likely coplanar the Aa - Ab orbit is 32/62\,au, due to dynamical arguments \citep{nelson16}. However, the exact mutual inclination is not known.
+Recently, the massive transition disk system HD~142527 ($M_\ast = 2.0\,M_\odot$, $M_\mathrm{disk} \sim 0.1\,M_\odot$) was discovered to have a M dwarf companion orbiting inside its large disk cavity \citep{biller12,lacour16}. The presence of this companion provides a possible explanation for why a smaller, inner disk in this system appears to be highly misaligned \citep[$\sim$70 deg][]{avenhaus14,marino15}, which may be driven by secular precession resonance between the disk and the companion \citep{owen17}. The extreme mass ratio of 10-20 between the M dwarf and the primary puts the HD~142527 system in a different class of multiple star systems than those we have considered so far. Even though the system parameters do not map directly to sources like \obj, these dynamical effects are still important to consider, especially since there is usually not sufficient observational sensitivity to detect such small companions for most sources (\obj\ included).
 
-Until recently, the only significant exception to this collection was the KH 15D system \citep{chiang04,capelo12}, an eccentric ($e=0.6$) binary on a 48 day period which hosts a circumbinary dust ring misaligned by 10 - 20 deg from the stellar orbit. The precession of this ring causes the eclipses to come and go, and the sharp \todo{inner/outer} edge of the disk leads to the idea that the ring is confined to a narrow region by a planet at 4\,au. However, in recent years a picture is emerging that not all circumbinary disks are aligned with the stellar orbit. For example, with the discovery of the M dwarf inside of the HD 169... system, in truth this protoplanetary disk should now be considered a circumbinary disk, and, given the highly inclined orbit of the M dwarf, the disk is almost certainly misaligned. Given the large mass ratio between the stars, however, it is not clear if other dynamical factors may be at play. For example, \citet{owen16} suggests that \todo{secular precession} is important.
+At younger ages, the Class 1 binary system L1551 IRS 5 is an interesting analogue because it hosts a large circumbinary disk \citep[$r\sim500$\,au, $M_\mathrm{disk} \approx 0.07 \,M_\odot$;][]{eisner12,takakuwa17} outside of two circumstellar disks. The binary is on a wide orbit ($a = 70\,\mathrm{au}$), to which the circumstellar disks are misaligned by up to 25 degrees. However, the circumstellar disks are probably aligned with the rotation of the outer circumbinary envelope, which may indicate that the stars were formed by rotationally-driven fragmentation, preserving this orientation \citep{lim16}. Surprisingly, Keplerian models of the central stellar mass suggest that only $0.8\,M_\odot$ is required to explain the rotational velocity of the circumbinary disk, so the particulars of this system differ from \obj\ in meaningful ways. Another binary system with misaligned protoplanetary disks (though no circumbinary disk) is HK~Tau \citep{jensen14}. Although the stellar orbit is wide ($\sim$386\,au separation) and not yet well defined, the current geometry indicates that at least one and possibly both protoplanetary disks are misaligned with the stellar orbit, likely as a result of their formation rather than any subsequent dynamical evolution.
 
-The most recent misaligned system is TWA~3A \citep{kellog17}. Comprised of a circumbinary disk within a triple system. The binary is  Disk is likely to be misaligned with both the inner orbital plane and the outer orbital plane.  All stars are spectral types M3-M4. Aa-Ab on a 35 day eccentric $e=0.63$ orbit. A-B is on a 200-800 year orbit, possibly eccentric. Although the absolute inclinations are not yet constrained due to incomplete astrometric coverage of the orbit, the parameter space is constrained such that the All three planes are likely misaligned by at least 30 degrees.
+The most recent example of a misaligned circumbinary disk is in the TWA~3A system \citep{kellog17}, which hosts a circumbinary disk within a hierarchical triple system of stars of near equal mass (SpTs M3 - M4). Aa-Ab on a 35 day eccentric $e=0.63$ orbit. A-B is on a 200-800 year orbit, possibly eccentric. Although the absolute inclinations are not yet constrained due to incomplete astrometric coverage of the orbit, the parameter space is constrained such that all three planes are likely misaligned by at least 30 degrees. The Aa-Ab circumbinary disk mutual inclination may be attributable to torques on the disk incurred by the distant B companion.
 
+Of all these T~Tauri sources surveyed, \obj\ remains the largest in terms of stellar mass. The configuration of \obj\ is relatively difficult to probe via traditional detection techniques, requiring sustained, long-term radial velocity monitoring over 35 years, as well as sophisticated care and attention to derive a radial velocity solution for such a blended source. Morever, sustained campaigns of astrometric monitoring are necessary to close orbits. And, finally, resolved submm interferometric observations were necessary to measure the inclination of the circumtriple disk.
 
-Of all these T~Tauri sources, \obj\ remains the largest in terms of stellar mass. The configuration of \obj\ is relatively difficult to probe via traditional detection techniques, requiring sustained, long-term radial velocity monitoring over 35 years, as well as sophticated care and attention to actually derive a radial velocity solution for such a blended source. Morever, sustained campaigns of astrometric monitoring are necessary to close orbits. And, finally, resolved submm interferometric observations were necessary to measure the inclination of the circumtriple disk.
+Although there may still be significant dynamical evolution in the architecture of the \obj\ system before it reaches the Main Sequence, it is worth briefly considering how its orbital parameters compare to the general population of triple stars. Among late B star primaries (which \obj~A will be on the main sequence), 13\% of systems have multiplicity of three or higher \citep{eggleton08}; this fraction is roughly constant across spectral types B--G. In a detailed analysis of higher-order multiple systems, \citet{tokovinin97} found that the ratio $P_\mathrm{long} / P_{\rm short}$ in almost all systems was greater than 10, presumably reflecting which orbits are stable. While \obj's ratio (17) is smaller than in many hierarchical systems, it is not an outlier among triple systems.
+\citet{tokovinin97,tokovinin17} find that the distribution of mutual inclinations of the orbits in triple systems is inconsistent both with complete alignment of the inner and outer orbits (zero mutual inclination) as well as completely independent inclinations (randomly distributed).
+For triples with outer projected separation $< 50\,$au the average misalignment is 20 degrees; orbits wider than 1000 au are not aligned. \citet{tokovinin17} notes that accretion of gas with randomly aligned angular momentum at the epoch of star formation can cause misaligned triples. However, we should note that this is for a population of much older systems, in which significant dynamical evolution could have occurred, particularly for the shorter-period systems.
 
-Although there may still be significant evolution in the properties of the \obj\ system due to dynamical interactions between the stars and the disk, it is worth briefly considering how the orbital parameters compare to the general population of binary and triple stars.
+How did the stars in the \obj\ system form?
 
-While the ratio between the outer orbital period and the inner orbital period (17) is smaller than in many hierarchical systems, it is not an outlier among triple systems.  In a detailed analysis of higher-order multiple systems, \citet{tokovinin97} found that the ratio $P_\mathrm{long} / P_{\rm short}$ in almost all systems was greater than 10, presumably reflecting which orbits are stable.
-
-Among late B star primaries (which \obj~A will be on the main sequence), 13\% of systems have multiplicity of three or higher \citep{eggleton08}; this fraction is roughly constant across spectral types B--G.
-
-\citet{tokovinin97} finds that the distribution of mutual inclinations of the orbits in triple systems is inconsistent both with complete alignment of the inner and outer orbits, but also with independent inclinations of the two orbits.  However, we should note that this is for a population of much older systems, in which significant dynamical evolution could have occurred, particularly for the shorter-period systems.
-
-
-\todo{Now, let's wildly speculate about formation...}
-\cite{bate12} says that tight binaries probably formed via fragmentation further out, and then decay through orbital decay through dynamical interactions, accretion, and the interaction of the circumstellar disks. Of the triples that form in simulation, most are misaligned with each other.
+\cite{bate12} says that tight binaries probably formed via fragmentation further out, and then decay through orbital decay through dynamical interactions, accretion, and the interaction of the circumstellar disks. Of the triples that form in his simulation, most are misaligned with each other.
 
 Given that we don't know any of the circumstellar disks around each of the stars, yet we do know that at least one source is accreting, then this would make for a worthwhile study, to resolve the disks, their inclinations, and compare them to the outer disk. Gas allows disipative stellar encounters. Perhaps these also resulted in the inclined orbit. The relatively low eccentricities for the binary and triple need to be taken into account. \citet{bate12} notes that eccentricities $e < 0.1\,$au are rare for periods larger than 100 days \citep{raghavan10}.
-
-\citet{tokovinin17} studies the statistics of the angle between the orbital momentum vectors in hierarchical triples with known inner visual or astrometric orbits.  For triples with outer projected separation $< 50\,$au, the average misalignment is 20 degrees; orbits wider than 1000 au are not aligned. \citet{tokovinin17} notes that accretion of gas with randomly aligned angular momentum at the epoch of star formation can cause misaligned triples. Also, dynamical effects might play a role. Circumbinary disks around eccentric binaries ($e > 0.5$), with moderately misaligned initial inclinations ($>40$ degrees) can be driven towards severe polar misalignment, where the disk is perpendicular to the binary orbit \citep{martin17}.
-
-\todo{Discuss Owen's HD result.}
-
-Fragmentation can be due to cooling or accretion. Highly variable accretion can force disks up to the fragmentation threshold, where binarity is a frequent outcome. Consensus that GI-formed objects will become brown dwarfs or stellar binary companions \citep{kratter10}, due to moderate disk temperatures and active accretion, which will grow these GI formed objects to higher masses. However, it is unlikely that these cores can explain the masses of the \obj\ stars. Rather, it is likely that they formed via turbulent core fragmentation \citep{offner10}. Especially since all the stars do not appear to be coplanar.
-
-
-
-
+Rather, it is likely that they formed via turbulent core fragmentation \citep{offner10}. Especially since all the stars do not appear to be coplanar.
 
 
 \section{Summary and Conclusions} \label{sec:summary}
@@ -665,11 +642,10 @@ Fragmentation can be due to cooling or accretion. Highly variable accretion can 
 \begin{itemize}
 \item Derived a dynamical mass for GW Ori
 \item Derived a new SB2 orbit for the stars, and disentangled spectra
-\item Compared the mutual inclinations for the disk and the stellar orbits
+\item Compared the mutual inclinations for the disk and the stellar orbits. Found to be significantly misaligned.
 \item Evaluate the concordance between stellar properties and PMS models
 \item Published lightcurve w/ eclipse analysis
 \item Placed system in context of triple systems
-\item Placed system in context of dippers
 \end{itemize}
 
 \acknowledgments
