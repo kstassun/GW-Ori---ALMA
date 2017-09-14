@@ -30,7 +30,7 @@
 
 \begin{document}
 
-\title{Disk--Stellar Mutual Inclinations and Recurrent Eclipses \\
+\title{Substantial Disk--Stellar Mutual Inclinations and Recurrent Eclipses \\
 in the Young and Massive GW~Ori Triple System}
 
 \correspondingauthor{Ian Czekala}
@@ -444,7 +444,7 @@ $M_\mathrm{tot}\;$ [$M_{\sun}$]\dotfill & \nodata & $5.7 \pm 0.7$ & $6.1 \pm 0.9
 \begin{figure*}[ht!]
 \begin{center}
   \includegraphics{astro.pdf}
-  \figcaption{Orbits from the joint RV-astrometric fit shaded according to their phase, where black represents periastron and color hue increases with orbital phase. \emph{top left}: orbits relative to the primary star A, in the plane of the sky, with the three epochs of astrometry from \citet{berger11}. The light grey data point and outer orbit represent the fit to the ``alternate'' position for C. The following plots are relative to the center of mass of the system, and a ficticious particle on a circular orbit coplanar with the circumtriple disk at 7 au is shown as grey dashed line. \emph{top right}: the sky plane \emph{bottom left}: looking down the North axis \emph{bottom right} looking down the East axis. Positive Z points towards observer.
+  \figcaption{Orbits from the joint RV-astrometric fit shaded according to their phase, where black represents periastron and color hue increases with orbital phase. \emph{top left}: orbits relative to the primary star A, in the plane of the sky, with the three epochs of astrometry from \citet{berger11}. The light grey data point and outer orbit represent the fit to the ``alternate'' position for C. The following plots are relative to the center of mass of the system. A fictitious particle at 7 au on a circular orbit coplanar with the circumtriple disk is shown as grey dashed line. \emph{top right}: the sky plane. For future discussion in \S\ref{sec:eclipses}, we label the side of the disk nearest to the observer. \emph{bottom left}: looking down the North axis. \emph{bottom right}: looking down the East axis. Positive Z points towards observer.
   \label{fig:astro}}
 \end{center}
 \end{figure*}
@@ -510,10 +510,32 @@ In light of this, the process of inferring stellar parameters becomes rather dif
 \end{figure*}
 
 
-\subsection{Photometric Analysis}
-Using the Lomb-Scargle (LS) periodicity search algorithm \citep{lomb76,scargle82} within the VARTOOLS analysis package \citep{Hartman:12}, we searched for periodic variability in the high cadenced KELT observations. Specifically, we remove the eclipses shown in Table \ref{tab:eclipses} from the KELT data and searched for a periodic signal from 1.1 to 100 days. The top two periods we recover are 74.798 and 2.931 days. See Figure \ref{fig:phased} for the phase-folded lightcurves. Additionally, we remove the KELT observations and phase the $V$-band observations from ASAS, ASAS-SN, and Maidanak to our derived orbital periods of 241.79 and 4121.12 days. We find no convincing coherent signal at the $\sim$242 days but the photometric observations phased to the $\sim$4121 day period show a coherent sinusoidal variability with a peak-to-peak amplitude of $\sim$0.15 mag.
+\subsection{Periodic Dimming and Eclipses}
+\label{sec:eclipses}
+Using the longer baseline of our combined photometric record, we identify several new eclipse events, bringing the total number of known events to 13, the 10 of these covered by our lightcurve are listed in Table~\ref{tab:eclipses}, marked in Figure~\ref{fig:orbitboth}, and shown zoomed in Figure~\ref{fig:eclipse-gallery}. Given the sometimes considerable noise in our lightcurve, we have only identified eclipse events that show multiple consecutive photometric points deviating significantly from the running average, since a large dip in only one epoch of photometry is likely the result of a spurious observation. There are also regular seasonal gaps in the lightcurve, making it likely that many other eclipse events were missed due to lack of coverage.
+The eclipse events are broadly similar in depth and duration to the events identified in \citet{shevchenko92,shevchenko98}, ranging from 0.1 to 0.7 mag and between 10 to 50 days. While there are several sequential eclipse events that occur near the inner period of 241 days (e.g., the first two eclipses in 1988 and 1990 noted by \citet{shevchenko92}), our longer baseline reveals that the eclipses are not strictly periodic.
+When the full lightcurve is phased to the inner period (Figure~\ref{fig:orbitin}), it becomes clear that there are a multitude of inner phases at which the eclipse events occur.
+We do observe one potential brightening event, shown in the lower left panel in Figure~\ref{fig:eclipse-gallery}. Brightenings are not seen for other eclipse events, so this case may be a unique artifact present in the KELT data, especially since the ASAS-SN data, which covers from egress onward, does not show the same behavior. If this event is real, then it would indicate increased accretion or flare luminosity during the eclipse itself. If this timing were not simply a coincidence, then this would indicate a direct link between the eclipses and accretion onto the stellar surface.
 
-We identify several new eclipse events listed in Table~\ref{tab:eclipses} and plotted in Figure~\ref{fig:eclipse-gallery}.
+
+Eclipses notwithstanding, the most striking mode of variability that emerges with the long baseline of our lightcurve is a 0.20 mag sinusoidal oscillation of the mean non-eclipsed flux, clearly phased with the outer orbital period of 4218 days (Figure~\ref{fig:orbitout}). We must be careful when evaluating this mode of variability, however, since it stretches across photometry acquired from several different instruments. Moreover, the KELT dataset was not taken in $V$-band but rather shifted to match the overlapping ASAS-SN observations, which means that it has limited ability to constrain this longer mode due to zeropoint uncertainty. With these caveats in mind, given that clear rising and falling trends are seen within each data set and that no vertical shifts have been applied to any other dataset, this mode is likely real. A final supporting piece of evidence is the earlier photoelectric observations of \citet{shevchenko98}, which stretch back to JD 2,445,000 and clearly phase up with the expected sinusoidal variation.
+Beyond this long term variability, it does appear as if the deep eclipses do preferentially occur between phases 0.4 - 0.8 from periastron. However, when consulting the earlier baseline photometry in \citet{shevchenko98}, we find at least two additional eclipses that fall closer to 0.0 phase, suggesting that the apparent clustering of deep eclipses is an effect of the seasonal sampling in our dataset.
+\todo{See Cody et al references to: In several cases, periodic fading on longer timescales (months to years) has been traced to obscuration by a circumbinary disk precessing about a double- or triple-star system (e.g., Cohen et al. 2003; Plavchan et al. 2008a; Herbst et al. 2010; Plavchan et al. 2013). }
+
+
+The long period sinusoidal variability reaches minimum flux levels near apoastron (phase 0.5) of the outer orbit. Since the light from the A-B binary dominates the total optical flux from the system, it is one or both of these stars that are either being partially occulted by opaque material (e.g., the sharp edge of a dense dust ring) or more fully occulted by partially opaque material (e.g., diffuse dust). When the A-B system is at apoastron it is closest to the inner edge of the disk (see Figure~\ref{fig:astro}, top right panel), which has presumably been somewhat cleared due to the dynamical influence of the stellar components. Due to the fact that the disk is more edge-on than the stellar orbits, apoastron also happens to correspond to the time when the A-B pair comes closest to being screened by the inner edge of the near side of the disk. From dynamical arguments, we expect the inner edge of the disk to be tructated out to 2-3 times the semi-major axis of the tertiary, which corresponds to $\sim$20-30\,au in radius. Even with the foreshortening due the relative inclinations, the inner edge of the disk would be at too large of a projected distance to occult the A-B pair at apoastron, unless the disk had a very puffed up inner edge. Given the gradual dimming, it may be more likely that the A-B pair is screened by tenuous material residing inside this truncation radius, such as the micron-sized dust within the gap hinted at by the $10\mu$m silicate emission feature in \obj's SED \citep{fang14}.
+
+By modeling the spectral energy distribution of \obj, \citet{fang14} determine that there is a variable reservoir of small grains in the center of the disk, possibly cleared and replenished due to the actions of the teritary. An outstanding question is what the disk looks like on these scales. Our ALMA observations do not have sufficient angular resolution to probe the disk at the physical scales corresponding to the orbit of the triple, although at its longest baselines, ALMA would have the spatial resolution (0.02 arcsec) to probe the disk on 8 au scales, more than sufficient to resolve an inner hole 16 au or larger in diameter.
+It is also clear that the distribution of solids within the \obj\ disk is not well constrained at small radii, although the solids are constrained to be at smaller radii ($r_\mathrm{dust} \sim 600$\,au) than the gas ($r_\twelve \sim 1300\,$au). We know from the SED that it changes, and we know that many disks exhibit substructure.
+
+
+Given that the $\sim$20\,day eclipse events do not significantly sync with the outer orbital period, it is not immediately clear whether they share the same physical origin as the long term brightness variations. The quasi-periodic nature of these eclipses, whereby a deep eclipse occurs and then subsequent shallower eclipses occur during the next orbit, led \citet{shevchenko98} to attribute these eclipses to an occultation by the overflowing Roche lobe of the secondary star. As the material accreted onto the secondary star, the size of the occulter diminished, and the eclipses got shallower. We now know from dynamical constraints that an edge-on A-B orbit ($i_\mathrm{in} \approx 90$ deg) is ruled out, and so we must consider other mechanisms. While do not see a series of eclipses with such striking regularity as those observed by \citet{shevchenko98}, it does appear as though consecutive eclipses may be correlated with the 241 day inner period.
+
+Any theory that seeks to explain these inner eclipses must account for the several pieces of evidence in addition to the updated orbital configuration. Namely, the eclipses span 10 - 50 days in duration, are of variable depth between 0.1 and 0.7 magnitudes, and are not strictly periodic with the inner period, and likely can occur at all phases of the outer orbital period. Moreover, our spectra (unwittingly) taken during times of eclipse show no obvious changes in spectral features beyond the normal variability described by \citet{fang14}. For the epochs where multiple bands existed (e.g., the four eclipses in the Maidanak dataset, which also includes B, R, and noisey U measurements) the eclipse duration was similar in all bands. The star appears slightly redder during eclipse ($\Delta (B - V)\approx 0.05$\,mag, $\Delta (V - R) \approx 0.1$\,mag), suggesting dust obscuration \todo{Does this obey any dust redenning law?}. We speculate that these quasi-periodic eclipses may be due to the presence of an unstable circumbinary disk around A and B or possibly the result of eclipses of the A star by accretion streams onto either the circumstellar disk of A or B.
+
+Lastly, we searched for periodicty in the lightcurve beyond the inner and outer orbital periods.
+After removing obvious eclipse events, we used the Lomb-Scargle (LS) periodicity search algorithm \citep{lomb76,scargle82}  \citep[within the VARTOOLS analysis package;][]{Hartman:12} to search for periodic variability from 1.1 to 100 days in the high cadenced KELT observations. The top two periods we recover are 2.93 and 74.80 days, shown in Figure \ref{fig:phased}. \todo{Does 2.93 correspond to the rotation period? What about 74.80?}
+
 
 \begin{figure}[!ht]
 \centering\includegraphics[width=0.99\linewidth, trim = 0 3.5in 0 0]{Figure_Phased.pdf}
@@ -523,15 +545,10 @@ We identify several new eclipse events listed in Table~\ref{tab:eclipses} and pl
 
 \begin{figure*}[!ht]
 \includegraphics{eclipse-gallery.pdf}
-\caption{A gallery of the eclipse events noted in Table~\ref{tab:eclipses}. It is possible that there are more eclispse, though we only selected for the events that had multiple consecutive dips, so as not to be the effect of a spurious measurement. The first two panels are the eclipses identified by \citet{shevchenko92}. Figure is started centered relative to eclipse start, which is labeled in the bottom corner of each subpanel. Note that the y-axis scale is substantially different for each panel. Some dips are as large as 0.7 magnitudes while others are less than 0.1 magnitudes. There may be a brightening event seen in the bottom panel starting at date \todo{XX}.}
+\caption{A gallery of the eclipse events noted in Table~\ref{tab:eclipses}, labeled relative to the start of the eclipse. Photometric legend is the same as in the top panel of Figure~\ref{fig:orbitboth}. Note that the y-axis scale is significantly different from panel to panel, with some eclipses as deep as 0.7 mag while others are less than 0.1 mag. The first two events are the same events identified by \citet{shevchenko92}.  The second to last event (enlarged bottom panel) may be accompanied by a brightening and then dimming, which is not present during other eclipse events. }
 \label{fig:eclipse-gallery}
 \end{figure*}
 
-
-\todo{Discussion of possible occulter size and orbital radius}
-%
-% Also see: http://arxiv.org/pdf/1608.07291v1.pdf
-%
 \begin{deluxetable}{rrrrl}
 \label{tab:eclipses}
 \tablecaption{V-band Photometric Eclipse Catalog\label{table:eclipses}}
@@ -556,7 +573,7 @@ $\geq$2450399 & $\leq$2450414 & $\leq$15 & 300 & Maidanak \\
 
 
 \section{Discussion} \label{sec:discussion}
-With the newly derived component masses now established, we turn to discussion of the photospheric properties of the stars and the age of the \obj\ system. Next, we incorporate this information in discussion of the dynamic inner environment of the system, including the quasi-periodic photometric eclipses. Finally, we discuss the system architecture in context of other triple systems and possible formation mechanisms.
+With the newly derived component masses now established, we turn to discussion of the photospheric properties of the stars and the age of the \obj\ system. With these in place, we discuss the system architecture in context of other triple systems and possible formation mechanisms.
 
 \subsection{The Age and Photospheric Properties of the GW Ori Stars}
 We use the spectroscopic constraints on the primary and secondary effective temperatures ($T_\mathrm{eff} = 5700 \pm 200\,\mathrm{K}$, $T_\mathrm{eff} = 4800 \pm 200\,\mathrm{K}$, respectively) and the collection of multi-band photometry in the literature \todo{\{fill in information from Keivan\}} to infer component luminosities for the A and B stars. We note that these values are \todo{\{similar/different\}} from those inferred by \citet{fang14}, who fit the \obj\ SED assuming that the contribution from the secondary light was negligible. We use the \todo{XX atmospheres} and \todo{XX} redenning laws to infer luminosities of \todo{XX} and \todo{XX} for each source.
@@ -583,17 +600,6 @@ As noted by \citet{berger11}, it is possible that one, two, or all three of the 
   \label{fig:evolution}}
   \end{center}
 \end{figure}
-
-\subsection{The dynamic center of the \obj\ system} \label{sec:inner disk}
-Early on, it was exciting to see that \obj\ exhibited quasi-periodic photometric dimmings, which were attributed to the presence of an edge-on disk. With our new orbital solutions, we now know that \obj\ is a massive triple system, with orbital planes that are likely misaligned with the circumtriple disk by as much as $45^\circ$. Outstanding questions about the system remain, for example, what is the structure of the disk on these scales, and can the disk geometry account for the photometric dimmings?
-
-By modeling the spectral energy distribution of \obj, \citet{fang14} determine that there is a variable reservoir of small grains in the center of the disk, possibly cleared and replenished due to the actions of the teritary. An outstanding question is what the disk looks like on these scales. Our ALMA observations do not have sufficient angular resolution to probe the disk at the physical scales corresponding to the orbit of the triple, although at its longest baselines, ALMA would have the spatial resolution (0.02 arcsec) to probe the disk on 8 au scales, more than sufficient to resolve an inner hole 16 au or larger in diameter.
-
-It is also clear that the distribution of solids within the \obj\ disk is not well constrained at small radii, although the solids are constrained to be at smaller radii ($r_\mathrm{dust} \sim 600$\,au) than the gas ($r_\twelve \sim 1300\,$au). We know from the SED that it changes, and we know that many disks exhibit substructure.
-
-It is interesting to draw parallels to the dipper phenomena discussed by \citet{cody},  \citet{ansdell}, who else? Ongoing invtigations suggest that these phenomemon might be due to accretion streams in the magnetosphere \citep{romanova} obscuring the star on ~weeklong timescales. The longer duration dimmings of \obj\ (events lasting 20+ days) as well as the longer timescales suggest that this dipping phenomenon might not be directly physically linked to the dipper mechanism (magnetospheric), but instead that the multiplicity might be affecting the structure of the disk, and material flowing in or out of the disk would be responsible for the effects, although certainly magnetospheric effects could certainly play a role.
-
-The tertiary star makes a complicated accretion flow than that studied for other well-known binaries \citep[e.g., DQ~Tau;]{artymowicz94,mathieu97}. Also, the timescale of variabiltiy and the possibly correlation with phase of the outer orbit may link this star in the category of systems that also display pulsed accretion near periastron / apoastron. \todo{UZ Tau E, TWA 3A, DQ Tau?} Jensen?
 
 \subsection{The \obj\ triple system in context}
 We aim to place \obj\ in context with other triple systems, and especially pre-Main Sequence triple systems. This system is also young (0.7 - 1.5 Myr) with a very massive disk ($\approx 0.1\,M_\odot$), making \obj\ an extremely interesting system to study in the context of star and planet theories about formation, migration, and stability.
